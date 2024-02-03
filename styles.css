@@ -85,7 +85,9 @@ button:hover{
     .banner video{
         width: 100%;
         height: auto;
-    }
+    }    
+}
+@media only screen and (max-width: 767px) {
     .navbar {
         flex-direction: column; /* Stack items vertically in mobile view */
         align-items: center; /* Center items horizontally */

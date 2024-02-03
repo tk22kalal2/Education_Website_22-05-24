@@ -11,9 +11,7 @@
     background-image: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40));
     background-position: center;
     background-size: cover;
-    display: flex;
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
+    display: flex;    
 }
 
 .navbar {

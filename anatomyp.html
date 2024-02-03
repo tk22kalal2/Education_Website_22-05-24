@@ -7,8 +7,11 @@
         <link rel="stylesheet" href="subject.css">
     </head>
     <body>
-        <input type="text" id="input-box" placeholder="Search anything" autocomplete="off">
-            <table class="content-table"><thead><tr><th>LECTURE</th></tr></thead>
+        <input type="text" id="input-box" onkeyup='tableSearch()' placeholder="Name">
+
+        <table class="content-table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+        
+        <thead><tr><th>LECTURE</th></tr></thead>
 <tr><td><a  href="https://telegram.me/dopaminembbs_bot?start=Z2V0LTMyMzc2NDQ0NDExNDg0MjY"  target="_blank">1. Introduction</a></td></tr>							
 <tr><td><a  href="https://telegram.me/dopaminembbs_bot?start=Z2V0LTMyMzg2NDY0OTc2MTQyNzI"  target="_blank">1. developmental-timeline</a></td></tr>							
 <tr><td><a  href="https://telegram.me/dopaminembbs_bot?start=Z2V0LTMyMzk2NDg1NTQwODAxMTg"  target="_blank">2. Gametogenesis</a></td></tr>							
@@ -186,7 +189,30 @@
 <tr><td><a  href="https://telegram.me/dopaminembbs_bot?start=Z2V0LTM0MTIwMDIyNjYyMDU2MzA"  target="_blank">16. lower-limb-arterial-supply</a></td></tr>							
 <tr><td><a  href="https://telegram.me/dopaminembbs_bot?start=Z2V0LTM0MTMwMDQzMjI2NzE0NzY"  target="_blank">17. lower-limb-venous-drainage</a></td></tr>		
               
-</table>      
+</table>  
+    <script type="application/javascript">
+        function tableSearch() {
+            let input, filter, table, tr, td, txtValue;
+
+            //Intialising Variables
+            input = document.getElementById("input-box");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+
+            for (let i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[1];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+
+        }
             </div>            
         </div>
     </body>

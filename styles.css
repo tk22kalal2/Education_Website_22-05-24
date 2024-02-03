@@ -97,4 +97,10 @@ button:hover{
         display: inline-block;
         margin: auto;
     }
+    .navbar ul li a{
+        text-decoration: none;
+        text-transform: uppercase;
+        color: white;
+        font-weight: 600;
+    }
 }

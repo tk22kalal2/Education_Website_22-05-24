@@ -12,6 +12,10 @@
     padding: 140px;
 }
 
+body {
+    background-color: #333; /* Set a dark background color */
+}
+
 button {
     width: 150px;
     padding: 15px;

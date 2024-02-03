@@ -116,4 +116,7 @@ button:hover {
     button {
         margin: 10px 5px;
     }
+    .content {
+        top: 50%; /* Adjusted top position for centering */
+    }
 }

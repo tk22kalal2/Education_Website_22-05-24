@@ -120,7 +120,7 @@ button a:hover {
 }
 
 .additional-buttons1 {
-    text-align: center; /* Optional: Center text within the container */
+    flex: 1 0 calc(25% - 10px); /* Optional: Center text within the container */
 }
 
 .banner video {

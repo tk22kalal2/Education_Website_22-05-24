@@ -87,7 +87,17 @@ button:hover {
     color: white;
     transition: 0.5s;
 }
+button a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+}
 
+button a:hover {
+    background: rgb(0, 192, 226);
+    color: white;
+    transition: 0.5s;
+}
 .banner video {
     position: absolute;
     right: 0;

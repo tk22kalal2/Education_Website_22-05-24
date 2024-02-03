@@ -10,7 +10,14 @@
         <div class="banner">
             <video autoplay loop muted plays-inline>
                 <source src="Video1.mp4" type="video/mp4">
-            </video>            
+            </video>
+            <form>
+    	     <label for="searchInput">Search:</label>
+    	       <div style="position: relative;">
+        	   <input type="text" id="searchInput" placeholder="Enter your search term..." oninput="getSuggestions()">
+        	   <ul id="suggestionList"></ul>
+    	      </div>
+	        </form>
             <div>
                 <button type="button"><a href="prep.html">PREPLADDER</a></button>
                 <button type="button">MARROW</button>

@@ -96,17 +96,10 @@ button a:hover {
     border: 1px solid #ccc;
     border-radius: 5px;
     width: 90%; /* Adjust width as needed */
-    margin: auto; /* Center horizontally */
+    margin: 20px auto 0; /* Center horizontally with 20px margin from top */
     font-size: 14px;
     height: 30px;
     position: relative;
-    top: 20px; /* Adjust the top position */
-}
-
-#searchInput:focus {
-    outline: none;
-    border-color: #1E90FF;
-    box-shadow: 0 0 10px rgba(30, 144, 255, 0.5);
 }
 
 #suggestionList {
@@ -123,6 +116,7 @@ button a:hover {
     width: 90%; /* Adjust width as needed */
     left: 5%; /* Adjust the left position */
 }
+
 
 
 @media (min-aspect-ratio: 16/9) {

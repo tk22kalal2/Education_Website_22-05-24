@@ -53,27 +53,14 @@
     color: black;
 }
 
-.content {
-    width: 100%;
-    position: absolute;
-    color: white;
-    top: 45%;
-    transform: translateY(-50%);
-    text-align: center;
-}
-
-.content h1 {
-    margin-top: 80px;
-    font-size: 90px;
-    font-weight: 800;
-}
-
-button {
+button{
     width: 200px;
     padding: 15px;
     margin: 20px 5px;
+    text-align: center;
     border-radius: 25px;
     color: black;
+    border: 2px;
     font-size: 20px;
     cursor: pointer;
     font-weight: 600;

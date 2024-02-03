@@ -52,6 +52,8 @@ button:hover {
         padding: 10px;
    }
     button {
-        margin: 2px 0;
+        height: 120px;
+        width: 150px;
+        margin: 10px 0;
     }
 }

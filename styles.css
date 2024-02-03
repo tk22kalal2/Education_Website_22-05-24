@@ -114,14 +114,12 @@ button a:hover {
 
 .container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    align-items: center; /* Optional: Align items in the center vertically */
 }
 
-.additional-buttons1,
-.additional-buttons2 {
-    flex: 1 0 calc(25% - 10px); /* Adjust the width of buttons as needed and consider the gap */
-    margin: 5px;
+.additional-buttons1 {
+    text-align: center; /* Optional: Center text within the container */
 }
 
 .banner video {

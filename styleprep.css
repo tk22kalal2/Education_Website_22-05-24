@@ -13,8 +13,7 @@
     background-size: cover;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */ /* Center vertically */
 }
 
 .banner video {

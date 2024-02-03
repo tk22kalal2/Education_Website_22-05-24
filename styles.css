@@ -103,59 +103,11 @@ button a:hover {
 }
 
 .container-flex {
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; /* Optional: Align items in the center vertically */
 }
-
-.additional-buttons1 {
-    width: 200px;
-    padding: 15px;
-    margin: 20px 5px;
-    border-radius: 25px;
-    color: black;
-    font-size: 20px;
-    cursor: pointer;
-    font-weight: 600;
-    flex: 1 0 calc(25% - 10px);/* Optional: Center text within the container */
-}
-
-.additional-buttons1 button {
-    /* Your button styles here */
-    width: 200px;
-    padding: 15px;
-    margin: 20px 5px;
-    border-radius: 25px;
-    color: black;
-    font-size: 20px;
-    cursor: pointer;
-    font-weight: 600;
-}
-
-/* Set the width of each button to occupy 25% of the container width, 
-   creating a column layout with four buttons per row */
-.additional-buttons1 button {
-    flex: 1 0 calc(25% - 10px);
-}
-
-.additional-buttons1 button:hover {
-    background: rgb(0, 192, 226);
-    color: white;
-    transition: 0.5s;
-}
-
-.additional-buttons1 button a {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: black;
-}
-
-.additional-buttons1 button a:hover {
-    background: rgb(0, 192, 226);
-    color: white;
-    transition: 0.5s;
-}
-
 
 .banner video {
     position: absolute;

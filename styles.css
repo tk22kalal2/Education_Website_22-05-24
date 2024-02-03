@@ -112,6 +112,12 @@ button a:hover {
     transition: 0.5s;
 }
 
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .additional-buttons1,
 .additional-buttons2 {
     flex: 1 0 calc(25% - 10px); /* Adjust the width of buttons as needed and consider the gap */

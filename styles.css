@@ -26,15 +26,9 @@
     height: 100vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40));
     background-position: center;
-    background-size: cover;
-    padding: 20px; /* Add padding to keep buttons inside the banner */
-    box-sizing: border-box; /* Include padding in the total width/height calculation */
+    background-size: cover;    
 }
 
-.banner2 button {
-    flex: 1 0 calc(25% - 10px); /* Adjust the width of buttons as needed and consider the gap */
-    margin: 5px; /* Adjust the margin as needed */
-}
 
 .navbar {
     width: 90%;

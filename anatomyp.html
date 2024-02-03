@@ -190,29 +190,29 @@
 <tr><td><a  href="https://telegram.me/dopaminembbs_bot?start=Z2V0LTM0MTMwMDQzMjI2NzE0NzY"  target="_blank">17. lower-limb-venous-drainage</a></td></tr>		
               
 </table>  
-    <script type="application/javascript">
-        function tableSearch() {
-            let input, filter, table, tr, td, txtValue;
+    <script>
+    function tableSearch() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("input-box");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
 
-            //Intialising Variables
-            input = document.getElementById("input-box");
-            filter = input.value.toUpperCase();
-            table = document.getElementById("myTable");
-            tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
 
-            for (let i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[1];
-                if (td) {
-                    txtValue = td.textContent || td.innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                        tr[i].style.display = "";
-                    } else {
-                        tr[i].style.display = "none";
-                    }
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
                 }
             }
-
         }
+    }
+</script>        
             </div>            
         </div>
     </body>

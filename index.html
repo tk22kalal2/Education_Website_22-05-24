@@ -22,63 +22,7 @@
                 <button type="button"><a href="prep.html">PREPLADDER</a></button>
                 <button type="button">MARROW</button>
                 <button type="button">DAMS</button>          
-            </div>
-	<script>
-              function getSuggestions() {
-            const input = document.getElementById('searchInput').value.toLowerCase();
-            const suggestionList = document.getElementById('suggestionList');
-            const githubURL = 'https://github.com/tk22kalal/Education_Website_22-05-23/tree/master/Plugins';
-            const filenames = [];
-
-            for (let i = 1; ; i++) {
-                const buttonSet = document.querySelector('.additional-buttons' + i);
-                if (!buttonSet) break;
-
-                const buttons = buttonSet.querySelectorAll('button');
-                buttons.forEach(button => {
-                    const onclickAttribute = button.getAttribute('onclick');
-                    if (onclickAttribute) {
-                        const matches = onclickAttribute.match(/fetchAndToggleContent\(['"]([^'"]+)['"]/);
-                        if (matches && matches[1]) {
-                            filenames.push(matches[1]);
-                        }
-                    }
-                });
-            }
-
-            suggestionList.innerHTML = '';
-
-            if (input.trim() === '') {
-                return;
-            }
-
-            filenames.forEach(filename => {
-                fetch(githubURL + filename)
-                    .then(response => response.text())
-                    .then(html => {
-                        const parser = new DOMParser();
-                        const doc = parser.parseFromString(html, 'text/html');
-                        const table = doc.querySelector('table');
-
-                        for (let i = 1; i < table.rows.length; i++) {
-                            const rowText = table.rows[i].textContent.toLowerCase();
-
-                            if (rowText.includes(input)) {
-                                const suggestionItem = document.createElement('li');
-                                const link = table.rows[i].querySelector('a');
-                                if (link) {
-                                    suggestionItem.innerHTML = `<a href="${link.href}" target="_blank">${rowText}</a>`;
-                                } else {
-                                    suggestionItem.textContent = rowText;
-                                }
-                                suggestionList.appendChild(suggestionItem);
-                            }
-                        }
-                    })
-                    .catch(error => console.error('Error fetching data:', error));
-            });
-	      }
-	</script>
+            </div>	
         </div>
     </body>
 </html>

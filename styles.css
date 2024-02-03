@@ -101,8 +101,9 @@ button a:hover {
 
 .additional-buttons1,
 .additional-buttons2 {
-      display: none;
-    }
+    display: block; /* Changed from 'none' to 'block' */
+    margin: 10px 0; /* Optional: Add margin for spacing between buttons */
+}
 
 .banner video {
     position: absolute;

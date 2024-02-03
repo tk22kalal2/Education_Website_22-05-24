@@ -30,3 +30,18 @@
         	font-weight: bold;
         	color: #009879;
     	}
+#searchInput {
+	    padding: 8px;
+	    border: 1px solid #ccc;
+	    border-radius: 5px;
+	    width: 100%;
+	    margin-top: 10px;
+	    font-size: 14px;
+	    height: 30px;
+	}
+	
+	#searchInput:focus {
+	    outline: none;
+	    border-color: #1E90FF;
+	    box-shadow: 0 0 10px rgba(30, 144, 255, 0.5);
+	}

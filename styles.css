@@ -116,11 +116,20 @@ button a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center; /* Optional: Align items in the center vertically */
+    align-items: center;
+    gap: 10px; /* Adjust the gap between buttons as needed */
+    width: 100%;
 }
 
 .additional-buttons1 {
-    text-align: center; /* Optional: Center text within the container */
+    width: 200px;
+    padding: 15px;
+    margin: 20px 5px;
+    border-radius: 25px;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 600;/* Optional: Center text within the container */
 }
 
 .additional-buttons1 button {

@@ -12,6 +12,7 @@
     background-position: center;
     background-size: cover;
     display: flex;
+    align-items: center; /* Center vertically */
     justify-content: center; /* Center horizontally */
 }
 
@@ -72,7 +73,6 @@ button {
     width: 200px;
     padding: 15px;
     margin: 20px 5px;
-    text-align: center;
     border-radius: 25px;
     color: black;
     font-size: 20px;

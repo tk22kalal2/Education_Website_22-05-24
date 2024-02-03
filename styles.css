@@ -153,4 +153,8 @@ button a:hover {
     .additional-buttons2 {
         margin: 10px 0;
     }
+    .banner video {
+        width: 100%;
+        height: auto;
+    }
 }

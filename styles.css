@@ -27,7 +27,15 @@
     background-image: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40));
     background-position: center;
     background-size: cover;
+    padding: 20px; /* Add padding to keep buttons inside the banner */
+    box-sizing: border-box; /* Include padding in the total width/height calculation */
 }
+
+.banner2 button {
+    flex: 1 0 calc(25% - 10px); /* Adjust the width of buttons as needed and consider the gap */
+    margin: 5px; /* Adjust the margin as needed */
+}
+
 
 .banner2 button {
     flex: 1 0 21%; /* Adjust the width of buttons as needed */

@@ -1,28 +1,66 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Design Your Website With Background Video</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <div class="banner">
-            <video autoplay loop muted plays-inline>
-                <source src="Video1.mp4" type="video/mp4">
-            </video>
-            <form>
-    	     <label for="searchInput search-container">Search:</label>
-    	       <div style="position: relative;">
-        	   <input type="text" id="searchInput" placeholder="Enter your search term..." oninput="getSuggestions()">
-        	   <ul id="suggestionList"></ul>
-    	      </div>
-	        </form>
-            <div>
-                <button type="button"><a href="prep.html">PREPLADDER</a></button>
-                <button type="button">MARROW</button>
-                <button type="button">DAMS</button>          
-            </div>	
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Your Website With Background Video</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="banner">
+        <video autoplay loop muted playsinline>
+            <source src="Video1.mp4" type="video/mp4">
+        </video>
+        <form>
+            <label for="searchInput">Search:</label>
+            <div style="position: relative;">
+                <input type="text" id="searchInput" placeholder="Enter your search term..." oninput="getSuggestions()">
+                <ul id="suggestionList"></ul>
+            </div>
+        </form>
+        <div>
+            <button type="button"><a href="prep.html">PREPLADDER</a></button>
+            <button type="button">MARROW</button>
+            <button type="button">DAMS</button>
         </div>
-    </body>
+    </div>
+
+    <script>
+        function getSuggestions() {
+            // Get the input value
+            var input = document.getElementById('searchInput').value.toLowerCase();
+
+            // Get the table and rows
+            var table = document.getElementById('anatomyTable');
+            var rows = table.getElementsByTagName('tr');
+
+            // Create an array to store matching keywords
+            var suggestions = [];
+
+            // Iterate through the rows starting from index 1 (skipping the header row)
+            for (var i = 1; i < rows.length; i++) {
+                var cells = rows[i].getElementsByTagName('td');
+                for (var j = 0; j < cells.length; j++) {
+                    var cellText = cells[j].innerText.toLowerCase();
+                    // Check if the input matches the cell text
+                    if (cellText.includes(input) && !suggestions.includes(cellText)) {
+                        suggestions.push(cellText);
+                    }
+                }
+            }
+
+            // Display suggestions
+            var suggestionList = document.getElementById('suggestionList');
+            suggestionList.innerHTML = ''; // Clear previous suggestions
+            suggestions.forEach(function (suggestion) {
+                var listItem = document.createElement('li');
+                listItem.textContent = suggestion;
+                suggestionList.appendChild(listItem);
+            });
+        }
+    </script>
+</body>
+
 </html>

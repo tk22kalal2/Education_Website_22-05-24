@@ -114,6 +114,7 @@ button a:hover {
 
 .container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center; /* Optional: Align items in the center vertically */
 }

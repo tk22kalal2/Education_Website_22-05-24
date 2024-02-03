@@ -154,7 +154,7 @@ button a:hover {
         margin: 10px 0;
     }
     .banner video {
-        width: 100%;
-        height: auto;
+        width: auto;
+        height: 100%;
     }
 }

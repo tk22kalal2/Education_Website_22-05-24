@@ -113,14 +113,14 @@ button a:hover {
 }
 
 .container {
+    width: 1000px
+    margin: 0 auto;
+}
+
+.container-flex {
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 10px; /* Adjust the gap between buttons as needed */
-    width: 100%;
-    background-position: center;
-    background-size: cover;
 }
 
 .additional-buttons1 {

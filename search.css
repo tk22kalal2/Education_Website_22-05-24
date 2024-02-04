@@ -42,4 +42,19 @@
 .searchcontainer #suggestionList li:hover {
     background: #e9f3ff;
 }
-    
+
+@media only screen and (max-width: 767px) {
+   .searchcontainer {
+        margin: 1px;
+        text-align: center;
+        position: relative; /* Added position: relative; */
+    } 
+    .searchcontainer #searchInput {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 100%;
+        margin: 2px auto 0;
+        font-size: 18px;
+        height: 50px;
+    }

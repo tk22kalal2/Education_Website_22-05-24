@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     // List of HTML files in the "plugins" folder
     const htmlFiles = [
-        "anatomyp.html","biochemestryp.html"
+        "biochemestryp.html","anatomyp.html"
         // Add other file names as needed
     ];
 

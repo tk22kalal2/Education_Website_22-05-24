@@ -1,9 +1,12 @@
-// Import the file list
-const filePaths = require('./fileList');
-
 document.addEventListener("DOMContentLoaded", function () {
+    // List of HTML files to include
+    const htmlFiles = [
+        "plugins/anatomyp.html",
+        // Add other file names as needed
+    ];
+
     // Fetch all HTML files and process them
-    Promise.all(filePaths.map(fetchFileContent))
+    Promise.all(htmlFiles.map(fetchFileContent))
         .then(htmlArray => {
             // Concatenate HTML content from all files
             const combinedHtml = htmlArray.join("");

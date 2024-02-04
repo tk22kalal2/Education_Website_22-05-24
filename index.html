@@ -15,54 +15,20 @@
         </video>
         <div class="navbar">
              <nav>                                
-                <ul class="nav__links">
-                <li class="link"><a href="#">Home</a></li>
-                <li class="link"><a href="#">About Us</a></li>                                                      
-                </ul>
+               <ul class="nav__links">
+                 <li class="link"><a href="#">Home</a></li>
+                 <li class="link"><a href="#">About Us</a></li>                                                      
+               </ul>
             </nav>
         </div>
         <div class="content">
-        <div>
-            <button type="button"><a href="prep.html">PREPLADDER</a></button>
-            <button type="button">MARROW</button>
-            <button type="button">DAMS</button>
+            <div>
+                <button type="button"><a href="prep.html">PREPLADDER</a></button>
+                <button type="button">MARROW</button>
+                <button type="button">DAMS</button>
+           </div>
         </div>
     </div>
-
-    <script>
-        function getSuggestions() {
-            // Get the input value
-            var input = document.getElementById('searchInput').value.toLowerCase();
-
-            // Get the table and rows
-            var table = document.getElementById('anatomyTable');
-            var rows = table.getElementsByTagName('tr');
-
-            // Create an array to store matching keywords
-            var suggestions = [];
-
-            // Iterate through the rows starting from index 1 (skipping the header row)
-            for (var i = 1; i < rows.length; i++) {
-                var cells = rows[i].getElementsByTagName('td');
-                for (var j = 0; j < cells.length; j++) {
-                    var cellText = cells[j].innerText.toLowerCase();
-                    // Check if the input matches the cell text
-                    if (cellText.includes(input) && !suggestions.includes(cellText)) {
-                        suggestions.push(cellText);
-                    }
-                }
-            }
-
-            // Display suggestions
-            var suggestionList = document.getElementById('suggestionList');
-            suggestionList.innerHTML = ''; // Clear previous suggestions
-            suggestions.forEach(function (suggestion) {
-                var listItem = document.createElement('li');
-                listItem.textContent = suggestion;
-                suggestionList.appendChild(listItem);
-            });
-        }
-    </script>
 </body>
 
 </html>

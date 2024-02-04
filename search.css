@@ -7,10 +7,10 @@
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 100%;
-    margin-top: 10px;
+    width: 600px;
+    margin-top: 5px;
     font-size: 14px;
-    height: 30px;
+    height: 50px;
 }
 
 .searchcontainer #searchInput:focus {

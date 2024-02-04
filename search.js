@@ -1,10 +1,12 @@
+const glob = require('glob');
+
 document.addEventListener("DOMContentLoaded", function () {
     // Fetch all HTML files in the "plugins" folder with ".html" extension
     fetchHtmlFiles("plugins/*.html")
         .then(htmlArray => {
             // Concatenate HTML content from all files
             const combinedHtml = htmlArray.join("");
-            
+
             // Extract keywords and corresponding URLs
             const keywordsAndUrls = extractKeywordsAndUrls(combinedHtml);
 
@@ -29,10 +31,27 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function fetchHtmlFiles(globPattern) {
-    // Fetch all HTML files matching the glob pattern using fetch API
-    return fetch(globPattern)
+    return new Promise((resolve, reject) => {
+        // Use glob to find all HTML files in the "plugins" folder
+        glob(globPattern, (err, files) => {
+            if (err) {
+                reject(err);
+            } else {
+                // Read the content of each file
+                const filePromises = files.map(file => fetchFileContent(file));
+                Promise.all(filePromises)
+                    .then(resolve)
+                    .catch(reject);
+            }
+        });
+    });
+}
+
+function fetchFileContent(file) {
+    // Fetch the content of each file using fetch API
+    return fetch(file)
         .then(response => response.text())
-        .catch(error => console.error("Error fetching HTML files:", error));
+        .catch(error => console.error(`Error fetching ${file}:`, error));
 }
 
 function extractKeywordsAndUrls(html) {

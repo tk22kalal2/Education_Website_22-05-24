@@ -11,11 +11,16 @@ document.addEventListener("DOMContentLoaded", function () {
             searchInput.addEventListener("input", function () {
                 const searchTerm = searchInput.value.toLowerCase();
 
-                // Filter keywords based on the search term
-                const filteredKeywords = keywords.filter(keyword => keyword.includes(searchTerm));
+                if (searchTerm === "") {
+                    // If search term is empty, hide the suggestion list
+                    hideSuggestions();
+                } else {
+                    // Filter keywords based on the search term
+                    const filteredKeywords = keywords.filter(keyword => keyword.includes(searchTerm));
 
-                // Display suggestions in the suggestion list
-                displaySuggestions(filteredKeywords);
+                    // Display suggestions in the suggestion list
+                    displaySuggestions(filteredKeywords);
+                }
             });
         })
         .catch(error => console.error("Error fetching anatomyp.html:", error));
@@ -44,4 +49,11 @@ function displaySuggestions(suggestions) {
         listItem.textContent = suggestion;
         suggestionList.appendChild(listItem);
     });
+}
+
+function hideSuggestions() {
+    const suggestionList = document.getElementById("suggestionList");
+
+    // Clear existing suggestions
+    suggestionList.innerHTML = "";
 }

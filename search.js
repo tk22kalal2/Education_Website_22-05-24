@@ -1,8 +1,7 @@
-const filePaths = require('./fileList'); // Adjust the path if necessary
+// Import the file list
+const filePaths = require('./fileList');
 
 document.addEventListener("DOMContentLoaded", function () {
-    // Import the file list
-
     // Fetch all HTML files and process them
     Promise.all(filePaths.map(fetchFileContent))
         .then(htmlArray => {

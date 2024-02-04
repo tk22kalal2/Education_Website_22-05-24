@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
     fetch("plugins/anatomyp.html")
         .then(response => response.text())
         .then(html => {
-            // Extract keywords from the HTML content
-            const keywords = extractKeywords(html);
+            // Extract keywords and corresponding URLs from the HTML content
+            const keywordsAndUrls = extractKeywordsAndUrls(html);
 
             // Set up event listener for the search input
             const searchInput = document.getElementById("searchInput");
@@ -16,25 +16,30 @@ document.addEventListener("DOMContentLoaded", function () {
                     hideSuggestions();
                 } else {
                     // Filter keywords based on the search term
-                    const filteredKeywords = keywords.filter(keyword => keyword.includes(searchTerm));
+                    const filteredKeywordsAndUrls = keywordsAndUrls.filter(entry => entry.keyword.includes(searchTerm));
 
                     // Display suggestions in the suggestion list
-                    displaySuggestions(filteredKeywords);
+                    displaySuggestions(filteredKeywordsAndUrls);
                 }
             });
         })
         .catch(error => console.error("Error fetching anatomyp.html:", error));
 });
 
-function extractKeywords(html) {
+function extractKeywordsAndUrls(html) {
     const parser = new DOMParser();
     const doc = parser.parseFromString(html, "text/html");
     const anchorElements = doc.querySelectorAll(".content-table td a");
 
-    // Extract keywords from the anchor elements
-    const keywords = Array.from(anchorElements).map(anchor => anchor.textContent.toLowerCase());
+    // Extract keywords and corresponding URLs from the anchor elements
+    const keywordsAndUrls = Array.from(anchorElements).map(anchor => {
+        return {
+            keyword: anchor.textContent.toLowerCase(),
+            url: anchor.getAttribute("href")
+        };
+    });
 
-    return keywords;
+    return keywordsAndUrls;
 }
 
 function displaySuggestions(suggestions) {
@@ -44,9 +49,15 @@ function displaySuggestions(suggestions) {
     suggestionList.innerHTML = "";
 
     // Display new suggestions
-    suggestions.forEach(suggestion => {
+    suggestions.forEach(entry => {
         const listItem = document.createElement("li");
-        listItem.textContent = suggestion;
+        listItem.textContent = entry.keyword;
+        
+        // Add click event listener to redirect to the URL when clicked
+        listItem.addEventListener("click", function () {
+            window.open(entry.url, "_blank");
+        });
+
         suggestionList.appendChild(listItem);
     });
 }

@@ -1,6 +1,7 @@
 .searchcontainer {
     margin: 20px;
     text-align: center;
+    position: relative; /* Added position: relative; */
 }
 
 .searchcontainer #searchInput {
@@ -30,6 +31,8 @@
     overflow-y: auto;
     margin-top: 5px;
     width: 600px;
+    left: 0; /* Adjusted left position to 0 */
+    top: 100%; /* Positioned beneath the search input */
 }
 
 .searchcontainer #suggestionList li {

@@ -1,10 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Fetch the HTML content of 'anatomyp.html' using fetch API
-    fetch("plugins/anatomyp.html")
-        .then(response => response.text())
-        .then(html => {
-            // Extract keywords and corresponding URLs from the HTML content
-            const keywordsAndUrls = extractKeywordsAndUrls(html);
+    // List of HTML files in the "plugins" folder
+    const htmlFiles = [
+        "anatomyp.html","biochemestryp.html"
+        // Add other file names as needed
+    ];
+
+    // Fetch all HTML files and process them
+    Promise.all(htmlFiles.map(fetchHtmlFile))
+        .then(htmlArray => {
+            // Concatenate HTML content from all files
+            const combinedHtml = htmlArray.join("");
+            
+            // Extract keywords and corresponding URLs
+            const keywordsAndUrls = extractKeywordsAndUrls(combinedHtml);
 
             // Set up event listener for the search input
             const searchInput = document.getElementById("searchInput");
@@ -23,8 +31,15 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             });
         })
-        .catch(error => console.error("Error fetching anatomyp.html:", error));
+        .catch(error => console.error("Error fetching HTML files:", error));
 });
+
+function fetchHtmlFile(fileName) {
+    // Fetch the HTML content of each file using fetch API
+    return fetch(`plugins/${fileName}`)
+        .then(response => response.text())
+        .catch(error => console.error(`Error fetching ${fileName}:`, error));
+}
 
 function extractKeywordsAndUrls(html) {
     const parser = new DOMParser();
@@ -52,7 +67,7 @@ function displaySuggestions(suggestions) {
     suggestions.forEach(entry => {
         const listItem = document.createElement("li");
         listItem.textContent = entry.keyword;
-        
+
         // Add click event listener to redirect to the URL when clicked
         listItem.addEventListener("click", function () {
             window.open(entry.url, "_blank");

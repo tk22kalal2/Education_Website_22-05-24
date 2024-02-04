@@ -1,8 +1,8 @@
-const glob = require('glob');
+const filePaths = require('./fileList'); // Adjust the path if necessary
 
 document.addEventListener("DOMContentLoaded", function () {
-    // Fetch all HTML files in the "plugins" folder with ".html" extension
-    fetchHtmlFiles("plugins/*.html")
+    // Fetch all HTML files and process them
+    Promise.all(filePaths.map(fetchFileContent))
         .then(htmlArray => {
             // Concatenate HTML content from all files
             const combinedHtml = htmlArray.join("");
@@ -29,70 +29,3 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .catch(error => console.error("Error fetching HTML files:", error));
 });
-
-function fetchHtmlFiles(globPattern) {
-    return new Promise((resolve, reject) => {
-        // Use glob to find all HTML files in the "plugins" folder
-        glob(globPattern, (err, files) => {
-            if (err) {
-                reject(err);
-            } else {
-                // Read the content of each file
-                const filePromises = files.map(file => fetchFileContent(file));
-                Promise.all(filePromises)
-                    .then(resolve)
-                    .catch(reject);
-            }
-        });
-    });
-}
-
-function fetchFileContent(file) {
-    // Fetch the content of each file using fetch API
-    return fetch(file)
-        .then(response => response.text())
-        .catch(error => console.error(`Error fetching ${file}:`, error));
-}
-
-function extractKeywordsAndUrls(html) {
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(html, "text/html");
-    const anchorElements = doc.querySelectorAll(".content-table td a");
-
-    // Extract keywords and corresponding URLs from the anchor elements
-    const keywordsAndUrls = Array.from(anchorElements).map(anchor => {
-        return {
-            keyword: anchor.textContent.toLowerCase(),
-            url: anchor.getAttribute("href")
-        };
-    });
-
-    return keywordsAndUrls;
-}
-
-function displaySuggestions(suggestions) {
-    const suggestionList = document.getElementById("suggestionList");
-
-    // Clear existing suggestions
-    suggestionList.innerHTML = "";
-
-    // Display new suggestions
-    suggestions.forEach(entry => {
-        const listItem = document.createElement("li");
-        listItem.textContent = entry.keyword;
-
-        // Add click event listener to redirect to the URL when clicked
-        listItem.addEventListener("click", function () {
-            window.open(entry.url, "_blank");
-        });
-
-        suggestionList.appendChild(listItem);
-    });
-}
-
-function hideSuggestions() {
-    const suggestionList = document.getElementById("suggestionList");
-
-    // Clear existing suggestions
-    suggestionList.innerHTML = "";
-}

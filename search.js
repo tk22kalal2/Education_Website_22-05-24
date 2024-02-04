@@ -1,12 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // List of HTML files in the "plugins" folder
-    const htmlFiles = [
-        "biochemestryp.html","anatomyp.html"
-        // Add other file names as needed
-    ];
-
-    // Fetch all HTML files and process them
-    Promise.all(htmlFiles.map(fetchHtmlFile))
+    // Fetch all HTML files in the "plugins" folder with ".html" extension
+    fetchHtmlFiles("plugins/*.html")
         .then(htmlArray => {
             // Concatenate HTML content from all files
             const combinedHtml = htmlArray.join("");
@@ -34,11 +28,11 @@ document.addEventListener("DOMContentLoaded", function () {
         .catch(error => console.error("Error fetching HTML files:", error));
 });
 
-function fetchHtmlFile(fileName) {
-    // Fetch the HTML content of each file using fetch API
-    return fetch(`plugins/${fileName}`)
+function fetchHtmlFiles(globPattern) {
+    // Fetch all HTML files matching the glob pattern using fetch API
+    return fetch(globPattern)
         .then(response => response.text())
-        .catch(error => console.error(`Error fetching ${fileName}:`, error));
+        .catch(error => console.error("Error fetching HTML files:", error));
 }
 
 function extractKeywordsAndUrls(html) {

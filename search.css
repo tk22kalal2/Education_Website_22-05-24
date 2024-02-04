@@ -1,4 +1,9 @@
-#searchInput {
+.searchcontainer {
+    margin: 20px;
+    text-align: center;
+}
+
+.searchcontainer #searchInput {
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -8,13 +13,13 @@
     height: 30px;
 }
 
-#searchInput:focus {
+.searchcontainer #searchInput:focus {
     outline: none;
     border-color: #1E90FF;
     box-shadow: 0 0 10px rgba(30, 144, 255, 0.5);
 }
 
-#suggestionList {
+.searchcontainer #suggestionList {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -25,10 +30,10 @@
     max-height: 300px;
     overflow-y: auto;
     margin-top: 5px;
-    width: 100%; /* Set the width to 100% */
+    width: 100%;
 }
 
-#suggestionList li {
+.searchcontainer #suggestionList li {
     padding: 8px;
     cursor: pointer;
     font-size: 16px;

@@ -9,7 +9,7 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     width: 600px;
-    margin-top: 5px;
+    margin: 5px auto 0;
     font-size: 18px;
     height: 50px;
 }
@@ -29,10 +29,7 @@
     z-index: 1;
     max-height: 300px;
     overflow-y: auto;
-    margin-top: 5px;
     width: 600px;
-    left: 0; /* Adjusted left position to 0 */
-    top: 100%; /* Positioned beneath the search input */
 }
 
 .searchcontainer #suggestionList li {

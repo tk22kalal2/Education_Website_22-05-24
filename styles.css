@@ -82,6 +82,28 @@ button:hover{
     z-index: -1;
 }
 
+.icons {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    position: absolute;
+    z-index: 100;
+}
+.icons ul {
+    padding: initial;
+}
+
+.icons ul li {
+    height: 40px;
+    width: 40px;
+    list-style-type: none;
+    padding-left: 12px:
+    padding-top: 6px;
+    margin-top: 5px;
+    color: #fff;
+    background: #000; 
+}
+
 @media(min-aspect-ratio: 16/9){
     .banner video{
         width: 100%;

@@ -16,7 +16,7 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    background-image: #ebeef1);
+    background: #ebeef1;
 }
 linear-gradient(45deg, #001F3F, #4CAF50, #000000
 button {
@@ -26,6 +26,7 @@ button {
     margin: 20px 20px;
     border-radius: 25px;
     color: black;
+    background: #ebeef1;
     font-size: 16px;
     cursor: pointer;
     font-weight: 600;

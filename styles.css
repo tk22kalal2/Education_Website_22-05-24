@@ -81,30 +81,43 @@ button:hover{
     bottom: 0;
     z-index: -1;
 }
-
-.icons {
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    position: absolute;
-    z-index: 100;
+ 
+.telegram-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
 }
 
-.icons ul {
-    padding: initial;
+.telegram-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #0088cc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: pulse;
+	animation-duration: 1.5s;
+	animation-timing-function: ease-out;
+	animation-iteration-count: infinite;
 }
 
-.icons ul li {
-    height: 40px;
-    width: 40px;
-    list-style-type: none;
-    padding-left: 12px;
-    padding-top: 6px;
-    margin-top: 5px;
-    color: #fff;
-    background: #000; 
+      @keyframes pulse {
+	0% {
+		box-shadow: 0 0 0 0 rgba(0, 136, 204, 0.5);
+	}
+	80% {
+		box-shadow: 0 0 0 14px rgba(0, 136, 204, 0);
+	}
 }
 
+.telegram-icon svg {
+  fill: #fff;
+  width: 30px;
+  height: 30px;
+}
+ 
 
 @media(min-aspect-ratio: 16/9){
     .banner video{

@@ -21,9 +21,9 @@ body {
 
 button {
     height: 100px;
-    width: 150px;
+    width: 140px;
     padding: 20px;
-    margin: 30px;
+    margin: 30px 5px;
     border-radius: 25px;
     border: none;
     color: #00a037;

@@ -89,6 +89,7 @@ button:hover{
     position: absolute;
     z-index: 100;
 }
+
 .icons ul {
     padding: initial;
 }
@@ -97,12 +98,13 @@ button:hover{
     height: 40px;
     width: 40px;
     list-style-type: none;
-    padding-left: 12px:
+    padding-left: 12px;
     padding-top: 6px;
     margin-top: 5px;
     color: #fff;
     background: #000; 
 }
+
 
 @media(min-aspect-ratio: 16/9){
     .banner video{

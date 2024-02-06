@@ -41,3 +41,32 @@
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/101/27.+Spine+Part+2+yw+.mp4?hash=AgAD1B' target='_blank'> 27. Spine Part 2 yw </a></td></tr>				
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/102/28.+Joint+Disorders+Part+1yw+.mp4?hash=AgAD0R' target='_blank'> 28. Joint Disorders Part 1yw </a></td></tr>				
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/103/29.+Joint+Disorders+Part+2+yw+.mp4?hash=AgADzx' target='_blank'> 29. Joint Disorders Part yw </a></td></tr>				
+
+</table>  
+    <script>
+    function tableSearch() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("input-box");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
+
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>        
+            </div>            
+        </div>
+    </body>
+</html>

@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design Your Website With Background Video</title>
+        <link rel="stylesheet" href="subject.css">
+    </head>
+    <body>
+       <div class="search-box">
+            <input type="text" id="input-box" onkeyup='tableSearch()' placeholder="Name">
+            <table class="content-table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+        </div>
+        <thead><tr><th>LECTURE</th></tr></thead>
+</table>  
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/5706/1_Free_Videos_Multi_Discplinary_Approach_Mda_to_a_Child_With_Abdominal.mp4?hash=AgADgw' target='_blank'> 1. Free Videos - Multi Discplinary Approach Mda to a Child With Abdominal Mass atf.mp4 </a></td></tr>								
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/5707/2.+General+-+Abnormal+Head+Sizes+Craniosynostosis+atf.mp4?hash=AgADqQ' target='_blank'> 2. General - Abnormal Head Sizes Craniosynostosis atf.mp4 #doctut #yourwish12 </a></td></tr>								
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/5708/2.+General+-+AdolescDevelopmatf.mp4?hash=AgADqg' target='_blank'> 2. General - AdolescDevelopmatf.mp4 #doctut #yourwish12 </a></td></tr>								
@@ -67,3 +82,31 @@
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/5772/19_Qrp_Ini_Cet_Quick_Revision_Program_by_Dr_Sandeep_Sharma_atf.mp4?hash=AgADpw' target='_blank'> 19. Qrp - Ini Cet Quick Revision Program by Dr Sandeep Sharma atf.mp4 #doctut #yourwish12 </a></td></tr>								
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/5773/19.+Qrp+-+Ini+Cet+Quick+Revision+Program+2021+atf.mp4?hash=AgADpg' target='_blank'> 19. Qrp - Ini Cet Quick Revision Program 2021 atf.mp4 #doctut #yourwish12 </a></td></tr>								
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/5774/19.+Qrp+-+by+Dr+Sandeep+Sharma+atf.mp4?hash=AgADqA' target='_blank'> 19. Qrp - by Dr Sandeep Sharma atf.mp4 #doctut #yourwish12 </a></td></tr>								
+</table>  
+    <script>
+    function tableSearch() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("input-box");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
+
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>        
+            </div>            
+        </div>
+    </body>
+</html>

@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design Your Website With Background Video</title>
+        <link rel="stylesheet" href="subject.css">
+    </head>
+    <body>
+       <div class="search-box">
+            <input type="text" id="input-box" onkeyup='tableSearch()' placeholder="Name">
+            <table class="content-table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+        </div>
+        <thead><tr><th>LECTURE</th></tr></thead>
+</table>  
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/5959/1.+Introduction+to+-+Basics+atf.mp4?hash=AgADmw' target='_blank'> 1. Introduction to - Basics atf.mp4 #doctut #yourwish12 </a></td></tr>							
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/5960/1.+Introduction+to+-+Radiation+Units+atf.mp4?hash=AgADnA' target='_blank'> 1. Introduction to - Radiation Units atf.mp4 #doctut #yourwish12 </a></td></tr>							
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/5961/2.+Xray+-+Mammography+and+X+Ray+Views+atf.mp4?hash=AgADrA' target='_blank'> 2. Xray - Mammography and X Ray Views atf.mp4 #doctut #yourwish12 </a></td></tr>							
@@ -31,3 +46,31 @@
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/5989/17.+Qrp+-+Ini+Cet+Quick+Revision+Program+2021+atf.mp4?hash=AgADqQ' target='_blank'> 17. Qrp - Ini Cet Quick Revision Program 2021 atf.mp4 #doctut #yourwish12 </a></td></tr>							
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/5990/17.+Qrp+-+by+Dr+Khaleel+Ahmed+atf.mp4?hash=AgADqw' target='_blank'> 17. Qrp - by Dr Khaleel Ahmed atf.mp4 #doctut #yourwish12 </a></td></tr>							
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/5991/17_Qrp_Ini_Cet_Quick_Revision_Program_by_Dr_Khaleel_Ahmed_atf.mp4?hash=AgADqg' target='_blank'> 17. Qrp - Ini Cet Quick Revision Program by Dr Khaleel Ahmed atf.mp4 #doctut #yourwish12 </a></td></tr>							
+</table>  
+    <script>
+    function tableSearch() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("input-box");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
+
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>        
+            </div>            
+        </div>
+    </body>
+</html>

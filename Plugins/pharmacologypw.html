@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design Your Website With Background Video</title>
+        <link rel="stylesheet" href="subject.css">
+    </head>
+    <body>
+       <div class="search-box">
+            <input type="text" id="input-box" onkeyup='tableSearch()' placeholder="Name">
+            <table class="content-table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+        </div>
+        <thead><tr><th>LECTURE</th></tr></thead>
+</table>  
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1012/056_General_Pharmacology_01_Introduction_Absorption_%40MadXAbhi.mp4?hash=AgADkg' target='_blank'> Lecture Name ➜ 056 General Pharmacology 01 Introduction Absorption.mp4 Batch Name ➜ MBBS 2nd PROf 🎁[]🎁 </a></td></tr>																	
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1013/057_General_Pharmacology_02_Absorption_%26_Distribution_%40MadXAbhi.mp4?hash=AgADkw' target='_blank'> Lecture Name ➜ 057 General Pharmacology 02 Absorption & Distribution.mp4 Batch Name ➜ MBBS 2nd PROF 🎁[]🎁 </a></td></tr>																	
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1014/058+Pharmacokinetics+01+Distribution+%40MadXAbhi.mp4?hash=AgADlA' target='_blank'> Lecture Name ➜ 058 Pharmacokinetics 01 Distribution.mp4 Batch Name ➜ MBBS 2nd PROF 🎁[]🎁 </a></td></tr>																	
@@ -26,3 +41,31 @@
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1037/081+Respiratory+system+01+Asthma+%40MadXAbhi.mp4?hash=AgADrg' target='_blank'> Lecture Name ➜ 081 Respiratory system 01 Asthma.mp4 Batch Name ➜ MBBS 2nd PROF ~ . 🎁[]🎁 </a></td></tr>																	
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1038/082+Respiratory+system+02+Asthma+%40MadXAbhi.mp4?hash=AgADrw' target='_blank'> Lecture Name ➜ 082 Respiratory system 02 Asthma.mp4 Batch Name ➜ MBBS 2nd PROF ~ . 🎁[]🎁 </a></td></tr>																	
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1039/083+Respiratory+system+03+PAH+cystic+fibrosis+%40MadXAbhi.mp4?hash=AgADsA' target='_blank'> Lecture Name ➜ 083 Respiratory system 03 PAH cystic fibrosis.mp4 Batch Name ➜ MBBS 2nd PROF ~ . 🎁[]🎁 </a></td></tr>																	
+</table>  
+    <script>
+    function tableSearch() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("input-box");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
+
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>        
+            </div>            
+        </div>
+    </body>
+</html>

@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design Your Website With Background Video</title>
+        <link rel="stylesheet" href="subject.css">
+    </head>
+    <body>
+       <div class="search-box">
+            <input type="text" id="input-box" onkeyup='tableSearch()' placeholder="Name">
+            <table class="content-table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+        </div>
+        <thead><tr><th>LECTURE</th></tr></thead>
+</table>  
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/985/MBBS+2nd+PROF+~+%40MadXAbhi+%F0%9F%98%87+8156+%40MadXAbhi.mp4?hash=AgADyw' target='_blank'> Lecture Name ➜ 029 Cell Injury Cell Death And Adaptations 01 Cellular Adaptation & Competency.mp4 Batch Name ➜ MBBS 2nd PROF ~ . 🎁[]🎁 </a></td></tr>																
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/986/MBBS+2nd+PROF+~+%40MadXAbhi+%F0%9F%98%87+6669+%40MadXAbhi.mp4?hash=AgADzQ' target='_blank'> Lecture Name ➜ 030 Cell Injury Cell Death And Adaptations 02 Cell Injury And Necrosis.mp4 Batch Name ➜ MBBS 2nd PROF ~ . 🎁[]🎁 </a></td></tr>																
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/987/MBBS+2nd+PROF+~+%40MadXAbhi+%F0%9F%98%87+9341+%40MadXAbhi.mp4?hash=AgADzg' target='_blank'> Lecture Name ➜ 031 Cell Injury Cell Death and Adaptations 03 Apoptosis & Intra Cellular Accumulation.mp4 Batch Name ➜ MBBS 2nd PROF ~ . 🎁[]🎁 </a></td></tr>																
@@ -25,3 +40,31 @@
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1009/MBBS+2nd+PROF+~+%40MadXAbhi+%F0%9F%98%87+6357+%40MadXAbhi.mp4?hash=AgAD_w' target='_blank'> Lecture Name ➜ 053 CVS 03 Vascular tumours and MI.mp4 Batch Name ➜ MBBS 2nd PROF ~ . 🎁[]🎁 </a></td></tr>																
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1010/MBBS+2nd+PROF+~+%40MadXAbhi+%F0%9F%98%87+6149+%40MadXAbhi.mp4?hash=AgAEAw' target='_blank'> Lecture Name ➜ 054 CVS 04 Valvular heart disease and cardiomyopathy.mp4 Batch Name ➜ MBBS 2nd PROF ~ . 🎁[]🎁 </a></td></tr>																
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1011/055+CVS+05+Cardiomyopathy+and+basics+of+anemia+%40MadXAbhi.mp4?hash=AgADkQ' target='_blank'> Lecture Name ➜ 055 CVS 05 Cardiomyopathy and basics of anemia.mp4 Batch Name ➜ MBBS 2nd PROF ~ . 🎁[]🎁 </a></td></tr>																
+</table>  
+    <script>
+    function tableSearch() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("input-box");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
+
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>        
+            </div>            
+        </div>
+    </body>
+</html>

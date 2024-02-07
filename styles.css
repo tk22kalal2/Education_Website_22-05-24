@@ -68,6 +68,11 @@ button{
     cursor: pointer;
     font-weight: 600;
 }
+button a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+}
 button:hover{
     background: rgb(0, 192, 226);
     transition: 0.5s;

@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design Your Website With Background Video</title>
+        <link rel="stylesheet" href="subject.css">
+    </head>
+    <body>
+       <div class="search-box">
+            <input type="text" id="input-box" onkeyup='tableSearch()' placeholder="Name">
+            <table class="content-table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+        </div>
+        <thead><tr><th>LECTURE</th></tr></thead>
+</table>  
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/6117/M+leprae%2C+nocardia+actinomyces%2C+neisseria+Day+20+atf.mp4?hash=AgADrh' target='_blank'> M leprae, nocardia actinomyces, neisseria Day 20 atf.mp4 </a></td></tr>							
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/6118/Clostridium+%26+listeria+Day+18+atf.mp4?hash=AgADrx' target='_blank'> Clostridium & listeria Day 18 atf.mp4 </a></td></tr>							
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/6119/Diphtheria%2C+mycobacteria+Day+19+atf.mp4?hash=AgADsR' target='_blank'> Diphtheria, mycobacteria Day 19 atf.mp4 </a></td></tr>							
@@ -34,3 +49,30 @@
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/6150/Serology+Day+13+atf.mp4?hash=AgAD8R' target='_blank'> Serology Day 13 atf.mp4 </a></td></tr>							
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/6151/Staph+Aureus+Day+14+atf.mp4?hash=AgAD8x' target='_blank'> Staph Aureus Day 14 atf.mp4 </a></td></tr>							
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/6152/hypersensitivity+%26+deficiency+of+phagocytosis+Day+11+atf.mp4?hash=AgAD9R' target='_blank'> hypersensitivity & deficiency of phagocytosis Day 11 atf.mp4 </a></td></tr>							
+<script>
+    function tableSearch() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("input-box");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
+
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>        
+            </div>            
+        </div>
+    </body>
+</html>

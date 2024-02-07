@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design Your Website With Background Video</title>
+        <link rel="stylesheet" href="subject.css">
+    </head>
+    <body>
+       <div class="search-box">
+            <input type="text" id="input-box" onkeyup='tableSearch()' placeholder="Name">
+            <table class="content-table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+        </div>
+        <thead><tr><th>LECTURE</th></tr></thead>
+</table>  
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/2325/1.+Cell+Injury+Introduction+Necrosis+atf.mp4?hash=AgADWB' target='_blank'> 1. Cell Injury Introduction Necrosis atf.mp4 </a></td></tr>							
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/2326/2.+Cell+Injury+Newer+Cell+Deaths+atf.mp4?hash=AgADWR' target='_blank'> 2. Cell Injury Newer Cell Deaths atf.mp4 </a></td></tr>							
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/2327/3.+Intracellular+Accumulations+atf.mp4?hash=AgADWh' target='_blank'> 3. Intracellular Accumulations atf.mp4 </a></td></tr>							
@@ -63,3 +78,30 @@
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/2387/63.+Blood+Banking+and+Transfusion+Medicine+Part+1+atf.mp4?hash=AgADhh' target='_blank'> 63. Blood Banking and Transfusion Medicine Part 1 atf.mp4 </a></td></tr>							
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/2388/64.+Blood+Banking+and+Transfusion+Medicine+Part+2+atf.mp4?hash=AgADhx' target='_blank'> 64. Blood Banking and Transfusion Medicine Part 2 atf.mp4 </a></td></tr>							
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/2389/65.+Tissue+Processing+atf.mp4?hash=AgADiR' target='_blank'> 65. Tissue Processing atf.mp4 </a></td></tr>							
+<script>
+    function tableSearch() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("input-box");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
+
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>        
+            </div>            
+        </div>
+    </body>
+</html>

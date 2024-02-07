@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design Your Website With Background Video</title>
+        <link rel="stylesheet" href="subject.css">
+    </head>
+    <body>
+       <div class="search-box">
+            <input type="text" id="input-box" onkeyup='tableSearch()' placeholder="Name">
+            <table class="content-table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+        </div>
+        <thead><tr><th>LECTURE</th></tr></thead>
+</table>  
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/6958/1.+Amino+Acid+classification+%26+Urea+Synthesis+atf.mp4?hash=AgADVx' target='_blank'> 1. Amino Acid classification & Urea Synthesis atf.mp4 </a></td></tr>							
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/6959/2.+Branched+chain+Amino+Acid+atf.mp4?hash=AgADWR' target='_blank'> 2. Branched chain Amino Acid atf.mp4 </a></td></tr>							
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/6960/3.+Phenylalanine%2C+Tyrosine+%2C+Tryptophann+%2C+Methionine+metabo.mp4?hash=AgADWx' target='_blank'> 3. Phenylalanine, Tyrosine , Tryptophann , Methionine metabolism atf.mp4 </a></td></tr>							
@@ -63,3 +78,30 @@
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/7020/6.1.Fat+Soluble+Vitamins+atf.mp4?hash=AgAD1h' target='_blank'> 6.1.Fat Soluble Vitamins atf.mp4 </a></td></tr>							
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/7021/6.2+Water+Soluble+Vitamins+atf.mp4?hash=AgAD2R' target='_blank'> 6.2 Water Soluble Vitamins atf.mp4 </a></td></tr>							
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/7022/6.3+Vitamins+MCQ+atf.mp4?hash=AgAD2x' target='_blank'> 6.3 Vitamins MCQ atf.mp4 </a></td></tr>							
+<script>
+    function tableSearch() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("input-box");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
+
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>        
+            </div>            
+        </div>
+    </body>
+</html>

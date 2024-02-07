@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design Your Website With Background Video</title>
+        <link rel="stylesheet" href="subject.css">
+    </head>
+    <body>
+       <div class="search-box">
+            <input type="text" id="input-box" onkeyup='tableSearch()' placeholder="Name">
+            <table class="content-table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+        </div>
+        <thead><tr><th>LECTURE</th></tr></thead>
+</table>  
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/957/General_Microbiology_01_Introduction_And_Classification_Of_Microbes.mp4?hash=AgADMQ' target='_blank'> File Name » General Microbiology 01 - Introduction And Classification Of Microbes.mp4 Batch » MBBS 2nd PROF ( Physics Wallah ) ~ 🎁[]🎁 </a></td></tr>																	
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/958/General_Microbiology_02_Bacterial_Cell_Anatomy_Bacterial_Growth.mp4?hash=AgADMg' target='_blank'> File Name » General Microbiology 02 - Bacterial Cell Anatomy Bacterial Growth Curve and Bacterial Spores.mp4 Batch » MBBS 2nd PROF ( Physics Wallah ) ~ 🎁[]🎁 </a></td></tr>																	
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/959/General_Microbiology_03_Bacterial_cell_anatomy_Bacterial_growth.mp4?hash=AgADNQ' target='_blank'> File Name » General Microbiology 03 - Bacterial cell anatomy Bacterial growth curve Bacterial spores.mp4 Batch » MBBS 2nd PROF ( Physics Wallah ) ~ 🎁[]🎁 </a></td></tr>																	
@@ -26,3 +41,30 @@
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/982/MBBS+2nd+PROF+~+%40MadXAbhi+%F0%9F%98%87+8975+%40MadXAbhi.mp4?hash=AgADxw' target='_blank'> Lecture Name ➜ 026 Systemic Microbiology 05 Genitourinary Infections and STIs.mp4 Batch Name ➜ MBBS 2nd PROF ~ . 🎁[]🎁 </a></td></tr>																	
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/983/MBBS+2nd+PROF+~+%40MadXAbhi+%F0%9F%98%87+7618+%40MadXAbhi.mp4?hash=AgADyA' target='_blank'> Lecture Name ➜ 027 Systemic Microbiology 06 Genitourinary Infections and STIs.mp4 Batch Name ➜ MBBS 2nd PROF ~ . 🎁[]🎁 </a></td></tr>																	
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/984/MBBS+2nd+PROF+~+%40MadXAbhi+%F0%9F%98%87+9223+%40MadXAbhi.mp4?hash=AgADyg' target='_blank'> Lecture Name ➜ 028 Systemic Microbiology 07 Genitourinary Infections and STIs No DPP.mp4 Batch Name ➜ MBBS 2nd PROF ~ . 🎁[]🎁 </a></td></tr>																	
+<script>
+    function tableSearch() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("input-box");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
+
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>        
+            </div>            
+        </div>
+    </body>
+</html>

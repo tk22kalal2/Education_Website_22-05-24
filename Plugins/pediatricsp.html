@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design Your Website With Background Video</title>
+        <link rel="stylesheet" href="subject.css">
+    </head>
+    <body>
+       <div class="search-box">
+            <input type="text" id="input-box" onkeyup='tableSearch()' placeholder="Name">
+            <table class="content-table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+        </div>
+        <thead><tr><th>LECTURE</th></tr></thead>
+</table>  
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1633/1.+Assessment+of+Growth+and+Growth+Charts.mp4?hash=AgADyw' target='_blank'> 1. Assessment of Growth and Growth Charts </a></td></tr>							
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1634/2.+Normal+Anthropometric+Parameters.mp4?hash=AgADzA' target='_blank'> 2. Normal Anthropometric Parameters </a></td></tr>							
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1635/3.+Short+Stature+tall+Stature.mp4?hash=AgADzQ' target='_blank'> 3. Short Stature tall Stature </a></td></tr>							
@@ -101,3 +116,31 @@
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1733/9.+Sturge+Weber+Syndrome.mp4?hash=AgADSQ' target='_blank'> 9. Sturge Weber Syndrome </a></td></tr>							
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1734/10_Intravenous_Cannula_and_its_Insertion_in_Neonates_Children.mp4?hash=AgADSg' target='_blank'> 10. Intravenous Cannula and its Insertion in Neonates Children </a></td></tr>							
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1735/11.+Phototheraphy+for+Neonatal+Jaundice.mp4?hash=AgADSw' target='_blank'> 11. Phototheraphy for Neonatal Jaundice </a></td></tr>							
+</table>  
+    <script>
+    function tableSearch() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("input-box");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
+
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>        
+            </div>            
+        </div>
+    </body>
+</html>

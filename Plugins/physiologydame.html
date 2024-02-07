@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design Your Website With Background Video</title>
+        <link rel="stylesheet" href="subject.css">
+    </head>
+    <body>
+       <div class="search-box">
+            <input type="text" id="input-box" onkeyup='tableSearch()' placeholder="Name">
+            <table class="content-table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+        </div>
+        <thead><tr><th>LECTURE</th></tr></thead>
+</table>  
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/7521/1.+Impulse+Conduction+Pathway%2C+Time+of+Arrival+of+Impulse%2C+P.mp4?hash=AgADtR' target='_blank'> 1. Impulse Conduction Pathway, Time of Arrival of Impulse, Plateau potential & Pacemaker Potential. atf.mp4 </a></td></tr>							
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/7522/2_Hemodynamics_%26_Functional_Classification_of_vascular_syste.mp4?hash=AgADth' target='_blank'> 2.Hemodynamics & Functional Classification of vascular system atf.mp4 </a></td></tr>							
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/7523/3.+Cardiac+cycle+atf.mp4?hash=AgADtx' target='_blank'> 3. Cardiac cycle atf.mp4 </a></td></tr>							
@@ -37,3 +52,31 @@
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/7557/2_Gas_exchange%2C_perfusion_limited_%26_diffusion_limited_gases_.mp4?hash=AgAD4B' target='_blank'> 2.Gas exchange, perfusion limited & diffusion limited gases & transport of o2 & co2 atf.mp4 </a></td></tr>							
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/7558/3_Tidal_volumes_%26_capacities_%2C_flow_volume_loops_%26_airway_re.mp4?hash=AgAD4R' target='_blank'> 3.Tidal volumes & capacities , flow volume loops & airway resistance atf.mp4 </a></td></tr>							
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/7559/4_Regulation_of_respiration_Neural_%26_Chemical_control%2C_Zo.mp4?hash=AgAD4h' target='_blank'> 4. Regulation of respiration - Neural & Chemical control, Zones of flow in lung atf.mp4 </a></td></tr>							
+</table>  
+    <script>
+    function tableSearch() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("input-box");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
+
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>        
+            </div>            
+        </div>
+    </body>
+</html>

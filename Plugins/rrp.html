@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design Your Website With Background Video</title>
+        <link rel="stylesheet" href="subject.css">
+    </head>
+    <body>
+       <div class="search-box">
+            <input type="text" id="input-box" onkeyup='tableSearch()' placeholder="Name">
+            <table class="content-table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+        </div>
+        <thead><tr><th>LECTURE</th></tr></thead>
+</table>  
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/2154/1.+Live+Rapid+Revision+Part+1+Embryology+Histology.mp4?hash=AgADHA' target='_blank'> 1. Embryology Histology.mp4 </a></td></tr>						
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/2155/2.+Live+Rapid+Revision+Part+2+A+Neuroanatomy+Head+Neck.mp4?hash=AgADIw' target='_blank'> 2. Neuroanatomy Head Neck part -1 .mp4 </a></td></tr>						
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/2156/3_Live_Rapid_Revision_Part_2_B_Neuroanatomy_Head_Neck_Replace.mp4?hash=AgADKg' target='_blank'> 3.Neuroanatomy_Head_Neck part -2 .mp4 </a></td></tr>						
@@ -120,3 +135,31 @@
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/2273/2.+Dermatology+Part+2.mp4?hash=AgADxw' target='_blank'> 2. Dermatology Part 2.mp4 </a></td></tr>						
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/2274/3.+Dermatology+Part+3.mp4?hash=AgADyA' target='_blank'> 3. Dermatology Part 3.mp4 </a></td></tr>						
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/2275/4.+Dermatology+Image+Discussion+.mp4?hash=AgADyQ' target='_blank'> 4. Dermatology Image Discussion .mp4 </a></td></tr>						
+</table>  
+    <script>
+    function tableSearch() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("input-box");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
+
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>        
+            </div>            
+        </div>
+    </body>
+</html>

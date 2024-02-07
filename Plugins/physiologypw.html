@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design Your Website With Background Video</title>
+        <link rel="stylesheet" href="subject.css">
+    </head>
+    <body>
+       <div class="search-box">
+            <input type="text" id="input-box" onkeyup='tableSearch()' placeholder="Name">
+            <table class="content-table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+        </div>
+        <thead><tr><th>LECTURE</th></tr></thead>
+</table>  
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/909/MBBS+1ST+PROF+~+%40MadXAbhi+%F0%9F%95%8A+5615+%40MadXAbhi.mp4?hash=AgADlg' target='_blank'> Lecture Name ➜ 029 Body fluid compartments 01 Volumes of body fluids Measurement of body fluid volumes Disturbances in body fluid compartments.mp4 Batch Name ➜ MBBS 1ST PROF ~ . </a></td></tr>																
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/910/MBBS+1ST+PROF+~+%40MadXAbhi+%F0%9F%95%8A+8134+%40MadXAbhi.mp4?hash=AgADlw' target='_blank'> Lecture Name ➜ 030 Homeostasis 01 Cell ICF ECF Equilibrium Homeostatic regulatory mechanisms.mp4 Batch Name ➜ MBBS 1ST PROF ~ . </a></td></tr>																
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/911/MBBS+1ST+PROF+~+%40MadXAbhi+%F0%9F%95%8A+9807+%40MadXAbhi.mp4?hash=AgADmA' target='_blank'> Lecture Name ➜ 031 Transport Processes 01 Diffusion Active Transport Na k Pump.mp4 Batch Name ➜ MBBS 1ST PROF ~ . </a></td></tr>																
@@ -31,3 +46,31 @@
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/939/MBBS+1ST+PROF+~+%40MadXAbhi+%F0%9F%95%8A+8496+%40MadXAbhi.mp4?hash=AgAD6w' target='_blank'> Lecture Name ➜ 059 Coronary circulation 01 Introduction functional anatomy Peculiarities Clinical application Angina MI.mp4 Batch Name ➜ MBBS 1ST PROF ~ . </a></td></tr>																
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/940/MBBS+1ST+PROF+~+%40MadXAbhi+%F0%9F%95%8A+7378+%40MadXAbhi.mp4?hash=AgAD7Q' target='_blank'> Lecture Name ➜ 060 Circulatory shock 01 Types of shock Stages of shock Physiologic basis of treatment No Dpp.mp4 Batch Name ➜ MBBS 1ST PROF ~ . </a></td></tr>																
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/941/MBBS+1ST+PROF+~+%40MadXAbhi+%F0%9F%95%8A+5060+%40MadXAbhi.mp4?hash=AgAD7g' target='_blank'> Lecture Name ➜ 061 Respiratory system introduction 01 Generations of respiratory tree Pneumocytes Mechanism of breathing part 1.mp4 Batch Name ➜ MBBS 1ST PROF ~ . </a></td></tr>																
+</table>  
+    <script>
+    function tableSearch() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("input-box");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
+
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>        
+            </div>            
+        </div>
+    </body>
+</html>

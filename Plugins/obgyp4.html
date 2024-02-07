@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design Your Website With Background Video</title>
+        <link rel="stylesheet" href="subject.css">
+    </head>
+    <body>
+       <div class="search-box">
+            <input type="text" id="input-box" onkeyup='tableSearch()' placeholder="Name">
+            <table class="content-table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+        </div>
+        <thead><tr><th>LECTURE</th></tr></thead>
+</table>  
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/3778/Gyne+Obs+1.+Gynecology+1.+Menstruation+atf.mp4?hash=AgADyw' target='_blank'> Gyne Obs 1. Gynecology 1. Menstruation atf 🅶︎🆈︎🅽︎🅴︎🅲︎🅾︎🅻︎🅾︎🅶︎🆈︎ 🅰︎🅽︎🅳︎ 🅾︎🅱︎🅴︎🆂︎🆃︎🆁︎🅸︎🅲︎🆂︎ #gynecology #prepladderfree </a></td></tr>								
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/3779/Gyne_Obs_1_Gynecology_2_Ovarian_Hyperstimulation_Syndrome_Baker.mp4?hash=AgAD2Q' target='_blank'> Gyne_Obs_1_Gynecology_2_Ovarian_Hyperstimulation_Syndrome_Baker 🅶︎🆈︎🅽︎🅴︎🅲︎🅾︎🅻︎🅾︎🅶︎🆈︎ 🅰︎🅽︎🅳︎ 🅾︎🅱︎🅴︎🆂︎🆃︎🆁︎🅸︎🅲︎🆂︎ #gynecology #prepladderfree </a></td></tr>								
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/3780/Gyne+Obs+1.+Gynecology+3.+Tests+of+Ovulation+atf.mp4?hash=AgAD5w' target='_blank'> Gyne Obs 1. Gynecology 3. Tests of Ovulation atf 🅶︎🆈︎🅽︎🅴︎🅲︎🅾︎🅻︎🅾︎🅶︎🆈︎ 🅰︎🅽︎🅳︎ 🅾︎🅱︎🅴︎🆂︎🆃︎🆁︎🅸︎🅲︎🆂︎ #gynecology #prepladderfree </a></td></tr>								
@@ -64,3 +79,30 @@
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/3841/Gyne_Obs_5_Controversial_Questions_64_Controversial_Questions.mp4?hash=AgADsx' target='_blank'> Gyne_Obs_5_Controversial_Questions_64_Controversial_Questions 🅶︎🆈︎🅽︎🅴︎🅲︎🅾︎🅻︎🅾︎🅶︎🆈︎ 🅰︎🅽︎🅳︎ 🅾︎🅱︎🅴︎🆂︎🆃︎🆁︎🅸︎🅲︎🆂︎ #gynecology #prepladderfree </a></td></tr>								
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/3842/Gyne_Obs_5_Controversial_Questions_65_Common_Controversies_in_Obstetrics.mp4?hash=AgADvh' target='_blank'> Gyne_Obs_5_Controversial_Questions_65_Common_Controversies_in_Obstetrics 🅶︎🆈︎🅽︎🅴︎🅲︎🅾︎🅻︎🅾︎🅶︎🆈︎ 🅰︎🅽︎🅳︎ 🅾︎🅱︎🅴︎🆂︎🆃︎🆁︎🅸︎🅲︎🆂︎ #gynecology #prepladderfree </a></td></tr>								
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/3843/Gyne_Obs_6_Image_Based_Discussion_66_Image_Based_Discussion_Obstetrics.mp4?hash=AgADyh' target='_blank'> Gyne_Obs_6_Image_Based_Discussion_66_Image_Based_Discussion_Obstetrics 🅶︎🆈︎🅽︎🅴︎🅲︎🅾︎🅻︎🅾︎🅶︎🆈︎ 🅰︎🅽︎🅳︎ 🅾︎🅱︎🅴︎🆂︎🆃︎🆁︎🅸︎🅲︎🆂︎ #gynecology #prepladderfree </a></td></tr>								
+<script>
+    function tableSearch() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("input-box");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
+
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>        
+            </div>            
+        </div>
+    </body>
+</html>

@@ -146,7 +146,8 @@ button:hover{
     }
 
     button {
-        margin: 10px 100px;
+	margin-top: 20px;
+        margin: 10px 80px;
     }
 
     .additional-buttons1,

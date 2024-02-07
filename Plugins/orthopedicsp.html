@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design Your Website With Background Video</title>
+        <link rel="stylesheet" href="subject.css">
+    </head>
+    <body>
+       <div class="search-box">
+            <input type="text" id="input-box" onkeyup='tableSearch()' placeholder="Name">
+            <table class="content-table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+        </div>
+        <thead><tr><th>LECTURE</th></tr></thead>
+</table>  
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1860/1.+Introduction+to+Orthopedics.mp4?hash=AgAD6Q' target='_blank'> 1. Introduction to Orthopedics </a></td></tr>						
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1861/2.+Xray+Diagnosis.mp4?hash=AgAD6g' target='_blank'> 2. Xray Diagnosis </a></td></tr>						
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1862/1.+Osteomyelitis.mp4?hash=AgAD6w' target='_blank'> 1. Osteomyelitis </a></td></tr>						
@@ -21,3 +36,30 @@
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1880/1.+CTEV+and+CDH.mp4?hash=AgAD_g' target='_blank'> 1. CTEV and CDH </a></td></tr>						
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1881/1.+Miscellaneous+Topics.mp4?hash=AgAD_w' target='_blank'> 1. Miscellaneous Topics </a></td></tr>						
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1882/2.+Slipped+Capital+Femoral+Epiphysis.mp4?hash=AgAEDw' target='_blank'> 2. Slipped Capital Femoral Epiphysis </a></td></tr>						
+<script>
+    function tableSearch() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("input-box");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
+
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>        
+            </div>            
+        </div>
+    </body>
+</html>

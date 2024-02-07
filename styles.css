@@ -11,38 +11,7 @@
     background-position: center;
     background-size: center;
 }
-.navbar{
-    width: 90%;
-    padding: 30px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.logo{
-    width: 160px;
-    margin-top: -10px;
-    cursor: pointer;
-}
-.navbar ul li{
-    list-style: none;
-    display: inline-block;
-    margin: 20px;
-}
-.navbar ul li a{
-    text-decoration: none;
-    text-transform: uppercase;
-    color: white;
-    font-weight: 600;
-    padding: 15px;
-}
-li a:hover{
-    background: white;
-    transition: 0.6s;
-}
-.navbar a:hover{
-    color: black;
-}
+
 .content{
     width: 100%;
     position: absolute;

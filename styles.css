@@ -116,7 +116,7 @@ button:hover{
 
     button {
         margin: 10px 80px;
-	margin-top: 40px;
+	top: 40px;
     }
 
     .additional-buttons1,

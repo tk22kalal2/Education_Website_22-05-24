@@ -40,10 +40,9 @@
     font-size: 16px;
 }
 .searchcontainer #suggestionList li a {
-    padding: 15px 10px;
-    cursor: pointer;
-    border-radius: 3px;
-    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
 }
 .searchcontainer #suggestionList li:hover {
     background: #e9f3ff;

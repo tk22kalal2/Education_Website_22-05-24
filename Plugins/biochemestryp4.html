@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design Your Website With Background Video</title>
+        <link rel="stylesheet" href="subject.css">
+    </head>
+    <body>
+       <div class="search-box">
+            <input type="text" id="input-box" onkeyup='tableSearch()' placeholder="Name">
+            <table class="content-table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+        </div>
+        <thead><tr><th>LECTURE</th></tr></thead>
+</table>  
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/2908/B.+Introduction+8.+How+to+use+the+app+atf.mp4?hash=AgADbg' target='_blank'> Biochemistry - Introduction - How to use app 🤣 Dr. Smily Pruthi #PrepladderForFree #biochemistry </a></td></tr>							
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/2909/B.+Introduction+2.+Introduction+atf.mp4?hash=AgADaA' target='_blank'> Biochemistry - Introduction Dr. Smily Pruthi #PrepladderForFree #biochemistry </a></td></tr>							
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/2910/B.+Introduction+3.+How+to+study+Biochemistry+atf.mp4?hash=AgADaQ' target='_blank'> Biochemistry - Introduction - 2 . How to Study Biochemistry Dr. Smily Pruthi #PrepladderForFree #biochemistry </a></td></tr>							
@@ -100,3 +115,30 @@
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/3007/Unit+VIII+-++Miscellaneous+100.+Meister+Cycle+atf.mp4?hash=AgADCw' target='_blank'> Meister Cycle Biochemistry - Unit 8 - Miscellaneous Dr. Smily Pruthi #PrepladderForFree #biochemistry </a></td></tr>							
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/3008/Unit_VIII_Miscellaneous_101_Buffers_and_Titration_curve_atf.mp4?hash=AgADDA' target='_blank'> Buffers and Titration Biochemistry - Unit 8 - Miscellaneous Dr. Smily Pruthi #PrepladderForFree #biochemistry </a></td></tr>							
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/3009/Unit+VIII+-++Miscellaneous+102.+Polyamine+pathway+atf.mp4?hash=AgADCg' target='_blank'> Polyamine pathway Unit 8 #PrepladderForFree #biochemistry </a></td></tr>							
+<script>
+    function tableSearch() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("input-box");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
+
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>        
+            </div>            
+        </div>
+    </body>
+</html>

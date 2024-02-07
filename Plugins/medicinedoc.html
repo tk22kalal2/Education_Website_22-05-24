@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design Your Website With Background Video</title>
+        <link rel="stylesheet" href="subject.css">
+    </head>
+    <body>
+       <div class="search-box">
+            <input type="text" id="input-box" onkeyup='tableSearch()' placeholder="Name">
+            <table class="content-table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+        </div>
+        <thead><tr><th>LECTURE</th></tr></thead>
+</table>  
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/5304/1.+Pulmonology+-+Ards+atf.mp4?hash=AgAD9A' target='_blank'> 1. Pulmonology - Ards atf.mp4 </a></td></tr>									
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/5305/1.+Pulmonology+-+Basics+of+Spirometry+atf.mp4?hash=AgAD9Q' target='_blank'> 1. Pulmonology - Basics of Spirometry atf.mp4 </a></td></tr>									
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/5306/1.+Pulmonology+-+Bronchial+Asthma+atf.mp4?hash=AgAD9g' target='_blank'> 1. Pulmonology - Bronchial Asthma atf.mp4 </a></td></tr>									
@@ -181,3 +196,30 @@
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/5484/19_Gastroenterology_and_Hepatology_Overview_of_Liver_Cirrhosisf6560e7a.mp4?hash=AgADcg' target='_blank'> 19. Gastroenterology and Hepatology - Overview of Liver Cirrhosis atf.mp4 </a></td></tr>									
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/5485/19_Gastroenterology_and_Hepatology_Overview_of_Portal_Hypertension7d0d4cf4.mp4?hash=AgADcw' target='_blank'> 19. Gastroenterology and Hepatology - Overview of Portal Hypertension atf.mp4 </a></td></tr>									
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/5486/19_Gastroenterology_and_Hepatology_Treatment_of_Portal_Hypertension798e620b.mp4?hash=AgADdA' target='_blank'> 19. Gastroenterology and Hepatology - Treatment of Portal Hypertension atf.mp4 </a></td></tr>									
+<script>
+    function tableSearch() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("input-box");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
+
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>        
+            </div>            
+        </div>
+    </body>
+</html>

@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design Your Website With Background Video</title>
+        <link rel="stylesheet" href="subject.css">
+    </head>
+    <body>
+       <div class="search-box">
+            <input type="text" id="input-box" onkeyup='tableSearch()' placeholder="Name">
+            <table class="content-table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+        </div>
+        <thead><tr><th>LECTURE</th></tr></thead>
+</table>  
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1910/01+Mitral+Valve+Prolapse+with+Animations.mp4?hash=AgAD5x' target='_blank'> 01 Mitral Valve Prolapse with Animations 📤 Uᴘʟᴏᴀᴅᴇᴅ Bʏ </a></td></tr>							
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1911/02+Percutaneous+Coronary+Interventions.mp4?hash=AgAD6B' target='_blank'> 02 Percutaneous Coronary Interventions 📤 Uᴘʟᴏᴀᴅᴇᴅ Bʏ </a></td></tr>							
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1912/03+Heart+Sounds+1.mp4?hash=AgAD6h' target='_blank'> 03 Heart Sounds 1 📤 Uᴘʟᴏᴀᴅᴇᴅ Bʏ </a></td></tr>							
@@ -242,3 +257,30 @@
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/2151/08+Approach+to+Case+of+Suspected+Meningitis_watermark.mp4?hash=AgADWh' target='_blank'> 08 Approach to Case of Suspected Meningitis_watermark 📤 Uᴘʟᴏᴀᴅᴇᴅ Bʏ </a></td></tr>							
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/2152/09+Glasgow+Coma+Scale_watermark.mp4?hash=AgADWx' target='_blank'> 09 Glasgow Coma Scale_watermark 📤 Uᴘʟᴏᴀᴅᴇᴅ Bʏ </a></td></tr>							
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/2153/10+Pacemaker+Simplified_watermark.mp4?hash=AgADXB' target='_blank'> 10 Pacemaker Simplified_watermark 📤 Uᴘʟᴏᴀᴅᴇᴅ Bʏ </a></td></tr>							
+<script>
+    function tableSearch() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("input-box");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
+
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>        
+            </div>            
+        </div>
+    </body>
+</html>

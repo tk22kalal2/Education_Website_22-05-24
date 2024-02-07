@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design Your Website With Background Video</title>
+        <link rel="stylesheet" href="subject.css">
+    </head>
+    <body>
+       <div class="search-box">
+            <input type="text" id="input-box" onkeyup='tableSearch()' placeholder="Name">
+            <table class="content-table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+        </div>
+        <thead><tr><th>LECTURE</th></tr></thead>
+</table>  
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/2420/1.+Menstruation+atf.mp4?hash=AgADIB' target='_blank'> 1. Menstruation atf.mp4 </a></td></tr>							
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/2421/2.+Menstruation+Problems+Young+Small+Girls+atf.mp4?hash=AgADMx' target='_blank'> 2. Menstruation Problems Young Small Girls atf.mp4 </a></td></tr>							
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/2422/3.+Ovarian+Hyperstimulation+atf.mp4?hash=AgADPh' target='_blank'> 3. Ovarian Hyperstimulation atf.mp4 </a></td></tr>							
@@ -72,3 +87,30 @@
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/2491/72.+Azoospermic+Man+Gets+His+Own+Biological+Child+atf.mp4?hash=AgADhh' target='_blank'> 72. Azoospermic Man Gets His Own Biological Child atf.mp4 </a></td></tr>							
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/2492/73.+From+Being+a+Gamate+to+Becoming+a+Human+atf.mp4?hash=AgADhx' target='_blank'> 73. From Being a Gamate to Becoming a Human atf.mp4 </a></td></tr>							
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/2493/74.+Lapro+Hysteroscopy+for+Workup+of+an+Infertile+Women+atf.mp4?hash=AgADiR' target='_blank'> 74. Lapro Hysteroscopy for Workup of an Infertile Women atf.mp4 </a></td></tr>							
+<script>
+    function tableSearch() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("input-box");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
+
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>        
+            </div>            
+        </div>
+    </body>
+</html>

@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design Your Website With Background Video</title>
+        <link rel="stylesheet" href="subject.css">
+    </head>
+    <body>
+       <div class="search-box">
+            <input type="text" id="input-box" onkeyup='tableSearch()' placeholder="Name">
+            <table class="content-table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+        </div>
+        <thead><tr><th>LECTURE</th></tr></thead>
+</table>  
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/529/1_watermarked.mp4?hash=AgAD_R' target='_blank'> 01.Introduction to Radiology </a></td></tr>		
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/530/2_watermarked.mp4?hash=AgAD_h' target='_blank'> 02.X-ray Fundamentals </a></td></tr>		
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/531/3_watermarked.mp4?hash=AgAD_x' target='_blank'> 03.X-ray Production and Interactions </a></td></tr>		
@@ -39,3 +54,31 @@
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/567/39_watermarked.mp4?hash=AgADRh' target='_blank'> 39.MSK: Systemic bone disorders and Miscellaneous imaging </a></td></tr>		
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/568/40_watermarked.mp4?hash=AgADSh' target='_blank'> 40.MSK: Bone tumors </a></td></tr>		
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/569/41_watermarked.mp4?hash=AgADTh' target='_blank'> 41.MSK: Trauma rapid review </a></td></tr>		
+</table>  
+    <script>
+    function tableSearch() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("input-box");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
+
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>        
+            </div>            
+        </div>
+    </body>
+</html>

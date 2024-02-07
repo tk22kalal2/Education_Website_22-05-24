@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design Your Website With Background Video</title>
+        <link rel="stylesheet" href="subject.css">
+    </head>
+    <body>
+       <div class="search-box">
+            <input type="text" id="input-box" onkeyup='tableSearch()' placeholder="Name">
+            <table class="content-table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+        </div>
+        <thead><tr><th>LECTURE</th></tr></thead>
+</table>  
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1808/1.+Basics+of+Radiology+Part-1.mp4?hash=AgADpQ' target='_blank'> 1. Basics of Radiology Part-1 </a></td></tr>							
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1809/2.+Basics+of+Radiology+Part-2.mp4?hash=AgADpg' target='_blank'> 2. Basics of Radiology Part-2 </a></td></tr>							
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1810/3.+Basics+of+MRi.mp4?hash=AgADpw' target='_blank'> 3. Basics of MRi </a></td></tr>							
@@ -17,3 +32,31 @@
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1824/1.+MSK.mp4?hash=AgADuA' target='_blank'> 1. MSK </a></td></tr>							
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1825/1.+nuclear+Medicine.mp4?hash=AgADuQ' target='_blank'> 1. nuclear Medicine </a></td></tr>							
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1826/1.+Radiotherapy.mp4?hash=AgADug' target='_blank'> 1. Radiotherapy </a></td></tr>							
+</table>  
+    <script>
+    function tableSearch() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("input-box");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
+
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>        
+            </div>            
+        </div>
+    </body>
+</html>

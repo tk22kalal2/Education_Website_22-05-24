@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design Your Website With Background Video</title>
+        <link rel="stylesheet" href="subject.css">
+    </head>
+    <body>
+       <div class="search-box">
+            <input type="text" id="input-box" onkeyup='tableSearch()' placeholder="Name">
+            <table class="content-table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+        </div>
+        <thead><tr><th>LECTURE</th></tr></thead>
+</table>  
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/4154/1.+Anatomy+1.+Embryology+_+Histology+atf.mp4?hash=AgADgQ' target='_blank'> Anatomy 1 - Embryology Rapid Revision Prepladd.er. #anatomy </a></td></tr>								
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/4155/1.+Anatomy+2.++Neuroantomy%2C+Head+_+Neck+atf.mp4_PART_00000.mp4?hash=AgADKQ' target='_blank'> Anatomy 2 - Neuroanatomy Part 1 Rapid Revision Prepladd er #anatomy </a></td></tr>								
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/4156/1.+Anatomy+2.++Neuroantomy%2C+Head+_+Neck+atf.mp4_PART_00001.mp4?hash=AgADKg' target='_blank'> Anatomy 2 - Neuroanatomy Part 2 Rapid Revision Prepladd er. #anatomy </a></td></tr>								
@@ -42,3 +57,31 @@
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/4195/13.+Surgery+23.+GIT+atf.mp4?hash=AgADUw' target='_blank'> Surgery 2 - GIT Rapid Revision Prepladd.er #surgery </a></td></tr>								
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/4196/13.+Surgery+24.+Hepatobilliary+Pancreatic+Surgery+atf.mp4?hash=AgADVA' target='_blank'> Surgery 3 - Hepatobiliary, Pancreatic Surgery Rapid Revision Prepladd.er #surgery </a></td></tr>								
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/4197/13.+Surgery+25.+Genitourinary+Surgery+atf.mp4?hash=AgADVQ' target='_blank'> Surgery 4 - Genitourinary Rapid Revision Prepladd.er #surgery </a></td></tr>								
+</table>  
+    <script>
+    function tableSearch() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("input-box");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
+
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>        
+            </div>            
+        </div>
+    </body>
+</html>

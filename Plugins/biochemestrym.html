@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design Your Website With Background Video</title>
+        <link rel="stylesheet" href="subject.css">
+    </head>
+    <body>
+       <div class="search-box">
+            <input type="text" id="input-box" onkeyup='tableSearch()' placeholder="Name">
+            <table class="content-table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+        </div>
+        <thead><tr><th>LECTURE</th></tr></thead>
+</table>  
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/161/1_Dr_Rebecca_James%2C_MD_Biochemistry_How_to_approch_Biochemistry.mp4?hash=AgADex' target='_blank'> 01: How to approach Biochemistry </a></td></tr>	
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/162/2_watermarked.mp4?hash=AgADfB' target='_blank'> 02: Biochemistry of Fed State </a></td></tr>	
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/163/3_watermarked.mp4?hash=AgADfx' target='_blank'> 03: Biochemistry of Fasting State </a></td></tr>	
@@ -59,3 +74,30 @@
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/219/59_watermarked.mp4?hash=AgADDB' target='_blank'> 59: Energy Releasing Vitamins </a></td></tr>	
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/220/60_watermarked.mp4?hash=AgADDR' target='_blank'> 60: Vitamin B6 & Vitamin C </a></td></tr>	
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/221/61_watermarked.mp4?hash=AgADDh' target='_blank'> 61: Heme Metabolism </a></td></tr>	
+<script>
+    function tableSearch() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("input-box");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
+
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>        
+            </div>            
+        </div>
+    </body>
+</html>

@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design Your Website With Background Video</title>
+        <link rel="stylesheet" href="subject.css">
+    </head>
+    <body>
+       <div class="search-box">
+            <input type="text" id="input-box" onkeyup='tableSearch()' placeholder="Name">
+            <table class="content-table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+        </div>
+        <thead><tr><th>LECTURE</th></tr></thead>
+</table>  
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1472/1.+Definition+%2C+Components+and+Tools+of+Epidemiology.mp4?hash=AgADKA' target='_blank'> 1. Definition , Components and Tools of Epidemiology </a></td></tr>							
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1473/2.+need-classification-unit-approach-to-study-designs.mp4?hash=AgADKQ' target='_blank'> 2. need-classification-unit-approach-to-study-designs </a></td></tr>							
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1474/3.+descriptive-study-disease-distribution.mp4?hash=AgADKg' target='_blank'> 3. descriptive-study-disease-distribution </a></td></tr>							
@@ -112,3 +127,31 @@
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1583/6.+test-of-statistical-significance.mp4?hash=AgADlg' target='_blank'> 6. test-of-statistical-significance </a></td></tr>							
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1584/7.+graphical-representation-of-data.mp4?hash=AgADlw' target='_blank'> 7. graphical-representation-of-data </a></td></tr>							
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/1585/8.+sampling-probability.mp4?hash=AgADmA' target='_blank'> 8. sampling-probability </a></td></tr>							
+</table>  
+    <script>
+    function tableSearch() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("input-box");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
+
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>        
+            </div>            
+        </div>
+    </body>
+</html>

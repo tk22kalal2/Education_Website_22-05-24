@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design Your Website With Background Video</title>
+        <link rel="stylesheet" href="subject.css">
+    </head>
+    <body>
+       <div class="search-box">
+            <input type="text" id="input-box" onkeyup='tableSearch()' placeholder="Name">
+            <table class="content-table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+        </div>
+        <thead><tr><th>LECTURE</th></tr></thead>
+</table>  
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/6780/11.1.Allergic+Disorders+and+Dermatitis+atf.mp4?hash=AgADbR' target='_blank'> 11.1.Allergic Disorders and Dermatitis atf.mp4 </a></td></tr>						
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/6781/3.1.Appendegeal+Disorders+atf.mp4?hash=AgADdx' target='_blank'> 3.1.Appendegeal Disorders atf.mp4 </a></td></tr>						
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/6782/1.1.Basics+of+Skin+atf.mp4?hash=AgADfR' target='_blank'> 1.1.Basics of Skin atf.mp4 </a></td></tr>						
@@ -41,3 +56,30 @@
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/6820/5.4+MCQ+Papulosqamous+disorders+atf.mp4?hash=AgAD8x' target='_blank'> 5.4 MCQ Papulosqamous disorders atf.mp4 </a></td></tr>						
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/6821/Pigmentary+Disorders+atf.mp4?hash=AgAD9R' target='_blank'> Pigmentary Disorders atf.mp4 </a></td></tr>						
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/6822/1.STD+atf.mp4?hash=AgAD9h' target='_blank'> 1.STD atf.mp4 </a></td></tr>						
+<script>
+    function tableSearch() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("input-box");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
+
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>        
+            </div>            
+        </div>
+    </body>
+</html>

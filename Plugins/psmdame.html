@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design Your Website With Background Video</title>
+        <link rel="stylesheet" href="subject.css">
+    </head>
+    <body>
+       <div class="search-box">
+            <input type="text" id="input-box" onkeyup='tableSearch()' placeholder="Name">
+            <table class="content-table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+        </div>
+        <thead><tr><th>LECTURE</th></tr></thead>
+</table>  
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/7265/Topic+0+How+to+Approach+Statistics+atf.mp4?hash=AgADch' target='_blank'> Topic 0 How to Approach Statistics atf.mp4 </a></td></tr>								
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/7266/Topic+1+Measure+of+Central+Tendency+atf.mp4?hash=AgADcx' target='_blank'> Topic 1 Measure of Central Tendency atf.mp4 </a></td></tr>								
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/7267/Topic+2+Measure+of+Dispersion+of+Data+atf.mp4?hash=AgADdB' target='_blank'> Topic 2 Measure of Dispersion of Data atf.mp4 </a></td></tr>								
@@ -164,3 +179,31 @@
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/7428/1.+Deaddiction+psychiatry+atf.mp4?hash=AgADrR' target='_blank'> 1. Deaddiction psychiatry atf.mp4 </a></td></tr>								
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/7429/2.Drugs+used+in+deaddiction+atf.mp4?hash=AgADrh' target='_blank'> 2.Drugs used in deaddiction atf.mp4 </a></td></tr>								
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/7430/3.+MCQ+discussion+chapter+6+atf.mp4?hash=AgADrx' target='_blank'> 3. MCQ discussion chapter 6 atf.mp4 </a></td></tr>								
+</table>  
+    <script>
+    function tableSearch() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("input-box");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
+
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>        
+            </div>            
+        </div>
+    </body>
+</html>

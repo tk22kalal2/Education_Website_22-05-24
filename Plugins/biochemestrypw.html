@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design Your Website With Background Video</title>
+        <link rel="stylesheet" href="subject.css">
+    </head>
+    <body>
+       <div class="search-box">
+            <input type="text" id="input-box" onkeyup='tableSearch()' placeholder="Name">
+            <table class="content-table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+        </div>
+        <thead><tr><th>LECTURE</th></tr></thead>
+</table>  
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/942/MBBS+1ST+PROF+~+%40MadXAbhi+%F0%9F%95%8A+7091+%40MadXAbhi.mp4?hash=AgAD7w' target='_blank'> Lecture Name ➜ 062 Cell membrane and Transport 01 Fluid mosaic model Active transport Passive transport Disorders related with transport.mp4 Batch Name ➜ MBBS 1ST PROF ~ . </a></td></tr>															
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/943/MBBS+1ST+PROF+~+%40MadXAbhi+%F0%9F%95%8A+7859+%40MadXAbhi.mp4?hash=AgAD8A' target='_blank'> Lecture Name ➜ 063 Enzyme Classification And Mechanism Of Action 01 Classes Of Enzyme Enzyme Commission Number Mechanism Of Action Activation Energy Transition State Theories Es Complex Formation Mechanism Of Catalysis.mp4 Batch Name ➜ MBBS 1ST PROF ~ . </a></td></tr>															
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/944/MBBS+1ST+PROF+~+%40MadXAbhi+%F0%9F%95%8A+6339+%40MadXAbhi.mp4?hash=AgAD8Q' target='_blank'> Lecture Name ➜ 064 Coenzyme & Factors affecting enzyme activity 01 Cofactor Prosthetic Group Factors Affecting Enzyme Activity.mp4 Batch Name ➜ MBBS 1ST PROF ~ . </a></td></tr>															
@@ -13,3 +28,30 @@
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/954/MBBS+1ST+PROF+~+%40MadXAbhi+%F0%9F%95%8A+9272+%40MadXAbhi.mp4?hash=AgADAQ' target='_blank'> Lecture Name ➜ 074 Lipid Metabolism 02 Fatty acid synthesis Ketone body metabolism.mp4 Batch Name ➜ MBBS 1ST PROF ~ . </a></td></tr>															
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/955/MBBS+1ST+PROF+~+%40MadXAbhi+%F0%9F%95%8A+6796+%40MadXAbhi.mp4?hash=AgADBA' target='_blank'> Lecture Name ➜ 075 Lipid Metabolism 03 Cholesterol metabolism Lipoprotein metabolism Disorders of lipoprotein metabolism.mp4 Batch Name ➜ MBBS 1ST PROF ~ . </a></td></tr>															
 <tr><td><a href='https://just-bibi-nothinglama.koyeb.app/watch/956/MBBS+1ST+PROF+~+%40MadXAbhi+%F0%9F%95%8A+9994+%40MadXAbhi.mp4?hash=AgADBQ' target='_blank'> Lecture Name ➜ 076 Amino acid and Proteins 01 Amino acid classification Structural organization of proteins Biological important peptides.mp4 Batch Name ➜ MBBS 1ST PROF ~ . </a></td></tr>															
+<script>
+    function tableSearch() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("input-box");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
+
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>        
+            </div>            
+        </div>
+    </body>
+</html>

@@ -120,12 +120,6 @@ button:hover{
 	overflow-y: auto;
     }
     .content{
-	    width: 100%;
-	    position: absolute;
-	    color: white;
-	    top: 45%;
-	    transform: translateY(-50%);
-	    text-align: center;
 	    overflow-y: auto;
     }
 

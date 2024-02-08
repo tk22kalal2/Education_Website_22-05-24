@@ -118,6 +118,7 @@ button:hover{
         margin: 10px 80px;
 	top: 50px;
 	overflow-y: auto;
+	max-height: 200px;
     }
     .content{
 	    overflow-y: auto;

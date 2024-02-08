@@ -120,6 +120,7 @@ button:hover{
 	max-height: 200px;
     }
     .content{
+	    top: 10%;
 	    position: relative;
 	    overflow-y: auto;
     }

@@ -12,43 +12,59 @@
     background-size: center;
 }
 
-.content{
-    width: 100%;
-    position: absolute;
-    color: white;
-    top: 45%;
-    transform: translateY(-50%);
-    text-align: center;
-}
-.content h1{
-    margin-top: 80px;
-    font-size: 90px;
-    font-weight: 800;
-}
-button{
-    width: 200px;
-    padding: 15px;
-    margin: 30px 5px;
-    text-align: center;
-    border-radius: 25px;
-    color: black;
-    border: 2px;
-    font-size: 20px;
-    cursor: pointer;
-    font-weight: 600;
-}
-button a{
-    text-decoration: none;
-    text-transform: uppercase;
-    color: black;
-}
-button:hover{
-    background: rgb(0, 192, 226);
-    transition: 0.5s;
-}
-button:hover{
-    color: white;
-}
+.registrationform{
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  min-height: 100vh;
+	}
+	
+	.container {
+	  background-color: rgba(0, 0, 0, 0); /* Transparent background */
+	}
+	
+	form {
+	  width: 300px;
+	  padding: 20px;
+	  border-radius: 10px;
+	  border: 2px solid wheat;
+	  background-color: rgba(255, 255, 255, 0.3); /* Transparent background with white tint */
+	}
+	
+	.form-control {
+	  margin-bottom: 20px;
+	}
+	
+	label {
+	  color: white;
+	}
+	
+	input[type="text"],
+	input[type="email"],
+	input[type="password"] {
+	  width: 100%;
+	  padding: 10px;
+	  border: 2px solid white;
+	  border-radius: 5px;
+	  background-color: transparent; /* Transparent background */
+	  color: white;
+	}
+	
+	button {
+	  width: 100%;
+	  padding: 10px;
+	  border: none;
+	  border-radius: 5px;
+	  background-color: transparent; /* Transparent background */
+	  color: white;
+	  cursor: pointer;
+	}
+	
+	button:hover {
+	  background-color: rgba(255, 255, 255, 0.4); /* Lighter tint on hover */
+	}
+
+    
 .banner video{
     position: absolute;
     right: 0;

@@ -1,38 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registration</title>
+    <title>Registration Form</title>
 </head>
 <body>
-  <h2>Registration</h2>
-  <form id="registrationForm">
-    <label for="username">Username:</label><br>
-    <input type="text" id="username" name="username" required><br>
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email" required><br>
-    <label for="password">Password:</label><br>
-    <input type="password" id="password" name="password" required><br><br>
-    <input type="submit" value="Register">
-  </form>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script>
-    $(document).ready(function() {
-      $('#registrationForm').submit(function(e) {
-        e.preventDefault();
-        var username = $('#username').val();
-        var email = $('#email').val();
-        var password = $('#password').val();
+    <h2>Registration Form</h2>
+    <form id="registrationForm" onsubmit="submitForm(event)">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br>
         
-        // Call Google Apps Script to submit registration data
-        google.script.run.withSuccessHandler(function() {
-          alert('Registration successful! Please login.');
-          window.location = 'login.html'; // Redirect to login page
-        }).submitForm(username, email, password);
-      });
-    });
-  </script>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+
+            var formData = new FormData(document.getElementById("registrationForm"));
+            var jsonObject = {};
+
+            for (const [key, value] of formData.entries()) {
+                jsonObject[key] = value;
+            }
+
+            fetch("https://script.google.com/macros/s/Your_Google_Apps_Script_ID/exec", {
+                method: "POST",
+                mode: "no-cors",
+                body: JSON.stringify(jsonObject)
+            })
+            .then(response => console.log("Form submitted successfully", response))
+            .catch(error => console.error("Error submitting form", error));
+        }
+    </script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-<?php require_once "controllerUserData.php"; ?>
+<?php require_once "controllerUserData.html"; ?>
 <?php 
 $email = $_SESSION['email'];
 if($email == false){
@@ -17,7 +17,7 @@ if($email == false){
     <div class="container">
         <div class="row">
             <div class="col-md-4 offset-md-4 form">
-                <form action="reset-code.php" method="POST" autocomplete="off">
+                <form action="reset-code.html" method="POST" autocomplete="off">
                     <h2 class="text-center">Code Verification</h2>
                     <?php 
                     if(isset($_SESSION['info'])){

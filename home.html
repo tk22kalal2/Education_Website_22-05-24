@@ -11,10 +11,10 @@ if($email != false && $password != false){
         $code = $fetch_info['code'];
         if($status == "verified"){
             if($code != 0){
-                header('Location: reset-code.php');
+                header('Location: reset-code.html');
             }
         }else{
-            header('Location: user-otp.php');
+            header('Location: user-otp.html');
         }
     }
 }else{
@@ -62,7 +62,7 @@ if($email != false && $password != false){
 <body>
     <nav class="navbar">
     <a class="navbar-brand" href="#">Brand name</a>
-    <button type="button" class="btn btn-light"><a href="logout-user.php">Logout</a></button>
+    <button type="button" class="btn btn-light"><a href="logout-user.html">Logout</a></button>
     </nav>
     <h1>Welcome <?php echo $fetch_info['name'] ?></h1>
     

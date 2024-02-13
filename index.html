@@ -3,88 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In</title>
+    <title>Registration Form</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-        }
-        .container {
-            max-width: 400px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-top: 100px;
-        }
-        h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        input[type="text"],
-        input[type="password"],
-        input[type="submit"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-sizing: border-box;
-        }
-        input[type="submit"] {
-            background-color: #4caf50;
-            color: #fff;
-            cursor: pointer;
-        }
-        input[type="submit"]:hover {
-            background-color: #45a049;
-        }
+      /* Styles */
     </style>
+    <script>
+        function generateOTP() {
+            return Math.floor(10000 + Math.random() * 90000); // Generate random 5-digit OTP
+        }
+
+        function submitForm() {
+            var email = document.getElementById("email").value;
+          
+          
+            var otp = generateOTP(); // Generate OTP
+
+            // Call Google Apps Script function to handle form submission
+            google.script.run.withSuccessHandler(function (success) {
+                if (success) {
+                    var enteredOTP = prompt("Enter OTP sent to your email:");
+                    if (enteredOTP == otp) {
+                        alert("OTP verification successful! Redirecting to login page...");
+                        window.location.href = "https://test--soft-truffle-b57ed7.netlify.app/index2.html"; // Redirect to login page
+                    } else {
+                        alert("Incorrect OTP. Registration failed.");
+                    }
+                } else {
+                    alert("Error submitting form.");
+                }
+            }).submitForm(email, otp); // Submit form with OTP
+        }
+    </script>
 </head>
 <body>
     <div class="container">
-        <h2>Sign In</h2>
-        <form id="https://script.google.com/macros/s/AKfycbxn7BxE_RGdAI9UAs1gI7qSTjfg15myfpTs9LR936S55b2ltATkqS61oYNxwFxGfTEp/exec" onsubmit="submitForm(event)">
-            <input type="text" id="email" name="email" placeholder="Email" required>
-            <input type="password" id="password" name="password" placeholder="Password" required>
-            <input type="text" id="otp" name="otp" placeholder="Enter OTP" required style="display:none;"> <!-- Hidden initially -->
-            <input type="submit" id="submitButton" value="Sign In">
+        <form id="registrationForm">
+            <!-- Form Fields -->
+            <div class="form-control">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <button type="button" onclick="submitForm()">Register</button>
         </form>
     </div>
-
     <script>
-        function submitForm(event) {
-            event.preventDefault(); // Prevent default form submission
-
-            var form = document.getElementById("signInForm");
-            var email = form.elements["email"].value;
-            var password = form.elements["password"].value;
-            var otp = form.elements["otp"].value;
-
-            if (otp === "") {
-                // If OTP field is empty, generate and send OTP
-                generateAndSendOTP(email, password);
-            } else {
-                // If OTP is entered, submit the form
-                form.submit();
-            }
-        }
-
-        function generateAndSendOTP(email, password) {
-            google.script.run.withSuccessHandler(function(otp) {
-                // Show OTP field and update button text
-                document.getElementById("otp").style.display = "block";
-                document.getElementById("submitButton").value = "Submit OTP";
-
-                // Focus on OTP input field
-                document.getElementById("otp").focus();
-
-                // Update form action to include email and password
-                var form = document.getElementById("signInForm");
-                form.action = "https://script.google.com/macros/s/AKfycbxn7BxE_RGdAI9UAs1gI7qSTjfg15myfpTs9LR936S55b2ltATkqS61oYNxwFxGfTEp/exec?email=" + email + "&password=" + password + "&otp=" + otp;
-            }).generateOTP(email);
-        }
+        // Google Apps Script Functions
     </script>
 </body>
 </html>

@@ -41,31 +41,7 @@
             background-color: #45a049;
         }
     </style>
-    <script>
-        function generateOTP() {
-            return Math.floor(10000 + Math.random() * 90000); // Generate random 5-digit OTP
-        }
-
-        function doPost() {
-            var email = document.getElementById("email").value;
-            
-            var otp = generateOTP(); // Generate OTP
-
-            // Call Google Apps Script function to handle form submission
-            google.script.run.withSuccessHandler(function (success) {
-                if (success) {
-                    var enteredOTP = prompt("Enter OTP sent to your email:");
-                    if (enteredOTP == otp) {
-                        alert("OTP verification successful! Redirecting to login page...");
-                        window.location.href = "https://test--soft-truffle-b57ed7.netlify.app/index2.html"; // Redirect to login page
-                    } else {
-                        alert("Incorrect OTP. Registration failed.");
-                    }
-                } else {
-                    alert("Error submitting form.");
-                }
-            }).doPost(email, otp); // Submit form with OTP
-        }
+    
 </head>
 <body>
     <div class="container">

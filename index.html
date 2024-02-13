@@ -3,45 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Form</title>
+    <title>Sign In</title>
     <style>
-      /* Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 100px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: #fff;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <form id="registrationForm" action="https://script.google.com/macros/s/AKfycbxn7BxE_RGdAI9UAs1gI7qSTjfg15myfpTs9LR936S55b2ltATkqS61oYNxwFxGfTEp/exec" method="post">
-            <!-- Form Fields -->
-            <div class="form-control">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <button type="button" onclick="submitForm()">Register</button>
+        <h2>Sign In</h2>
+        <form action="PASTE_THE_SCRIPT_URL_HERE" method="post">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Sign In">
         </form>
     </div>
-    <script>
-        // Google Apps Script Function
-        function submitForm() {
-            var email = document.getElementById("email").value;
-            var otp = generateOTP(); // Generate OTP
-            google.script.run.withSuccessHandler(function (success) {
-                if (success) {
-                    var enteredOTP = prompt("Enter OTP sent to your email:");
-                    if (enteredOTP == otp) {
-                        alert("OTP verification successful! Redirecting to login page...");
-                        window.location.href = "https://test--soft-truffle-b57ed7.netlify.app/index2.html"; // Redirect to login page
-                    } else {
-                        alert("Incorrect OTP. Registration failed.");
-                    }
-                } else {
-                    alert("Error submitting form.");
-                }
-            }).submitForm({ email: email, otp: otp }); // Submit form with email and OTP
-        }
-
-        function generateOTP() {
-            return Math.floor(10000 + Math.random() * 90000); // Generate random 5-digit OTP
-        }
-    </script>
 </body>
 </html>

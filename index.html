@@ -5,14 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Click on I am not a Robot</title>
     <style>
-        #notARobotButton {
-        background-color: blue;
-        color: white;
-        font-size: 18px;
-        padding: 10px 20px;
-        border: none;
-        cursor: pointer;
-    }
+      body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    flex: 1;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#notARobotButton {
+    background-color: blue;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    align-self: flex-end;
+}
 </style>
 </head>
 <body>

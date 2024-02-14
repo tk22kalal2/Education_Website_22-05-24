@@ -4,37 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Click on I am not a Robot</title>
-    <style>body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-    position: relative;
-}
-
-h1 {
-    margin: 20px 0;
-}
-
-#notARobotButton {
-    display: inline-block;
-    background-color: blue;
-    color: white;
-    font-size: 18px;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-#notARobotButton a {
-    color: white;
-    text-decoration: none;
-}
-
-#notARobotButton:hover {
-    background-color: darkblue;
-}
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            position: relative;
+        }
+        
+        h1 {
+            margin: 20px 0;
+        }
+        
+        #notARobotButton {
+            background-color: blue;
+            color: white;
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        #notARobotButton a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        #notARobotButton:hover {
+            background-color: darkblue;
+        }
 </style>
 </head>
 <body>
@@ -42,7 +45,7 @@ h1 {
     <h1>Go at the bottom of the page and click on I am not a Robot</h1>
 
     <button id="notARobotButton">
-        <a href="Index.html">I am not a Robot</a>
+        <a href="Index2.html">I am not a Robot</a>
     </button>
 
 </body>

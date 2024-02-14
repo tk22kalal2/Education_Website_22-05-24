@@ -14,7 +14,7 @@
         }
         
         h1 {
-            margin: 20px 10px;
+            margin: 20px 0;
         }
         
         #notARobotButton {
@@ -29,24 +29,19 @@
             left: 50%;
             transform: translateX(-50%);
         }
-        
-        #notARobotButton a {
-            color: white;
-            text-decoration: none;
-        }
-        
-        #notARobotButton:hover {
-            background-color: darkblue;
-        }
 </style>
 </head>
 <body>
 
     <h1>Go at the bottom of the page and click on I am not a Robot</h1>
 
-    <button id="notARobotButton">
-        <a href="Index2.html">I am not a Robot</a>
-    </button>
+    <button id="notARobotButton">I am not a Robot</button>
+
+    <script>
+        document.getElementById('notARobotButton').addEventListener('click', function() {
+            window.location.href = 'Index.html';
+        });
+    </script>
 
 </body>
 </html>

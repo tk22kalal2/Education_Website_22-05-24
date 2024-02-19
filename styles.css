@@ -12,58 +12,6 @@
     background-size: center;
 }
 
-.registrationform{
-	  display: flex;
-	  align-items: center;
-	  justify-content: center;
-	  min-height: 100vh;
-	}
-	
-	.container {
-	  background-color: rgba(0, 0, 0, 0); /* Transparent background */
-	}
-	
-	form {
-	  width: 300px;
-	  padding: 20px;
-	  border-radius: 10px;
-	  border: 2px solid wheat;
-	  background-color: rgba(255, 255, 255, 0.3); /* Transparent background with white tint */
-	}
-	
-	.form-control {
-	  margin-bottom: 20px;
-	}
-	
-	label {
-	  color: white;
-	}
-	
-	input[type="text"],
-	input[type="email"],
-	input[type="password"] {
-	  width: 100%;
-	  padding: 10px;
-	  border: 2px solid white;
-	  border-radius: 5px;
-	  background-color: transparent; /* Transparent background */
-	  color: white;
-	}
-	
-	button {
-	  width: 100%;
-	  padding: 10px;
-	  border: none;
-	  border-radius: 5px;
-	  background-color: transparent; /* Transparent background */
-	  color: white;
-	  cursor: pointer;
-	}
-	
-	button:hover {
-	  background-color: rgba(255, 255, 255, 0.4); /* Lighter tint on hover */
-	}
-
     
 .banner video{
     position: absolute;

@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     // List of HTML files to include
     const htmlFiles = [
-        "plugins/anatomyp.html","plugins/biochemestryp.html","plugins/physiologyp.html","plugins/pharmacologyp.html","plugins/pathologyp.html","plugins/microbiologyp.html","plugins/rrp.html","plugins/clinicalsp.html",
+        "Plugins/anatomyp.html","Plugins/biochemestryp.html","Plugins/physiologyp.html","plugins/pharmacologyp.html","plugins/pathologyp.html","plugins/microbiologyp.html","plugins/rrp.html","plugins/clinicalsp.html",
         "plugins/psmp.html","plugins/entp.html","plugins/opthalmologyp.html","plugins/pediatricsp.html","plugins/radiologyp.html","plugins/medicinep.html","plugins/surgeryp.html","plugins/anesthesiap.html","plugins/orthopedicsp.html","plugins/psychiatryp.html","plugins/obgyp.html","plugins/dermatologyp.html",
         "plugins/anatomyp4.html","plugins/biochemestryp4.html","plugins/physiologyp4.html","plugins/pharmacologyp4.html","plugins/pathologyp4.html","plugins/microbiologyp4.html","plugins/rrp4.html","plugins/clinicalsp4.html",
         "plugins/psmp4.html","plugins/entp4.html","plugins/opthalmologyp4.html","plugins/pediatricsp4.html","plugins/radiologyp4.html","plugins/medicinep4.html","plugins/surgeryp4.html","plugins/anesthesiap4.html","plugins/orthopedicsp4.html","plugins/psychiatryp4.html","plugins/obgyp4.html","plugins/dermatologyp4.html",

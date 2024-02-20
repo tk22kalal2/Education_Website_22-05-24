@@ -97,7 +97,7 @@ body {
 
   .container {
     width: 100%;
-    padding-left: 25px;
+    padding-left: 40px;
     padding-right: 25px;
   }
 
@@ -114,7 +114,7 @@ body {
   }
 
   .left-container img, .right-container img {
-    left: 10px;
+    left: 5px;
   }
 
   .left-container-arrow,

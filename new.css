@@ -101,6 +101,10 @@ body {
     padding-left: 40px;
     padding-right: 25px;
   }
+  .container img {
+    top: 35px;
+    width: 10%;
+  }
 
   .text-box {
     font-size: 13px;

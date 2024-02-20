@@ -88,29 +88,30 @@ body {
 }
 
 .button {
-    width: 200px;
-    padding: 15px;
-    margin: 30px 5px;
-    text-align: center;
-    border-radius: 25px;
-    color: black;
-    border: 2px;
-    font-size: 20px;
-    cursor: pointer;
-    font-weight: 600;
+  width: 200px;
+  padding: 15px;
+  margin: 30px 5px;
+  text-align: center;
+  border-radius: 25px;
+  color: black;
+  border: 2px;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: 600;
 }
+
 .button a {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
 }
+
 .button:hover {
-    background: rgb(0, 192, 226);
-    transition: 0.5s;
+  background: rgb(0, 192, 226);
+  transition: 0.5s;
+  color: white;
 }
-.button:hover {
-    color: white;
-}
+
 @media screen and (max-width: 600px) {
   .timeline {
     margin: 120px auto;

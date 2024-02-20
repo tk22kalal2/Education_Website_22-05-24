@@ -17,6 +17,7 @@ body {
   width: 100%;
   padding: 15px 200px;
   background: #4a98f7;
+  z-index: 11;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 .nav,

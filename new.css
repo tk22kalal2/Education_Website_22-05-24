@@ -89,14 +89,15 @@ body {
 
 @media screen and (max-width: 600px) {
   .timeline {
-    margin: 80px auto;
+    margin: 120px auto;
   }
   .timeline::after {
     left: 31px;
+    margin: 100px auto;
   }
 
   .container {
-    width: 80%;
+    width: 90%;
     padding-left: 40px;
     padding-right: 25px;
   }

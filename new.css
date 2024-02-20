@@ -92,12 +92,11 @@ body {
     margin: 120px auto;
   }
   .timeline::after {
-    left: 31px;
-    margin: 100px auto;
+    left: 31px;    
   }
 
   .container {
-    width: 90%;
+    width: 100%;
     padding-left: 40px;
     padding-right: 25px;
   }

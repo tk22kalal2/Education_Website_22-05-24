@@ -1,0 +1,28 @@
+/* Common button styles */
+.button {
+  width: 200px;
+  padding: 15px;
+  margin: 30px 5px;
+  text-align: center;
+  border-radius: 25px;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none; /* Remove underline for anchor inside the button */
+  display: inline-block; /* Ensure inline-block display for the anchor inside the button */
+  color: black; /* Set the default text color to black */
+  border: 2px solid black; /* Set the border color */
+}
+
+/* Styling the anchor (link) inside the button */
+.button a {
+  color: inherit; /* Inherit the color from the button (black) */
+  text-decoration: none; /* Remove underline for the anchor */
+}
+
+/* Hover effect for the button */
+.button:hover {
+  background: rgb(0, 192, 226);
+  transition: 0.5s;
+  color: white; /* Change text color to white on hover */
+}

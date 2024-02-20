@@ -113,6 +113,7 @@ a {
   }
   .nav {
     padding: 15px 20px;
+    z-index: 11;
   }
   .nav .nav-links {
     position: fixed;

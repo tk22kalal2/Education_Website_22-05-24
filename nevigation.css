@@ -93,7 +93,7 @@ a {
     z-index: 1;
     max-height: 300px;
     overflow-y: auto;
-    width: 600px;
+    width: 580px;
 }
 
 .search-box #suggestionList li {
@@ -181,4 +181,15 @@ a {
     transform: translateX(50%);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
+  .searh-box #suggestionList {
+        list-style: none;
+        flex: 1;
+        margin: 2px auto 0;
+        background-color: #fff;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        max-height: 300px;
+        overflow-y: auto;
+        width: 220px;
+    }
 }

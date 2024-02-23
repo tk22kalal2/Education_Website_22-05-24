@@ -190,6 +190,7 @@ a {
         z-index: 1;
         max-height: 300px;
         overflow-y: auto;
-        width: 220px;
+        overflow-x: auto;
+        width: 200px;
     }
 }

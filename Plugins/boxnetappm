@@ -32,3 +32,32 @@
 <tr><td><a href='https://www.boxnetapp.com?linkId=1777637441042391041" target='_blank'>OPHTHALMOLOGY</a></td></tr>
 <tr><td><a href=' target='_blank'>Q BANK E6</a></td></tr>
 <tr><td><a href='https://funpavo.com/s/1j7MRlLQpgu0bI9xmCpNRBQ" target='_blank'>NOTES E6</a></td></tr>
+
+</table>  
+    <script>
+    function tableSearch() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("input-box");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
+
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>        
+            </div>            
+        </div>
+    </body>
+</html>

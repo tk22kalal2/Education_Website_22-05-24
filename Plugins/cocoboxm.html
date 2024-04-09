@@ -1,1 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design Your Website With Background Video</title>
+        <link rel="stylesheet" href="subject.css">
+    </head>
+    <body>
+       <div class="search-box">
+            <input type="text" id="input-box" onkeyup='tableSearch()' placeholder="Name">
+            <table class="content-table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+        </div>
+        <thead><tr><th>LECTURE</th></tr></thead>
 
+<tr><td><a href='https://funpavo.com/s/1KajKGb7fVk4IBpXQ8L3lEg' target='_blank'>CLINICAL EDGE</a></td></tr>
+<tr><td><a href='https://funpavo.com/s/1gh5GtOIGiQLCIBxJf21fcA' target='_blank'>ENT SERIES</a></td></tr>
+
+<tr><td><a href='https://funpavo.com/s/1RSd-QdO0dYkv-lIcwE-oxw' target='_blank'>PSM</a></td></tr>
+<tr><td><a href='https://funpavo.com/s/19bA-VMjP716q4mnQ78gc3A' target='_blank'>ANESTHESIA </a></td></tr>
+<tr><td><a href='https://funpavo.com/s/1fpYVh-GcQmtx93ZIJlRShg' target='_blank'>BIOCHEMISTRY</a></td></tr>
+<tr><td><a href='https://funpavo.com/s/1OTQdFVu2KbsecKM7MA9auQ' target='_blank'>PSYCHIATRY</a></td></tr>
+<tr><td><a href='https://funpavo.com/s/12V-qq2DmCG1fTG6cgQDSzA' target='_blank'>DERMATOLOGY</a></td></tr>
+
+<tr><td><a href='https://funpavo.com/s/1jwzILO5qg1cy3vx_Wh7udw' target='_blank'>DERMATOLOGY</a></td></tr>
+<tr><td><a href='https://funpavo.com/s/1ArRzO5lCJuL45xlmoCDkhQ' target='_blank'>FMT</a></td></tr>
+<tr><td><a href='https://funpavo.com/s/13TUvkjK7ABsR-kK5Yj50zg' target='_blank'>PATHOLOGY</a></td></tr>
+<tr><td><a href='https://funpavo.com/s/1N9dtmfKRPM0TqvJms0rBZQ' target='_blank'>MARROW RR</a></td></tr>
+<tr><td><a href='https://funpavo.com/s/1m3UBL1-vQt2M0ApVO6rK4g' target='_blank'>ORTHOPEDICS</a></td></tr>
+
+<tr><td><a href='https://funpavo.com/s/1ftUrr39uJ1ihx0_PYTqD9Q' target='_blank'>MEDICINE</a></td></tr>
+<tr><td><a href='https://funpavo.com/s/1pjQzi3K5dGR2ido7kjIDaQ' target='_blank'>SURGERY</a></td></tr>
+<tr><td><a href='https://funpavo.com/s/1m3KAP-1K_woTFYw4btABNg' target='_blank'>OBGY</a></td></tr>
+<tr><td><a href='https://funpavo.com/s/1km5Ax8aLAHLEsqRtSd2Lfg' target='_blank'>PEDIATRICS</a></td></tr>
+
+<tr><td><a href='https://funpavo.com/s/1zhIooD9bSpT5P28nRNMDrw' target='_blank'>RADIOLOGY</a></td></tr>
+<tr><td><a href='https://funpavo.com/s/1sGCpXvOZlUaEY9CP7Z3VAA' target='_blank'>OPHTHALMOLOGY</a></td></tr>
+<tr><td><a href='https://funpavo.com/s/1OoBXIOvczM1_zS3nhUiJEg' target='_blank'>Q BANK E6</a></td></tr>
+<tr><td><a href='https://funpavo.com/s/1JBEH3CXVrjfoG_DAbmPzIw' target='_blank'>NOTES E6</a></td></tr>
+      
+
+</table>  
+    <script>
+    function tableSearch() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("input-box");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0]; // Assuming the search is based on the first column
+
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>        
+            </div>            
+        </div>
+    </body>
+</html>

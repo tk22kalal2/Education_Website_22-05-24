@@ -15,7 +15,12 @@
             if (onlineLink) {
                 const downloadButton = document.getElementById('downloadButton');
                 downloadButton.addEventListener('click', () => {
-                    window.location.href = onlineLink;
+                    const link = document.createElement('a');
+                    link.href = onlineLink;
+                    link.download = true;
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
                 });
             } else {
                 document.getElementById('downloadButton').textContent = 'No download link available';

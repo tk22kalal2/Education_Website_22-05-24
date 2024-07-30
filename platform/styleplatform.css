@@ -236,9 +236,6 @@ button a {
 
 /* Responsive styling for button container */
 @media only screen and (max-width: 767px) {
-    .button-container {
-        padding: 50px;
-    }
     button {
         height: 120px;
         width: 150px;

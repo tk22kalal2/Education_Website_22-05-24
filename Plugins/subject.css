@@ -46,11 +46,11 @@
         	box-shadow: 0 0 5px rgba(30, 144, 255, 0.5); /* Change to your preferred box-shadow */
    	}
    	body {
-        	margin: 20px;
+        	margin: 15px;
         	text-align: center; /* Center the content horizontally */
    	}
         .back-link {
-            margin-right: 30px; /* Adjust spacing as needed */
+            margin-right: 40px; /* Adjust spacing as needed */
             color: inherit; /* Inherit color from parent or specify your own */
             text-decoration: none; /* Remove underline from link */
         }

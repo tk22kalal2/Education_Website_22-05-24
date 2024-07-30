@@ -26,7 +26,7 @@ button {
     margin: 30px 5px;
     border-radius: 25px;
     border: none;
-    color: #00a037;
+    color: #a0c8e0;
     background: #ebeef1;
     font-size: 16px;
     cursor: pointer;
@@ -37,7 +37,7 @@ button {
 button a{
     text-decoration: none;
     text-transform: uppercase;
-    color: #00a037;
+    color: #a0c8e0;
 }
 @media (min-aspect-ratio: 16/9) {
     .banner video {

@@ -49,5 +49,14 @@
         	margin: 20px;
         	text-align: center; /* Center the content horizontally */
    	}
+        .back-link {
+            margin-right: 10px; /* Adjust spacing as needed */
+            color: inherit; /* Inherit color from parent or specify your own */
+            text-decoration: none; /* Remove underline from link */
+        }
+        
+        .back-link i {
+            font-size: 1.5em; /* Adjust size as needed */
+        }
 
         

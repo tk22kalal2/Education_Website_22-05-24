@@ -50,7 +50,7 @@
         	text-align: center; /* Center the content horizontally */
    	}
         .back-link {
-            margin-right: 10px; /* Adjust spacing as needed */
+            margin-right: 30px; /* Adjust spacing as needed */
             color: inherit; /* Inherit color from parent or specify your own */
             text-decoration: none; /* Remove underline from link */
         }

@@ -1,14 +1,25 @@
-// Preventing screenshots by detecting the Print Screen key
-document.addEventListener('keyup', function(e) {
-  if (e.key === 'PrintScreen') {
-    navigator.clipboard.writeText('');
-    alert('Screenshots are not allowed!');
-  }
-});
+document.addEventListener('visibilitychange', function() {
+            if (document.hidden) {
+                alert("Screenshots are not allowed!");
+            }
+        });
 
-// Clear clipboard data on copy
-document.addEventListener('copy', function(e) {
-  e.clipboardData.setData('text/plain', '');
-  e.preventDefault();
-  alert('Copying is not allowed!');
-});
+        window.addEventListener('blur', function() {
+            alert("Screenshots are not allowed!");
+        });
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "PrintScreen") {
+                event.preventDefault();
+                alert("Screenshots are not allowed!");
+            }
+        });
+
+        document.addEventListener('keyup', function(event) {
+            if (event.key === "PrintScreen") {
+                navigator.clipboard.writeText('')
+                .then(() => {
+                    alert('Screenshots are not allowed!');
+                });
+            }
+        });

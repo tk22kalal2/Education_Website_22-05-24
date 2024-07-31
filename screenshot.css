@@ -6,12 +6,4 @@ body {
             -o-user-select: none;
             -webkit-touch-callout: none; /* Disable callout, like long press menu on iOS */
         }
-        .no-screenshot {
-            background-color: #000;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #fff;
-            font-size: 2rem;
-        }
+        

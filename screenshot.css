@@ -1,9 +1,17 @@
-/* Disable right-click */
 body {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
+            user-select: none; /* Disable text selection */
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            -webkit-touch-callout: none; /* Disable callout, like long press menu on iOS */
+        }
+        .no-screenshot {
+            background-color: #000;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 2rem;
+        }

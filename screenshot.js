@@ -1,29 +1,61 @@
-document.addEventListener("keyup", function (e) {
-    var keyCode = e.keyCode ? e.keyCode : e.which;
-    if (keyCode == 44) {
-        stopPrntScr();
-    }
-});
+// Prevent context menu (right-click)
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
 
-function stopPrntScr() {
-    var inpFld = document.createElement("input");
-    inpFld.setAttribute("value", ".");
-    inpFld.setAttribute("width", "0");
-    inpFld.style.height = "0px";
-    inpFld.style.width = "0px";
-    inpFld.style.border = "0px";
-    document.body.appendChild(inpFld);
-    inpFld.select();
-    document.execCommand("copy");
-    inpFld.remove(inpFld);
-}
+        // Detect and prevent Print Screen key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "PrintScreen") {
+                event.preventDefault();
+                alert("Screenshots are not allowed!");
+            }
+        });
 
-function AccessClipboardData() {
-    try {
-        window.clipboardData.setData('text', "Access Restricted");
-    } catch (err) {
-        // Handle error
-    }
-}
+        document.addEventListener('keyup', function(event) {
+            if (event.key === "PrintScreen") {
+                navigator.clipboard.writeText('')
+                .then(() => {
+                    alert('Screenshots are not allowed!');
+                });
+            }
+        });
 
-setInterval("AccessClipboardData()", 300);
+        // Detect visibility change (e.g., user switches tabs)
+        document.addEventListener('visibilitychange', function() {
+            if (document.hidden) {
+                alert("Screenshots are not allowed!");
+            }
+        });
+
+        // Detect when the window loses focus (e.g., user switches applications)
+        window.addEventListener('blur', function() {
+            alert("Screenshots are not allowed!");
+        });
+
+        // Prevent screen recording (basic attempt)
+        const blackOverlay = document.createElement('div');
+        blackOverlay.style.position = 'fixed';
+        blackOverlay.style.top = '0';
+        blackOverlay.style.left = '0';
+        blackOverlay.style.width = '100%';
+        blackOverlay.style.height = '100%';
+        blackOverlay.style.backgroundColor = 'black';
+        blackOverlay.style.zIndex = '10000';
+        blackOverlay.style.display = 'none';
+        document.body.appendChild(blackOverlay);
+
+        document.addEventListener('visibilitychange', function() {
+            if (document.hidden) {
+                blackOverlay.style.display = 'block';
+            } else {
+                blackOverlay.style.display = 'none';
+            }
+        });
+
+        window.addEventListener('blur', function() {
+            blackOverlay.style.display = 'block';
+        });
+
+        window.addEventListener('focus', function() {
+            blackOverlay.style.display = 'none';
+        });

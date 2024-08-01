@@ -1,3 +1,27 @@
+body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+        }
+        .navbar i {
+            margin-right: 10px;
+        }
+
 .content-table {
         	border-collapse: collapse;
                 width: 100%;

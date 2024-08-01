@@ -4,12 +4,10 @@ body {
 }
 
 .navbar {
-    position: fixed;
-    top: 0;
+    position: relative;
     width: 100%;
     background: rgba(255, 255, 255, 0.9);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
     display: flex;
     align-items: center;
     padding: 10px 20px;
@@ -26,7 +24,7 @@ body {
 }
 
 .content {
-    padding-top: 60px; /* Make space for the navbar */
+    padding-top: 20px; /* Adjust padding-top to create space for the navbar */
     text-align: center; /* Center the content horizontally */
 }
 
@@ -86,7 +84,7 @@ body {
 }
 
 .back-link {
-    margin-right: 40px; /* Adjust spacing as needed */
+    margin-right: 10px; /* Adjust spacing as needed */
     color: inherit; /* Inherit color from parent or specify your own */
     text-decoration: none; /* Remove underline from link */
 }

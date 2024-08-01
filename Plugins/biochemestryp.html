@@ -18,8 +18,8 @@
                 </tr>
             </thead>
             <tbody>
-                <tr><td><a href='https://t.me/{{"X"}}?start=Z2V0LTkxNjI1MTA3MDE0NTI0ODg' target='_blank'> 1. Cell and integration of Metabolism </a></td></tr>						
-                <tr><td><a href='https://t.me/{{"X"}}?start=Z2V0LTkxNjE1MDg2NzcwOTc1NjE' target='_blank'> 1. Classification of Carbohydrates Simple Carbohydrates </a></td></tr>
+                <tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTkxNjI1MTA3MDE0NTI0ODg' target='_blank'> 1. Cell and integration of Metabolism </a></td></tr>						
+                <tr><td><a data-href='https://t.me/{{botUsername}}?start=Z2V0LTkxNjE1MDg2NzcwOTc1NjE' target='_blank'> 1. Classification of Carbohydrates Simple Carbohydrates </a></td></tr>
             </tbody>
         </table>
     </div>
@@ -32,9 +32,9 @@
 
         // Function to replace placeholders in all links
         function replacePlaceholders() {
-            const links = document.querySelectorAll('a[href*="{{\"X\"}}"]');
+            const links = document.querySelectorAll('a[data-href*="{{botUsername}}"]');
             links.forEach(link => {
-                link.href = link.href.replace('{{"X"}}', botUsername);
+                link.href = link.getAttribute('data-href').replace('{{botUsername}}', botUsername);
             });
         }
 

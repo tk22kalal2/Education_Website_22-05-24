@@ -74,6 +74,11 @@ body {
     text-align: left; /* Align text to the left */
 }
 
+.content-table td a {
+    color: #000; /* Black text color */
+    text-decoration: none; /* Remove underline */
+}
+
 #input-box {
     padding: 8px;
     border: 1px solid #ccc;

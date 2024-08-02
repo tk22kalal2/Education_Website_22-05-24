@@ -104,3 +104,17 @@ body {
 .back-link i {
     font-size: 1.5em; /* Adjust size as needed */
 }
+
+@media (max-width: 600px) {
+    .content-table td {
+        padding: 8px 10px; /* Adjust padding for smaller screens */
+        color: #000; /* Black text color */
+        text-decoration: none; /* Remove underline */
+        text-align: left; /* Align text to the left */
+    }
+
+    .content-table td a {
+        color: #000; /* Black text color */
+        text-decoration: none; /* Remove underline */
+    }
+}

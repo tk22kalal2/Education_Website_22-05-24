@@ -67,6 +67,13 @@ body {
     color: #009879;
 }
 
+.content-table td {
+    padding: 12px 15px;
+    color: #000; /* Black text color */
+    text-decoration: none; /* Remove underline */
+    text-align: left; /* Align text to the left */
+}
+
 #input-box {
     padding: 8px;
     border: 1px solid #ccc;

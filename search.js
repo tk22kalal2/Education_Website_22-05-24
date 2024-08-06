@@ -141,6 +141,27 @@ document.addEventListener("DOMContentLoaded", function () {
     { file: "Plugins/psychiatrydamh.html", fileName: "PSYCHIATRY", platformName: "DAMS HINGLISH" },
     { file: "Plugins/obgydamh.html", fileName: "OBGY", platformName: "DAMS HINGLISH" },
     { file: "Plugins/dermatologydamh.html", fileName: "DERMATOLOGY", platformName: "DAMS HINGLISH" },
+    { file: "Plugins/anatomycb.html", fileName: "ANATOMY", platformName: "CEREBELLUM" },
+    { file: "Plugins/biochemestrycb.html", fileName: "BIOCHEMESTRY", platformName: "CEREBELLUM" },
+    { file: "Plugins/physiologycb.html", fileName: "PHYSIOLOGY", platformName: "CEREBELLUM" },
+    { file: "Plugins/pharmacologycb.html", fileName: "PHARMACOLOGY", platformName: "CEREBELLUM" },
+    { file: "Plugins/pathologycb.html", fileName: "PATHOLOGY", platformName: "CEREBELLUM" },
+    { file: "Plugins/microbiologycb.html", fileName: "MICROBIOLOGY", platformName: "CEREBELLUM" },
+    { file: "Plugins/rrcb.html", fileName: "RR", platformName: "CEREBELLUM" },
+    { file: "Plugins/clinicalscb.html", fileName: "CLINICALS", platformName: "CEREBELLUM" },
+    { file: "Plugins/psmcb.html", fileName: "PSM", platformName: "CEREBELLUM" },
+    { file: "Plugins/entcb.html", fileName: "ENT", platformName: "CEREBELLUM" },
+    { file: "Plugins/opthalmologycb.html", fileName: "OPTHALMOLOGY", platformName: "CEREBELLUM" },
+    { file: "Plugins/pediatricscb.html", fileName: "PEDIATRICS", platformName: "CEREBELLUM" },
+    { file: "Plugins/radiologycb.html", fileName: "RADIOLOGY", platformName: "CEREBELLUM" },
+    { file: "Plugins/medicinecb.html", fileName: "MEDICINE", platformName: "CEREBELLUM" },
+    { file: "Plugins/surgerycb.html", fileName: "SURGERY", platformName: "CEREBELLUM" },
+    { file: "Plugins/anesthesiacb.html", fileName: "ANESTHESIA", platformName: "CEREBELLUM" },
+    { file: "Plugins/orthopedicscb.html", fileName: "ORTHOPEDICS", platformName: "CEREBELLUM" },
+    { file: "Plugins/psychiatrycb.html", fileName: "PSYCHIATRY", platformName: "CEREBELLUM" },
+    { file: "Plugins/obgycb.html", fileName: "OBGY", platformName: "CEREBELLUM" },
+    { file: "Plugins/dermatologycb.html", fileName: "DERMATOLOGY", platformName: "CEREBELLUM" }
+
     // Repeat this pattern for any additional files
 ];
 

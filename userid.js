@@ -8,7 +8,7 @@
             // Check if user.id exists
             if (!userId) {
                 // Redirect to indexX.html if user.id is missing
-                window.location.href = 'indexX.html';
+                window.location.href = 'indexXX.html';
             }
         };
     </script>

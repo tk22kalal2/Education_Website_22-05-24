@@ -3,7 +3,7 @@ window.onload = function() {
     const userId = urlParams.get('user.id');
 
     if (!userId) {
-        window.location.href = 'indexX.html';
+        window.location.href = 'indexXX.html';
         return;
     }
 

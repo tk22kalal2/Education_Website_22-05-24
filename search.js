@@ -242,9 +242,10 @@ function displaySuggestions(suggestions) {
     // Display new suggestions
     suggestions.forEach(entry => {
         const listItem = document.createElement("li");
+        listItem.classList.add('suggestion-item');
         
-        // Combine keyword, fileName, and platformName
-        const displayText = `${entry.keyword} | ${entry.fileName} | ${entry.platformName}`;
+        // Display only the file name
+        const displayText = entry.keyword;
         listItem.textContent = displayText;
 
         // Add click event listener to redirect to the URL when clicked
@@ -252,9 +253,24 @@ function displaySuggestions(suggestions) {
             window.open(entry.url, "_blank");
         });
 
+        // Create the info icon
+        const infoIcon = document.createElement("i");
+        infoIcon.className = "fa-solid fa-circle-info info-icon"; // Use the solid icon class
+        infoIcon.style.marginLeft = "10px";
+        infoIcon.style.cursor = "pointer";
+
+        // Add click event to show fileName and platformName
+        infoIcon.addEventListener("click", function (event) {
+            event.stopPropagation(); // Prevent the list item click event
+
+            alert(`File Name: ${entry.fileName}\nPlatform Name: ${entry.platformName}`);
+        });
+
+        listItem.appendChild(infoIcon);
         suggestionList.appendChild(listItem);
     });
 }
+
 
 function hideSuggestions() {
     const suggestionList = document.getElementById("suggestionList");

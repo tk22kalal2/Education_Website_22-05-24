@@ -1,4 +1,4 @@
-<script>
+
         // JavaScript function to check if user.id is present in the URL
         window.onload = function() {
             // Get the URL parameters
@@ -11,4 +11,4 @@
                 window.location.href = 'indexXX.html';
             }
         };
-    </script>
+    

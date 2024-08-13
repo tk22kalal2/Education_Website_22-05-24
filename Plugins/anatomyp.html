@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="navbar">
-        <a href="../index.html" class="back-link">
+        <a href="#" class="back-link">
             <i class="fa-solid fa-angle-left"></i> Back
         </a>
     </div>
@@ -243,6 +243,18 @@
                 }
             }
         }
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const userId = urlParams.get('user.id');
+
+            const backLink = document.getElementById('back-link');
+            if (userId) {
+                backLink.href = `../index.html?user.id=${userId}`;
+            } else {
+                // If user.id is missing, handle the redirection or set a default link
+                backLink.href = '../index.html';
+            }
+        });
     </script>
 </body>
 </html>

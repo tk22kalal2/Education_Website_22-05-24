@@ -7,12 +7,17 @@ window.onload = function() {
         return;
     }
 
-    // Add user.id to all links leading to index.html
-    const links = document.querySelectorAll('a[href$="index.html"]');
+    // Add user.id to all internal links
+    const links = document.querySelectorAll('a[href]');
     links.forEach(link => {
         const href = link.getAttribute('href');
-        link.setAttribute('href', `${href}?user.id=${userId}`);
+        // Ensure the link is internal
+        if (href && !href.includes('http') && !href.includes('user.id')) {
+            if (href.includes('?')) {
+                link.setAttribute('href', `${href}&user.id=${userId}`);
+            } else {
+                link.setAttribute('href', `${href}?user.id=${userId}`);
+            }
+        }
     });
-
-    // If needed, handle other initialization logic here
 };

@@ -82,3 +82,11 @@
         overflow-y: auto;
         width: 120px;
     }
+    .info-icon {
+        font-size: 12px; /* Slightly smaller icon for mobile */
+    }
+
+    .suggestion-item {
+        flex-direction: row; /* Maintain horizontal layout */
+        padding-right: 10px; /* Reduce padding for smaller screens */
+    }

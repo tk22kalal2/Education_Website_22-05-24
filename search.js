@@ -221,9 +221,12 @@ function extractKeywordsAndUrls(html) {
 
     // Extract keywords and corresponding URLs from the anchor elements
     const keywordsAndUrls = Array.from(anchorElements).map(anchor => {
+        const rawHref = anchor.getAttribute("data-href");
+        const url = rawHref.replace('{{botUsername}}', 'testingclonepavo_bot'); // Replace botUsername
+
         return {
             keyword: anchor.textContent.toLowerCase(),
-            url: anchor.getAttribute("href")
+            url: url
         };
     });
 
@@ -259,3 +262,4 @@ function hideSuggestions() {
     // Clear existing suggestions
     suggestionList.innerHTML = "";
 }
+    

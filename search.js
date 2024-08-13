@@ -165,13 +165,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Repeat this pattern for any additional files
 ];
 
-
-
-
-
-
-  
-
     // Fetch all HTML files and process them
     Promise.all(htmlFiles.map(fetchAndProcessFile))
         .then(allKeywordsAndUrls => {

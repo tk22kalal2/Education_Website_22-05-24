@@ -1,7 +1,8 @@
 .searchcontainer {
     margin: 0;
     text-align: center;
-    position: relative; /* Added position: relative; */
+    position: relative;
+    overflow-x: auto;/* 
 }
 
 .searchcontainer #searchInput {

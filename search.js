@@ -247,7 +247,7 @@ function displaySuggestions(suggestions) {
         if (index < suggestions.length - 1) {
             listItem.style.borderBottom = "1px solid #ccc"; // Adjust the color and style as needed
             listItem.style.paddingBottom = "10px"; // Optional: add padding for spacing before the line
-            listItem.style.marginBottom = "5px"; // Optional: add spacing after the line
+            listItem.style.marginBottom = "1px"; // Optional: add spacing after the line
         }
 
         // Create the bolded keyword element

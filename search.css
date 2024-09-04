@@ -38,6 +38,7 @@
     cursor: pointer;
     border-radius: 3px;
     font-size: 16px;
+    margin-bottom: 0;
 }
 .searchcontainer #suggestionList li a {
     text-decoration: none;

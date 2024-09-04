@@ -45,6 +45,7 @@
     white-space: nowrap;  /* Prevents line breaks within list items */
     overflow: hidden;  /* Hides overflow but allows scrolling */
     text-overflow: ellipsis;
+    width: 100%;
 }
 .searchcontainer #suggestionList li a {
     text-decoration: none;

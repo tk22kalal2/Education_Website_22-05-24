@@ -242,10 +242,21 @@ function displaySuggestions(suggestions) {
     // Display new suggestions
     suggestions.forEach(entry => {
         const listItem = document.createElement("li");
-        
-        // Combine keyword, fileName, and platformName
-        const displayText = `${entry.keyword} | ${entry.fileName} | ${entry.platformName}`;
-        listItem.textContent = displayText;
+
+        // Create the bolded keyword element
+        const keywordElement = document.createElement("span");
+        keywordElement.style.fontWeight = "bold";
+        keywordElement.textContent = entry.keyword;
+
+        // Create the fileName and platformName element
+        const fileInfoElement = document.createElement("div");
+        fileInfoElement.style.fontSize = "0.9em"; // Slightly smaller text
+        fileInfoElement.style.marginLeft = "10px"; // Indent to distinguish from keyword
+        fileInfoElement.textContent = `${entry.fileName} | ${entry.platformName}`;
+
+        // Append the keyword and file info to the list item
+        listItem.appendChild(keywordElement);
+        listItem.appendChild(fileInfoElement);
 
         // Add click event listener to redirect to the URL when clicked
         listItem.addEventListener("click", function () {

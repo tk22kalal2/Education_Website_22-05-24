@@ -240,8 +240,15 @@ function displaySuggestions(suggestions) {
     suggestionList.innerHTML = "";
 
     // Display new suggestions
-    suggestions.forEach(entry => {
+    suggestions.forEach((entry, index) => {
         const listItem = document.createElement("li");
+
+        // Add border to the bottom of each list item except the last one
+        if (index < suggestions.length - 1) {
+            listItem.style.borderBottom = "1px solid #ccc"; // Adjust the color and style as needed
+            listItem.style.paddingBottom = "10px"; // Optional: add padding for spacing before the line
+            listItem.style.marginBottom = "10px"; // Optional: add spacing after the line
+        }
 
         // Create the bolded keyword element
         const keywordElement = document.createElement("span");
@@ -266,6 +273,7 @@ function displaySuggestions(suggestions) {
         suggestionList.appendChild(listItem);
     });
 }
+
 
 function hideSuggestions() {
     const suggestionList = document.getElementById("suggestionList");

@@ -145,3 +145,11 @@
 .website-btn:hover {
   background-color: #005fa3;
 }
+
+/* Blog Image Styling */
+.blog-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0; /* Space above and below the image */
+}

@@ -128,7 +128,7 @@
 
 /* Styling for Go to Website Button */
 .website-button-wrapper {
-  text-align: centre;
+  text-align: center; /* Corrected 'centre' to 'center' */
   margin-top: 20px;
 }
 

@@ -1,17 +1,20 @@
 /* blog.css */
-/* Table of Contents Styling */
+* Table of Contents Styling */
 .toc {
-  background-color: #f1f1f1;
+  background-color: #f9f9f9;
   padding: 20px;
-  margin: 40px auto;
-  max-width: 800px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
   border-radius: 8px;
 }
 
+.toc h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
 .toc-list {
-  list-style-type: none;
-  padding-left: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .toc-list li {
@@ -19,9 +22,9 @@
 }
 
 .toc-list a {
-  color: #0077cc;
   text-decoration: none;
-  font-size: 18px;
+  color: #0077cc;
+  font-weight: bold;
 }
 
 .toc-list a:hover {

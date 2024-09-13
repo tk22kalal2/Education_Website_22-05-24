@@ -146,19 +146,35 @@
   background-color: #005fa3;
 }
 
-/* Blog Image Styling */
 /* General Blog Image Styling */
 .blog-image {
-  display: block;
-  max-width: 30%;
+  width: 100%;
   height: auto;
-  margin: 20px 0; /* Space above and below the image */
+  margin: 0 10px; /* Adds space between images */
 }
 
-/* Adjust Image Size for Tablets */
-@media (max-width: 600px) {
+/* Flexbox for images in a row */
+.image-row {
+  display: flex;
+  justify-content: space-between; /* Space between images */
+  align-items: center;
+  flex-wrap: wrap; /* Ensures images wrap on smaller screens */
+  margin: 20px 0;
+}
+
+@media (min-width: 768px) {
   .blog-image {
-    max-width: 100%; /* Decrease size for tablet view */
-    margin: 15px auto; /* Center images with reduced margin */
+    width: 30%; /* Adjusts width for larger screens */
+  }
+}
+
+@media (max-width: 767px) {
+  .image-row {
+    flex-direction: column; /* Stacks images vertically on small screens */
+  }
+
+  .blog-image {
+    width: 100%;
+    margin-bottom: 15px; /* Adds spacing between stacked images */
   }
 }

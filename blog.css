@@ -1,9 +1,8 @@
-/* blog.css */
-* Table of Contents Styling */
+/* Table of Contents Styling */
 .toc {
   background-color: #f9f9f9;
   padding: 20px;
-  margin-bottom: 20px;
+  margin: 40px 0; /* Added margin on top and bottom */
   border-radius: 8px;
 }
 
@@ -30,6 +29,7 @@
 .toc-list a:hover {
   text-decoration: underline;
 }
+
 
 .blog {
   background-color: #f9f9f9;

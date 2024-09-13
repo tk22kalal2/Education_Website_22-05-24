@@ -150,15 +150,15 @@
 /* General Blog Image Styling */
 .blog-image {
   display: block;
-  max-width: 100%;
+  max-width: 30%;
   height: auto;
   margin: 20px 0; /* Space above and below the image */
 }
 
 /* Adjust Image Size for Tablets */
-@media (min-width: 600px) and (max-width: 1024px) {
+@media (min-width: 600px) {
   .blog-image {
-    max-width: 30%; /* Decrease size for tablet view */
+    max-width: 100%; /* Decrease size for tablet view */
     margin: 15px auto; /* Center images with reduced margin */
   }
 }

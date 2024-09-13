@@ -156,7 +156,7 @@
 }
 
 /* Adjust Image Size for Tablets */
-@media (min-width: 600px) {
+@media (max-width: 600px) {
   .blog-image {
     max-width: 100%; /* Decrease size for tablet view */
     margin: 15px auto; /* Center images with reduced margin */

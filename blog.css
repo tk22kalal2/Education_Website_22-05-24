@@ -147,19 +147,23 @@
 }
 
 /* General Blog Image Styling */
+/* General Blog Image Styling */
 .blog-image {
   width: 100%;
   height: auto;
-  margin: 0 10px; /* Adds space between images */
+  margin: 0 10px; /* Space between images */
 }
 
-/* Flexbox for images in a row */
+/* Flexbox for images in a row with border */
 .image-row {
   display: flex;
   justify-content: space-between; /* Space between images */
   align-items: center;
   flex-wrap: wrap; /* Ensures images wrap on smaller screens */
   margin: 20px 0;
+  padding: 10px; /* Padding inside the border */
+  border: 2px solid #ccc; /* Border around the group of images */
+  border-radius: 8px; /* Rounded corners */
 }
 
 @media (min-width: 768px) {

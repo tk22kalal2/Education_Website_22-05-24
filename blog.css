@@ -1,23 +1,29 @@
 /* Table of Contents Styling */
+/* Table of Contents Styling */
 .toc {
   background-color: #f9f9f9;
   padding: 20px;
-  margin: 40px auto; /* Added margin on top and bottom */
-  border-radius: 8px;
+  margin: 60px auto; /* Added more space from top and bottom, centered it horizontally */
+  border-radius: 8px; /* Rounded corners for the box */
+  border: 2px solid #ddd; /* Add a border for a square effect */
+  max-width: 600px; /* Set a max width to make the box square-like */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */
 }
 
 .toc h2 {
   font-size: 24px;
   margin-bottom: 10px;
+  text-align: center; /* Center the title */
 }
 
 .toc-list {
   list-style: none;
   padding: 0;
+  margin-top: 20px;
 }
 
 .toc-list li {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .toc-list a {
@@ -34,7 +40,7 @@
 .blog {
   background-color: #f9f9f9;
   padding: 40px;
-  margin: 60px auto; /* Added margin above and below */
+  margin: 80px auto; /* Added margin above and below */
 }
 
 .blog-container {
@@ -122,7 +128,7 @@
 
 /* Styling for Go to Website Button */
 .website-button-wrapper {
-  text-align: right;
+  text-align: centre;
   margin-top: 20px;
 }
 

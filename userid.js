@@ -6,10 +6,11 @@ window.onload = function() {
         localStorage.setItem('userId', userId); // Store user.id in localStorage
     } else {
         const storedUserId = localStorage.getItem('userId');
-        if (!storedUserId) {
-            window.location.href = 'index.html'; // Redirect if no user.id is available
-            return;
-        }
+        // Remove or comment out the redirect logic
+        // if (!storedUserId) {
+        //     window.location.href = 'index.html'; // Redirect if no user.id is available
+        //     return;
+        // }
     }
 
     // Now you can use userId or storedUserId as needed

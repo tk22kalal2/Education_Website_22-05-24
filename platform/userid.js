@@ -7,7 +7,7 @@ window.onload = function() {
     } else {
         const storedUserId = localStorage.getItem('userId');
         if (!storedUserId) {
-            window.location.href = 'indexXX.html'; // Redirect if no user.id is available
+            window.location.href = 'index.html'; // Redirect if no user.id is available
             return;
         }
     }

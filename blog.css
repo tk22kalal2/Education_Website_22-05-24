@@ -106,7 +106,7 @@
 }
 
 .blog-content-wrapper.expanded {
-  max-height: auto; /* Adjust according to content length */
+  max-height: none; /* Remove the height limit when expanded */
 }
 
 .read-more-btn {

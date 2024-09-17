@@ -106,34 +106,6 @@
 }
 
 /* Styling for Read More and Blog Content */
-.blog-content-wrapper {
-  max-height: 200px;
-  overflow: hidden;
-  transition: max-height 0.3s ease-in-out;
-}
-
-.blog-content-wrapper.expanded {
-  max-height: none; /* Remove the height limit when expanded */
-}
-
-.read-more-btn {
-  display: block;
-  margin-left: auto;
-  margin-top: 20px;
-  background-color: #0077cc;
-  color: #fff;
-  padding: 8px 16px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.read-more-btn:hover {
-  background-color: #005fa3;
-}
-
-/* Styling for Go to Website Button */
 .website-button-wrapper {
   text-align: center; /* Corrected 'centre' to 'center' */
   margin-top: 20px;

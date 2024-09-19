@@ -4,8 +4,8 @@
   shareBtn.addEventListener("click", (event) => {
     if (navigator.share) {
       navigator.share({
-        title: "Google Official Website",
-        url: "https://www.google.com"
+        title: "Nextpulse Official Website",
+        url: "https://telegram.dog/testingclonepavo_bot"
       })
       .then(() => {
         console.log("Thanks for sharing");

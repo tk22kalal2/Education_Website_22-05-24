@@ -1,11 +1,14 @@
 
   const shareBtn = document.querySelector("#shareBtn");
+  const copyLinkBtn = document.querySelector("#copyLinkBtn");
+  const linkToCopy = "https://www.google.com";
 
+  // Web Share API for Share Button
   shareBtn.addEventListener("click", (event) => {
     if (navigator.share) {
       navigator.share({
-        title: "Nextpulse Official Website",
-        url: "https://telegram.dog/testingclonepavo_bot"
+        title: "Google Official Website",
+        url: linkToCopy
       })
       .then(() => {
         console.log("Thanks for sharing");
@@ -17,4 +20,15 @@
     } else {
       alert("Browser doesn't support this Web Share API");
     }
+  });
+
+  // Copy Link Functionality
+  copyLinkBtn.addEventListener("click", (event) => {
+    navigator.clipboard.writeText(linkToCopy)
+      .then(() => {
+        alert("Link copied to clipboard!");
+      })
+      .catch((err) => {
+        console.log("Failed to copy the link:", err);
+      });
   });

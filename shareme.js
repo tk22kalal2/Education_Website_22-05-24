@@ -1,13 +1,13 @@
 
   const shareBtn = document.querySelector("#shareBtn");
   const copyLinkBtn = document.querySelector("#copyLinkBtn");
-  const linkToCopy = "https://www.google.com";
+  const linkToCopy = "https://telegram.me/testingclonepavo_bot";
 
   // Web Share API for Share Button
   shareBtn.addEventListener("click", (event) => {
     if (navigator.share) {
       navigator.share({
-        title: "Google Official Website",
+        title: "Nextpulse Official Website",
         url: linkToCopy
       })
       .then(() => {

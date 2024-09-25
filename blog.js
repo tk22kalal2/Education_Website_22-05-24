@@ -5,12 +5,14 @@ const readMoreButtons = document.querySelectorAll('.read-more-btn');
 readMoreButtons.forEach((button) => {
   button.addEventListener('click', function() {
     const contentWrapper = this.previousElementSibling;
-    if (contentWrapper.style.display === 'none' || contentWrapper.style.display === '') {
-      contentWrapper.style.display = 'block';  // Show content
-      this.textContent = 'Show Less';          // Change button text
+    
+    // Toggle the 'expanded' class on the content wrapper
+    if (contentWrapper.classList.contains('expanded')) {
+      contentWrapper.classList.remove('expanded');
+      this.textContent = 'Read More...'; // Change button text to 'Read More'
     } else {
-      contentWrapper.style.display = 'none';   // Hide content
-      this.textContent = 'Read More...';       // Change button text back
+      contentWrapper.classList.add('expanded');
+      this.textContent = 'Show Less'; // Change button text to 'Show Less'
     }
   });
 });

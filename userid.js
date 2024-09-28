@@ -1,4 +1,14 @@
 window.onload = function() {
+    // Detect if the user is coming from Telegram
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+    if (userAgent.includes('Telegram')) {
+        // Redirect to indexx.html if opened from Telegram
+        window.location.href = 'indeXx.html';
+        return; // Stop further execution
+    }
+
+    // Regular logic for handling userId
     const urlParams = new URLSearchParams(window.location.search);
     const userId = urlParams.get('user.id');
 

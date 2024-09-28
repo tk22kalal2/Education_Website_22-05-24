@@ -1,14 +1,15 @@
 window.onload = function() {
-    // Detect if the user is coming from Telegram
+    // Detect if the user is coming from Telegram's in-app browser
     const userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
+    // Check if the user is using Telegram's in-app browser
     if (userAgent.includes('Telegram')) {
-        // Redirect to indexx.html if opened from Telegram
-        window.location.href = 'indeXx.html';
-        return; // Stop further execution
+        // Redirect to indexx.html if opened from Telegram browser
+        window.location.href = 'indexx.html';
+        return; // Stop further execution to ensure redirection happens
     }
 
-    // Regular logic for handling userId
+    // Continue with the rest of the functionality for non-Telegram users
     const urlParams = new URLSearchParams(window.location.search);
     const userId = urlParams.get('user.id');
 

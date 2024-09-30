@@ -171,7 +171,7 @@
   border-radius: 8px; /* Rounded corners */
   gap: 10px; /* Space between images inside the row */
   max-width: 100%; /* Ensures the container doesn't overflow */
-  height: 500px; /* Fixed height of the square box */
+  height: 501px; /* Fixed height of the square box */
   background-color: #f9f9f9; /* Optional: Background for the box */
 }
 

@@ -151,67 +151,57 @@
   background-color: #005fa3;
 }
 
-/* General Blog Image Styling */
-/* General Blog Image Styling */
-/* General styles for images */
 /* General styles for images */
 .blog-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures the image fits within the square box */
+  width: auto; /* Allow image width to adjust based on its height */
+  height: 100%; /* Set the image height to 100% of the container */
+  object-fit: cover; /* Ensure the image covers the available space */
   border-radius: 8px; /* Optional: To make the image corners rounded */
 }
 
 /* Flexbox for images in a row with border */
 .image-row {
   display: flex;
-  justify-content: space-between; /* Equal space between images */
+  justify-content: space-between; /* Align images horizontally */
   align-items: center;
-  flex-wrap: wrap; /* Ensures images wrap after 3 images */
+  flex-wrap: nowrap; /* Keep images on the same line */
   margin: 20px 0;
   padding: 10px; /* Padding inside the border */
   border: 2px solid #ccc; /* Border around the group of images */
   border-radius: 8px; /* Rounded corners */
   gap: 10px; /* Space between images inside the row */
   max-width: 100%; /* Ensures the container doesn't overflow */
-}
-
-/* Fixed size square boxes for images */
-.image-box {
-  width: 250px; /* Fixed width of the square box */
   height: 250px; /* Fixed height of the square box */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px; /* Space around each image box */
   background-color: #f9f9f9; /* Optional: Background for the box */
-  border: 2px solid #ddd; /* Optional: Border around each square box */
-  border-radius: 8px; /* Optional: Rounded corners */
 }
 
-/* Larger screens - max 3 images per row */
+/* Larger screens - align images horizontally */
 @media (min-width: 768px) {
   .image-row {
-    justify-content: space-between; /* Equal spacing horizontally */
+    justify-content: space-between; /* Equal space between images */
     padding-left: 10px;
     padding-right: 10px;
+    height: 250px; /* Keep the height of the box fixed */
   }
 
-  .image-box {
-    flex-basis: calc((100% - 40px) / 3); /* 3 boxes per row, including margins */
+  .blog-image {
+    height: 100%; /* Keep image height to fill the box */
+    width: auto; /* Allow image width to adjust accordingly */
   }
 }
 
 /* Smaller screens - images stack vertically */
 @media (max-width: 767px) {
   .image-row {
-    flex-direction: column; /* Stacks boxes vertically on small screens */
+    flex-direction: column; /* Stack images vertically */
     padding-left: 10px;
     padding-right: 10px;
+    height: auto; /* Allow box height to adjust */
   }
 
-  .image-box {
-    width: 100%; /* Full width of the container */
-    height: auto; /* Adjust height automatically */
+  .blog-image {
+    width: 100%; /* Make image take full width of the container */
+    height: auto; /* Adjust height based on width */
+    margin-bottom: 15px; /* Adds spacing between stacked images */
   }
 }

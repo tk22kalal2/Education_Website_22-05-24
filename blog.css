@@ -153,33 +153,46 @@
 
 /* General Blog Image Styling */
 /* General Blog Image Styling */
+/* General styles for images */
 .blog-image {
   width: 100%;
   height: auto;
-  margin: 0 10px; /* Space between images */
+  aspect-ratio: 1/1; /* Makes the image square */
+  object-fit: cover; /* Ensures the image fits within the square */
 }
 
 /* Flexbox for images in a row with border */
 .image-row {
   display: flex;
-  justify-content: space-between; /* Space between images */
+  justify-content: space-evenly; /* Equal space between images */
   align-items: center;
-  flex-wrap: wrap; /* Ensures images wrap on smaller screens */
+  flex-wrap: wrap; /* Ensures images wrap after 3 images */
   margin: 20px 0;
   padding: 10px; /* Padding inside the border */
   border: 2px solid #ccc; /* Border around the group of images */
   border-radius: 8px; /* Rounded corners */
+  gap: 10px; /* Space between images inside the row */
 }
 
+/* Larger screens - max 3 images per row */
 @media (min-width: 768px) {
+  .image-row {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
   .blog-image {
-    width: 30%; /* Adjusts width for larger screens */
+    flex-basis: calc((100% - 40px) / 3); /* 3 images per row, accounting for margins */
+    height: auto;
   }
 }
 
+/* Smaller screens - images stack vertically */
 @media (max-width: 767px) {
   .image-row {
     flex-direction: column; /* Stacks images vertically on small screens */
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .blog-image {

@@ -1,15 +1,12 @@
-document.addEventListener("DOMContentLoaded", function() {
-    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
-    // Check if the user agent contains Telegram's in-app browser signature
-    if (userAgent.includes("Telegram")) {
-        // Redirect to the error page
-        window.location.href = "error.html";
-    }
+        function isTelegramInAppBrowser() {
+            // A heuristic to detect if the site is running in Telegram's in-app browser
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            return /Telegram/i.test(userAgent);
+        }
 
-    // Optionally, check the referrer for Telegram
-    if (document.referrer && document.referrer.includes("t.me")) {
-        // Redirect to the error page
-        window.location.href = "error.html";
-    }
-});
+        if (isTelegramInAppBrowser()) {
+            // Redirect to error.html if opened in Telegram's in-app browser
+            window.location.href = "error.html";
+        }
+    

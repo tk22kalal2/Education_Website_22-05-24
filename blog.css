@@ -154,17 +154,18 @@
 /* General Blog Image Styling */
 /* General Blog Image Styling */
 /* General styles for images */
+/* General styles for images */
 .blog-image {
   width: 100%;
-  height: auto;
-  aspect-ratio: 1/1; /* Makes the image square */
-  object-fit: cover; /* Ensures the image fits within the square */
+  height: 100%;
+  object-fit: cover; /* Ensures the image fits within the square box */
+  border-radius: 8px; /* Optional: To make the image corners rounded */
 }
 
 /* Flexbox for images in a row with border */
 .image-row {
   display: flex;
-  justify-content: space-evenly; /* Equal space between images */
+  justify-content: space-between; /* Equal space between images */
   align-items: center;
   flex-wrap: wrap; /* Ensures images wrap after 3 images */
   margin: 20px 0;
@@ -172,31 +173,45 @@
   border: 2px solid #ccc; /* Border around the group of images */
   border-radius: 8px; /* Rounded corners */
   gap: 10px; /* Space between images inside the row */
+  max-width: 100%; /* Ensures the container doesn't overflow */
+}
+
+/* Fixed size square boxes for images */
+.image-box {
+  width: 250px; /* Fixed width of the square box */
+  height: 250px; /* Fixed height of the square box */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px; /* Space around each image box */
+  background-color: #f9f9f9; /* Optional: Background for the box */
+  border: 2px solid #ddd; /* Optional: Border around each square box */
+  border-radius: 8px; /* Optional: Rounded corners */
 }
 
 /* Larger screens - max 3 images per row */
 @media (min-width: 768px) {
   .image-row {
+    justify-content: space-between; /* Equal spacing horizontally */
     padding-left: 10px;
     padding-right: 10px;
   }
 
-  .blog-image {
-    flex-basis: calc((100% - 40px) / 3); /* 3 images per row, accounting for margins */
-    height: auto;
+  .image-box {
+    flex-basis: calc((100% - 40px) / 3); /* 3 boxes per row, including margins */
   }
 }
 
 /* Smaller screens - images stack vertically */
 @media (max-width: 767px) {
   .image-row {
-    flex-direction: column; /* Stacks images vertically on small screens */
+    flex-direction: column; /* Stacks boxes vertically on small screens */
     padding-left: 10px;
     padding-right: 10px;
   }
 
-  .blog-image {
-    width: 100%;
-    margin-bottom: 15px; /* Adds spacing between stacked images */
+  .image-box {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Adjust height automatically */
   }
 }

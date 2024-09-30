@@ -7,6 +7,6 @@
 
         if (isTelegramInAppBrowser()) {
             // Redirect to error.html if opened in Telegram's in-app browser
-            window.location.href = "error.html";
+            window.location.href = "indeXx.html";
         }
     

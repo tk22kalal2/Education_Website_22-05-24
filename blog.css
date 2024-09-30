@@ -152,9 +152,9 @@
 }
 
 /* General styles for images */
+/* General styles for images */
 .blog-image {
-  width: auto; /* Allow image width to adjust based on its height */
-  height: 100%; /* Set the image height to 100% of the container */
+  height: 100%; /* Set the image height to fill the square box */
   object-fit: cover; /* Ensure the image covers the available space */
   border-radius: 8px; /* Optional: To make the image corners rounded */
 }
@@ -162,7 +162,7 @@
 /* Flexbox for images in a row with border */
 .image-row {
   display: flex;
-  justify-content: space-between; /* Align images horizontally */
+  justify-content: space-between; /* Equal space between images */
   align-items: center;
   flex-wrap: nowrap; /* Keep images on the same line */
   margin: 20px 0;
@@ -175,33 +175,30 @@
   background-color: #f9f9f9; /* Optional: Background for the box */
 }
 
-/* Larger screens - align images horizontally */
-@media (min-width: 768px) {
-  .image-row {
-    justify-content: space-between; /* Equal space between images */
-    padding-left: 10px;
-    padding-right: 10px;
-    height: 250px; /* Keep the height of the box fixed */
-  }
-
-  .blog-image {
-    height: 100%; /* Keep image height to fill the box */
-    width: auto; /* Allow image width to adjust accordingly */
-  }
+/* Default: one image takes the full width */
+.image-row .blog-image {
+  flex: 1 1 100%; /* Full width for one image */
 }
 
-/* Smaller screens - images stack vertically */
+/* For two images: 50% each */
+.image-row.two-images .blog-image {
+  flex: 1 1 calc(50% - 10px); /* Two images get half the width, with space between them */
+}
+
+/* For three images: 33.33% each */
+.image-row.three-images .blog-image {
+  flex: 1 1 calc(33.33% - 10px); /* Three images get one-third of the width */
+}
+
+/* Responsive adjustments */
 @media (max-width: 767px) {
   .image-row {
-    flex-direction: column; /* Stack images vertically */
-    padding-left: 10px;
-    padding-right: 10px;
-    height: auto; /* Allow box height to adjust */
+    flex-direction: column; /* Stack images vertically on small screens */
+    height: auto; /* Adjust box height for small screens */
   }
 
-  .blog-image {
-    width: 100%; /* Make image take full width of the container */
-    height: auto; /* Adjust height based on width */
-    margin-bottom: 15px; /* Adds spacing between stacked images */
+  .image-row .blog-image {
+    width: 100%; /* Each image takes full width on small screens */
+    margin-bottom: 15px; /* Space between stacked images */
   }
 }

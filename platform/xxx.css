@@ -20,7 +20,7 @@ body {
     flex-direction: column;
     gap: 20px;
     width: 100%;
-    max-width: 800px; /* Adjust as needed */
+    max-width: 1600px; /* Adjust as needed */
 }
 
 .custom-button {

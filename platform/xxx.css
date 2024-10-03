@@ -1,51 +1,91 @@
+/* Reset default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 20px;
+    background-color: #ffffff; /* Set background to white */
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-}
-
-.navbar {
-    margin-bottom: 20px;
-}
-
-.back-link {
-    text-decoration: none;
-    font-size: 18px;
-    color: #333;
-    display: flex;
-    align-items: center;
+    min-height: 100vh; /* Full viewport height to center the content vertically */
 }
 
 .content-wrapper {
-    width: 100%;
-    max-width: 800px;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 40px; /* Space for the margin lines */
+    background-color: #ffffff; /* Ensure the content area has a white background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .content-wrapper::before,
-.content-wrapper::after {
+.content-wrapper::after,
+.content-wrapper::left,
+.content-wrapper::right {
     content: "";
     position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 2px;
     background-color: #ccc;
 }
 
+/* Top margin line */
 .content-wrapper::before {
+    top: 0;
     left: 0;
+    right: 0;
+    height: 40px;
+    border: 2px solid #ccc;
 }
 
+/* Bottom margin line */
 .content-wrapper::after {
+    bottom: 0;
+    left: 0;
     right: 0;
+    height: 40px;
+    border: 2px solid #ccc;
+}
+
+/* Left margin line */
+.content-wrapper::left {
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 40px;
+    border: 2px solid #ccc;
+}
+
+/* Right margin line */
+.content-wrapper::right {
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 40px;
+    border: 2px solid #ccc;
+}
+
+/* Adjust pseudo-elements for all four sides */
+.content-wrapper::before,
+.content-wrapper::after {
+    left: 0;
+    right: 0;
+}
+
+.content-wrapper::left,
+.content-wrapper::right {
+    top: 0;
+    bottom: 0;
+}
+
+/* Add lines on left and right */
+.content-wrapper::left {
+    left: -40px; /* Position outside the content-wrapper */
+}
+
+.content-wrapper::right {
+    right: -40px; /* Position outside the content-wrapper */
 }
 
 .button-container {
@@ -53,7 +93,6 @@ body {
     flex-direction: column;
     gap: 20px;
     align-items: center;
-    position: relative;
 }
 
 .custom-button {
@@ -108,4 +147,6 @@ body {
     width: 100%;
     height: 100%;
     z-index: 10;
+    text-decoration: none;
+    color: inherit;
 }

@@ -9,20 +9,37 @@ body {
     font-family: Arial, sans-serif;
     background-color: #ffffff; /* Set background to white */
     display: flex;
+    flex-direction: column; /* Stack elements vertically */
     justify-content: center;
     align-items: center;
     min-height: 100vh; /* Full viewport height to center the content vertically */
     padding: 20px; /* Optional padding for smaller screens */
 }
 
+/* Main Title Image */
+.main-title {
+    margin-bottom: 40px; /* Space between the title image and buttons */
+    text-align: center;
+}
+
+.main-title-img {
+    max-width: 100%;
+    height: auto;
+    width: 300px; /* Adjust as needed */
+    border-radius: 10px; /* Optional: Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+}
+
+/* Button Container */
 .button-container {
     display: flex;
     flex-direction: column;
     gap: 20px;
     width: 100%;
-    max-width: 800px; /* Increased from 400px to 1200px */
+    max-width: 1200px; /* Increased from 800px to 1200px */
 }
 
+/* Custom Button Styles */
 .custom-button {
     display: flex;
     align-items: center;

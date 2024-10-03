@@ -12,87 +12,15 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh; /* Full viewport height to center the content vertically */
-}
-
-.content-wrapper {
-    position: relative;
-    padding: 40px; /* Space for the margin lines */
-    background-color: #ffffff; /* Ensure the content area has a white background */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.content-wrapper::before,
-.content-wrapper::after,
-.content-wrapper::left,
-.content-wrapper::right {
-    content: "";
-    position: absolute;
-    background-color: #ccc;
-}
-
-/* Top margin line */
-.content-wrapper::before {
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 40px;
-    border: 2px solid #ccc;
-}
-
-/* Bottom margin line */
-.content-wrapper::after {
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 40px;
-    border: 2px solid #ccc;
-}
-
-/* Left margin line */
-.content-wrapper::left {
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 40px;
-    border: 2px solid #ccc;
-}
-
-/* Right margin line */
-.content-wrapper::right {
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 40px;
-    border: 2px solid #ccc;
-}
-
-/* Adjust pseudo-elements for all four sides */
-.content-wrapper::before,
-.content-wrapper::after {
-    left: 0;
-    right: 0;
-}
-
-.content-wrapper::left,
-.content-wrapper::right {
-    top: 0;
-    bottom: 0;
-}
-
-/* Add lines on left and right */
-.content-wrapper::left {
-    left: -40px; /* Position outside the content-wrapper */
-}
-
-.content-wrapper::right {
-    right: -40px; /* Position outside the content-wrapper */
+    padding: 20px; /* Optional padding for smaller screens */
 }
 
 .button-container {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    align-items: center;
+    width: 100%;
+    max-width: 800px; /* Adjust as needed */
 }
 
 .custom-button {
@@ -101,42 +29,42 @@ body {
     background-color: white;
     border: 2px solid #ccc;
     border-radius: 8px;
-    padding: 10px;
+    padding: 15px;
     width: 100%;
-    max-width: 400px;
-    text-align: left;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
+    text-decoration: none; /* Remove underline from links */
 }
 
 .custom-button:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .button-img {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    margin-right: 15px;
+    margin-right: 20px;
+    object-fit: cover;
 }
 
 .button-text {
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 
 .button-text h1 {
     margin: 0;
-    font-size: 18px;
+    font-size: 20px;
     color: #333;
 }
 
 .button-text p {
-    margin: 0;
-    font-size: 14px;
+    margin: 5px 0 0 0;
+    font-size: 16px;
     color: #777;
 }
 

@@ -62,8 +62,8 @@ body {
 }
 
 .button-img {
-    width: 80px; /* Increased size for better visibility */
-    height: 80px; /* Increased size for better visibility */
+    width: 50px; /* Increased size for better visibility */
+    height: 50px; /* Increased size for better visibility */
     border-radius: 50%;
     margin-right: 25px; /* Increased margin for better spacing */
     object-fit: cover;

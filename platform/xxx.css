@@ -3,6 +3,10 @@ body {
     background-color: #f9f9f9;
     margin: 0;
     padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .navbar {
@@ -17,10 +21,39 @@ body {
     align-items: center;
 }
 
+.content-wrapper {
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-wrapper::before,
+.content-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #ccc;
+}
+
+.content-wrapper::before {
+    left: 0;
+}
+
+.content-wrapper::after {
+    right: 0;
+}
+
 .button-container {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    align-items: center;
+    position: relative;
 }
 
 .custom-button {

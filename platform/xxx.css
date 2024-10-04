@@ -116,7 +116,9 @@ body {
         height: 250px; /* Reduce height on smaller screens */
         padding: 15px;
     }
-
+    .custom-button {
+        height: 260px;
+    }
     .button-img {
         width: 80px;
         height: 80px;

@@ -1,4 +1,4 @@
-./* Reset default margins and paddings */
+/* Reset default margins and paddings */
 * {
     margin: 0;
     padding: 0;
@@ -23,9 +23,8 @@ body {
 }
 
 .main-title-img {
-    max-width: 100%;
-    height: auto;
-    width: 300px; /* Adjust as needed */
+    width: 100%; /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
     border-radius: 10px; /* Optional: Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
 }

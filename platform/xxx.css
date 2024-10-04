@@ -1,71 +1,102 @@
+/* Reset default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* Set background to white */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full viewport height to center the content vertically */
+    padding: 20px; /* Optional padding for smaller screens */
+}
+
+/* Main Title Image */
+.main-title {
+    margin-bottom: 40px; /* Space between the title image and buttons */
+    text-align: center;
+}
+
+.main-title-img {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    max-width: 800px; /* Increased from 800px to 1200px */
+}
+
 /* Custom Button Styles */
 .custom-button {
     display: flex;
     align-items: center;
-    background-color: #f0f0f0; /* Light gray for a clean, professional look */
-    border: none; /* Remove border for a sleeker look */
-    border-radius: 12px; /* Slightly rounded corners */
-    padding: 15px 20px; /* Add some padding for better spacing */
+    background-color: white;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 0; /* Increased padding for better spacing */
     width: 100%;
-    max-width: 1200px; /* Button width scales with the container */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    max-width: 1200px; /* Increased from 400px to 1200px */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-decoration: none; /* Remove underline from links */
-    color: #333; /* Dark text color for readability */
-    overflow: hidden; /* Prevent overflow from button contents */
+    color: inherit; /* Inherit text color */
 }
 
 .custom-button:hover {
-    transform: translateY(-5px); /* Move up slightly on hover */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
-    background-color: #ffffff; /* Slightly brighten the button on hover */
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .button-img {
-    width: 80px; /* Bigger image for better visibility */
-    height: 80px; /* Matching height */
-    border-radius: 50%; /* Circular profile image */
-    margin-right: 20px; /* Space between image and text */
+    width: 50px; /* Increased size for better visibility */
+    height: 50px; /* Increased size for better visibility */
+    border-radius: 50%;
+    margin-right: 25px; /* Increased margin for better spacing */
     object-fit: cover;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for image depth */
 }
 
 .button-text {
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 
 .button-text h1 {
     margin: 0;
-    font-size: 26px; /* Increase size for visibility */
-    color: #333; /* Darker text for better readability */
-    font-weight: bold;
+    font-size: 24px; /* Increased font size for better readability */
+    color: #333;
 }
 
 .button-text p {
-    margin: 8px 0 0 0; /* Add some spacing above the paragraph */
-    font-size: 18px; /* Adjust font size */
-    color: #555; /* Softer gray for less emphasis */
+    margin: 5px 0 0 0;
+    font-size: 18px; /* Increased font size for better readability */
+    color: #777;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 1200px) {
     .button-container {
-        max-width: 90%;
+        max-width: 90%; /* Adjust container width on smaller screens */
     }
 
     .custom-button {
-        max-width: 100%;
+        max-width: 100%; /* Allow buttons to fill the container */
     }
 }
 
 @media (max-width: 768px) {
-    .custom-button {
-        padding: 10px;
-    }
-
     .button-img {
         width: 60px;
         height: 60px;
@@ -73,7 +104,7 @@
     }
 
     .button-text h1 {
-        font-size: 22px;
+        font-size: 20px;
     }
 
     .button-text p {
@@ -94,7 +125,7 @@
     }
 
     .button-text h1 {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .button-text p {

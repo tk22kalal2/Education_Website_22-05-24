@@ -154,7 +154,7 @@ body {
         font-size: 12px;
     }
     .main-title-img {
-        width: 110%; /* Full width of the container */
-        height: 110%; /* Maintain aspect ratio */
+        width: 105%; /* Full width of the container */
+        height: 90%; /* Maintain aspect ratio */
     }
 }

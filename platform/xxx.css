@@ -153,4 +153,8 @@ body {
     .button-text p {
         font-size: 12px;
     }
+    .main-title-img {
+        aspect-ratio: 1 / 1; /* Ensures height equals width */
+        height: auto; /* Ensures height adjusts based on width */
+    }
 }

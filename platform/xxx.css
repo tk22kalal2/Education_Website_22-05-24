@@ -108,8 +108,8 @@ body {
     }
     
     .main-title-img {
-        width: 110%; /* Full width of the container */
-        height: 110%; /* Maintain aspect ratio */
+        width: 100%; /* Full width of the container */
+        height: auto; /* Maintain aspect ratio */
     }
 
     .custom-button {

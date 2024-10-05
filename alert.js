@@ -22,6 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
   let isDirectAccess = referrer === "";
 
   if (isSocialMedia || isDirectAccess) {
-    alert("You are using a social media web-browser or direct link to access the website. Kindly search 'NextPulse' on Google and use the website. Otherwise, you will be banned.");
+    alert("You are using a social media web-browser or direct link to access the website. Kindly search 'afrahtafreeh site' on Google and use the website. Otherwise, you will be banned.");
   }
 });

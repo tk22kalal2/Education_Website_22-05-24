@@ -23,7 +23,7 @@ body {
 
 .text-box {
   padding: 20px 30px;
-  background: #9AE8A8;
+  background: rgba(178, 242, 187, 0.5);
   position: relative;
   border-radius: 6px;
   font-size: 15px;
@@ -54,7 +54,7 @@ body {
   position: absolute;
   width: 6px;
   height: 100%;
-  background: #9AE8A8;
+  background: rgba(178, 242, 187, 0.5);
   top: 0;
   left: 50%;
   margin-left: -3px;

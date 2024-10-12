@@ -78,12 +78,12 @@ body {
 }
 
 .left-container-arrow {
-  border-left: 15px solid #f0faff;
+  border-left: 15px solid rgba(178, 242, 187, 0.5);
   right: -15px;
 }
 
 .right-container-arrow {
-  border-right: 15px solid #f0faff;
+  border-right: 15px solid rgba(178, 242, 187, 0.5);
   left: -15px;
 }
 .telegram-float {

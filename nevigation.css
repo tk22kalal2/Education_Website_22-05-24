@@ -8,7 +8,8 @@
   font-family: "Poppins", sans-serif;
 }
 body {
-  background: #B2F2BB;
+  background-color: #9AE8A8;
+
 }
 .nav {
   position: fixed;
@@ -16,7 +17,7 @@ body {
   left: 0;
   width: 100%;
   padding: 15px 200px;
-  background: #B2F2BB;
+  background: #9AE8A8;
   z-index: 11;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }

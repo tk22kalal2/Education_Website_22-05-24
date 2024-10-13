@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Check if the referrer is a social media platform or a direct access (empty referrer)
   let isSocialMedia = socialMediaDomains.some(domain => referrer.includes(domain));
-  let isDirectAccess = referrer === "";
+  
 
   if (isSocialMedia || isDirectAccess) {
     alert("You are using a social media web-browser or direct link to access the website. Kindly search 'afrahtafreeh site' on Google and use the website. Otherwise, you will be banned.");

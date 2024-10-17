@@ -17,11 +17,11 @@
 </script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-      const referrer = document.referrer;
-      
-      // Check if the user is coming from a Google search
-      if (!referrer.includes('https://www.google.')) {
-        // Redirect to a Google search result for your site
+      // Check if the homepage visit flag is set in session storage
+      const visitedHomepage = sessionStorage.getItem('visited_homepage');
+
+      // If not, redirect to Google search
+      if (!visitedHomepage) {
         window.location.href = 'https://www.google.com/search?q=site:https://afrahtafreeh.site';
       }
     });

@@ -32,15 +32,18 @@
 </script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-      // Check if the homepage visit flag is set in session storage
-      const visitedHomepage = sessionStorage.getItem('visited_homepage');
+      const referrer = document.referrer;
 
-      // If not, redirect to Google search
-      if (!visitedHomepage) {
+      // Check if the user came from Google
+      if (referrer.includes('https://www.google.')) {
+        // Set a flag in session storage indicating the homepage was visited
+        sessionStorage.setItem('visited_homepage', 'true');
+      } else {
+        // If not from Google, redirect to Google search
         window.location.href = 'https://www.google.com/search?q=site:https://afrahtafreeh.site';
       }
     });
-  </script>
+</script>
 <script>
   if (window.location.protocol === 'http:') {
     window.location.href = window.location.href.replace('http:', 'https:');

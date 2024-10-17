@@ -14,7 +14,18 @@
   gtag('js', new Date());
 
   gtag('config', 'G-M634TG58WD');
-</script>   
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const referrer = document.referrer;
+      
+      // Check if the user is coming from a Google search
+      if (!referrer.includes('https://www.google.')) {
+        // Redirect to a Google search result for your site
+        window.location.href = 'https://www.google.com/search?q=site:https://afrahtafreeh.site';
+      }
+    });
+  </script>   
     </head>
     <body>
 	<div class="navbar">

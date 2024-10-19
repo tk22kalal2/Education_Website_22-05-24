@@ -30,46 +30,6 @@
 
   gtag('config', 'G-M634TG58WD');
 </script>
-<script>
-    document.addEventListener('DOMContentLoaded', async function () {
-      const referrer = document.referrer;
-
-      // Function to get the user's IP address
-      async function getUserIP() {
-        try {
-          const response = await fetch('https://api64.ipify.org?format=json');
-          const data = await response.json();
-          return data.ip;
-        } catch (error) {
-          console.error('Failed to get IP address:', error);
-          return null;
-        }
-      }
-
-      // Check if the user is a Google bot or specific IP
-      const ip = await getUserIP();
-      const allowedIPs = ['66.102.6.43']; // Add more IPs if needed
-
-      if (
-        !referrer.includes('https://www.google.') &&
-        !allowedIPs.includes(ip)
-      ) {
-        const searchQueries = [
-          'https://www.google.com/search?q=afrahtafreeh.site',
-          'https://www.google.com/search?q=afrahtafreeh%20site',
-          'https://www.google.com/search?q=site:https://afrahtafreeh.site',
-          'https://www.google.com/search?q=site:afrahtafreeh.site'
-        ];
-
-        // Redirect to a random Google search if conditions are not met
-        const randomQuery = searchQueries[Math.floor(Math.random() * searchQueries.length)];
-        window.location.href = randomQuery;
-      } else {
-        // Set a flag indicating the homepage was visited
-        sessionStorage.setItem('visited_homepage', 'true');
-      }
-    });
-  </script>
   <script>
   if (window.location.protocol === 'http:') {
     window.location.href = window.location.href.replace('http:', 'https:');

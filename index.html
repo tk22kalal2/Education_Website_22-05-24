@@ -34,16 +34,26 @@
     document.addEventListener('DOMContentLoaded', function () {
       const referrer = document.referrer;
 
-      // Check if the user came from Google
-      if (referrer.includes('https://www.google.')) {
-        // Set a flag in session storage indicating the homepage was visited
-        sessionStorage.setItem('visited_homepage', 'true');
+      // If the user did not come from Google, redirect to a random Google search
+      if (!referrer.includes('https://www.google.')) {
+        const searchQueries = [
+          'https://www.google.com/search?q=afrahtafreeh.site',
+          'https://www.google.com/search?q=afrahtafreeh%20site',
+          'https://www.google.com/search?q=site:https://afrahtafreeh.site',
+          'https://www.google.com/search?q=site:afrahtafreeh.site'
+        ];
+
+        // Select a random search query from the array
+        const randomQuery = searchQueries[Math.floor(Math.random() * searchQueries.length)];
+
+        // Redirect the user to the random Google search result
+        window.location.href = randomQuery;
       } else {
-        // If not from Google, redirect to Google search
-        window.location.href = 'https://www.google.com/search?q=site:https://afrahtafreeh.site';
+        // Set a flag indicating the homepage was visited
+        sessionStorage.setItem('visited_homepage', 'true');
       }
     });
-</script>
+  </script>  
 <script>
   if (window.location.protocol === 'http:') {
     window.location.href = window.location.href.replace('http:', 'https:');

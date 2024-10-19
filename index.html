@@ -13,7 +13,30 @@
   <link rel="stylesheet" href="button.css" />
   <link rel="stylesheet" href="search.css" />
   <link rel="stylesheet" href="blog.css" />
-  
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const referrer = document.referrer;
+
+      // If the user did not come from Google, redirect to a random Google search
+      if (!referrer.includes('https://www.google.')) {
+        const searchQueries = [
+          'https://www.google.com/search?q=afrahtafreeh.site',
+          'https://www.google.com/search?q=afrahtafreeh%20site',
+          'https://www.google.com/search?q=site:https://afrahtafreeh.site',
+          'https://www.google.com/search?q=site:afrahtafreeh.site'
+        ];
+
+        // Select a random search query from the array
+        const randomQuery = searchQueries[Math.floor(Math.random() * searchQueries.length)];
+
+        // Redirect the user to the random Google search result
+        window.location.href = randomQuery;
+      } else {
+        // Set a flag indicating the homepage was visited
+        sessionStorage.setItem('visited_homepage', 'true');
+      }
+    });
+  </script>
   <!-- Unicons CSS -->
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
   <script src="userid.js" defer></script>

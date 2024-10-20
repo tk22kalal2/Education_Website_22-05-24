@@ -12,10 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Set the session storage flag if the user is coming from Google
   if (fromGoogle) {
     sessionStorage.setItem("cameFromGoogle", "true"); // Set session storage flag
-  } else {
-    // If not coming from Google, clear the flag
-    sessionStorage.removeItem("cameFromGoogle");
-  }
+  } 
 
   // Show the pop-up only if the user is not from Google and the session flag is not set
   if (!fromGoogle) {

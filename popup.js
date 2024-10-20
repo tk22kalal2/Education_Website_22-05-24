@@ -2,21 +2,27 @@ document.addEventListener("DOMContentLoaded", () => {
   const popup = document.getElementById("popup");
   const referrer = document.referrer;
   const googleDomains = ["google.com", "google.co.in", "google.co.uk"];
-  
+
   // Check if the user has visited from Google in this session
   const cameFromGoogle = sessionStorage.getItem("cameFromGoogle");
 
   // Determine if the referrer is from Google
   const fromGoogle = googleDomains.some((domain) => referrer.includes(domain));
 
-  // Set the session storage flag if the user is coming from Google
+  // Logic to manage session storage
   if (fromGoogle) {
     sessionStorage.setItem("cameFromGoogle", "true"); // Set session storage flag
-  } 
+  } else {
+    // If not coming from Google and there's no session flag, show the popup
+    if (!cameFromGoogle) {
+      popup.classList.add("active"); // Show the pop-up
+      document.body.style.overflow = 'hidden'; // Prevent scrolling
+    }
+  }
 
-  // Show the pop-up only if the user is not from Google and the session flag is not set
+  // Reset the popup for direct visits, but keep the session storage
   if (!fromGoogle) {
-    popup.classList.add("active"); // Show the pop-up
-    document.body.style.overflow = 'hidden'; // Prevent scrolling
+    // Only clear session storage if directly coming from an external source
+    sessionStorage.removeItem("cameFromGoogle");
   }
 });

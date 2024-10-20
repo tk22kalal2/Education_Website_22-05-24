@@ -14,28 +14,8 @@
 
   gtag('config', 'G-M634TG58WD');
 </script>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // Check if the homepage visit flag is set in session storage
-      const visitedHomepage = sessionStorage.getItem('visited_homepage');
-
-      // If the homepage was not visited, redirect to a random Google search
-      if (!visitedHomepage) {
-        const searchQueries = [
-          'https://www.google.com/search?q=afrahtafreeh.site',
-          'https://www.google.com/search?q=afrahtafreeh%20site',
-          'https://www.google.com/search?q=site:https://afrahtafreeh.site',
-          'https://www.google.com/search?q=site:afrahtafreeh.site'
-        ];
-
-        // Select a random search query from the array
-        const randomQuery = searchQueries[Math.floor(Math.random() * searchQueries.length)];
-
-        // Redirect the user to the random Google search result
-        window.location.href = randomQuery;
-      }
-    });
-  </script>
+<link rel="stylesheet" href="../popup.css" />
+<script src="../popup.js"></script>
     
 </head>
 <body>

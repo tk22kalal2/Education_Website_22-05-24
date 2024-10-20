@@ -8,11 +8,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  visibility: hidden;
-  opacity: 0;
+  visibility: hidden; /* Start hidden */
+  opacity: 0;        /* Start invisible */
   transition: visibility 0s, opacity 0.3s ease;
-  z-index: 9999;
+  z-index: 9999;     /* Highest z-index */
   overflow: hidden;
+}
+
+.popup-overlay.active {
+  visibility: visible; /* Show when active */
+  opacity: 1;         /* Make visible */
 }
 
 .popup-content {
@@ -25,8 +30,4 @@
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
   font-size: 1.2em;
   font-weight: bold;
-}
-
-body.popup-active {
-  overflow: hidden;
 }

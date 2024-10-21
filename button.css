@@ -4,7 +4,7 @@
 button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #13547a;
+  background-color: #80d0c7;
   color: #fff;
   text-decoration: none;
   border: none;
@@ -21,7 +21,7 @@ button {
 
 /* Hover effect */
 button:hover {
-  background-color: #2980b9;
+  background-color: #80d0c7;
 }
 
 /* Optional: Add more styles as needed */

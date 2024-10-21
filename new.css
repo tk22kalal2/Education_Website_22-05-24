@@ -23,7 +23,7 @@ body {
 
 .text-box {
   padding: 20px 30px;
-  background: hsla(173, 46%, 66%, 0.3);
+  background: hsla(173, 46%, 66%, 0.2);
   position: relative;
   border-radius: 6px;
   font-size: 15px;
@@ -54,7 +54,7 @@ body {
   position: absolute;
   width: 6px;
   height: 100%;
-  background: hsla(173, 46%, 66%, 0.3);
+  background: hsla(173, 46%, 66%, 0.2);
   top: 0;
   left: 50%;
   margin-left: -3px;
@@ -78,12 +78,12 @@ body {
 }
 
 .left-container-arrow {
-  border-left: 15px solid hsla(173, 46%, 66%, 0.3);
+  border-left: 15px solid hsla(173, 46%, 66%, 0.2);
   right: -15px;
 }
 
 .right-container-arrow {
-  border-right: 15px solid hsla(173, 46%, 66%, 0.3);
+  border-right: 15px solid hsla(173, 46%, 66%, 0.2);
   left: -15px;
 }
 .telegram-float {

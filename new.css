@@ -203,3 +203,15 @@ body {
     left: -15px;
   }
 }
+.footer h1 {
+    font-size: 20px;
+  }
+
+  .footer p {
+    font-size: 14px;
+  }
+
+  .footer-line p {
+    font-size: 12px;
+  }
+}

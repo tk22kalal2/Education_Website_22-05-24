@@ -20,9 +20,8 @@ body {
 /* Rest of your CSS remains unchanged */
 .slider .list {
     position: absolute;
-    width: 100%;
+    width: max-content;
     height: 100%;
-    right: 0;
     left: 0;
     top: 0;
     display: flex;
@@ -30,9 +29,29 @@ body {
 }
 
 .slider .list img {
-    width: 100%; /* Ensure images take the full width */
-    height: 100%; /* Ensure images have a fixed height */
-    object-fit: cover; /* Maintain aspect ratio and cover the area */
+    width: 100%; /* Adjust the width to 100% for mobile responsiveness */
+    height: 700px; /* Fixed height for all images */
+    object-fit: cover; /* Maintain aspect ratio and cover */
+}
+
+.slider .buttons {
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider .buttons button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff5;
+    color: #fff;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
 }
 
 .slider .buttons {
@@ -87,6 +106,7 @@ body {
     flex-wrap: wrap;
     gap: 20px;
     margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .custom-button {
@@ -213,18 +233,19 @@ body {
 
 @media screen and (max-width: 768px) {
     .slider {
-        height: 340px; /* Adjust height for smaller screens */
+        width: 100%;
+        height: 340px; /* Adjust height for smaller screens if needed */
     }
 
     .slider .list img {
+        width: 100%; /* Ensure full width on smaller screens */
         height: 340px; /* Maintain fixed height on smaller screens */
-        object-fit: cover; /* Ensure the image covers the height properly */
     }
 
     .slider .buttons {
         top: 40%; /* Adjust button positioning slightly for mobile */
     }
-      .footer h1 {
+    .footer h1 {
     font-size: 20px;
   }
 

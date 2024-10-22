@@ -1,7 +1,7 @@
 
   const shareBtn = document.querySelector("#shareBtn");
   const copyLinkBtn = document.querySelector("#copyLinkBtn");
-  const linkToCopy = "https://telegram.me/testingclonepavo_bot";
+  const linkToCopy = "https://telegram.me/mynextpulseX_bot";
 
   // Web Share API for Share Button
   shareBtn.addEventListener("click", (event) => {

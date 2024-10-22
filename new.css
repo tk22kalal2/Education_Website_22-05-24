@@ -8,7 +8,21 @@
 body {
   background: #fff;
 }
+html, body {
+  height: 100%;
+}
 
+/* Make sure the main content fills the space and pushes the footer down */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Example: Wrapper for main content (before footer) */
+.main-content {
+  flex: 1;  /* This ensures the content takes up the available space */
+}
 .timeline {
   position: relative;
   max-width: 1200px;

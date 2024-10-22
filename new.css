@@ -104,7 +104,7 @@ body {
 
 /* Footer Styles */
 .footer {
-  background-color: #fff;
+  background-color: #1b1b1b;
   color: #ccc;
   text-align: center;
   padding: 40px 20px;
@@ -115,7 +115,7 @@ body {
 .footer h1 {
   font-size: 24px;
   font-weight: bold; /* Strong black for "GET IN TOUCH" */
-  color: #000; /* Black color */
+  color: #fff; /* Black color */
   margin-bottom: 20px;
 }
 

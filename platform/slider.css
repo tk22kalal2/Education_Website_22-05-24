@@ -25,9 +25,9 @@ body {
 }
 
 .slider .list img {
-    width: 100%; /* Adjust the width to 100% for mobile responsiveness */
-    height: 700px; /* Fixed height for all images */
-    object-fit: cover; /* Maintain aspect ratio and cover */
+    width: 100%; /* Ensure images take the full width */
+    height: 100%; /* Ensure images have a fixed height */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
 }
 
 .slider .buttons {
@@ -129,13 +129,12 @@ body {
 
 @media screen and (max-width: 768px) {
     .slider {
-        width: 100%;
-        height: 340px; /* Adjust height for smaller screens if needed */
+        height: 340px; /* Adjust height for smaller screens */
     }
 
     .slider .list img {
-        width: 100%; /* Ensure full width on smaller screens */
         height: 340px; /* Maintain fixed height on smaller screens */
+        object-fit: cover; /* Ensure the image covers the height properly */
     }
 
     .slider .buttons {

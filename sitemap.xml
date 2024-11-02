@@ -38,7 +38,12 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://afrahtafreeh.site/index2.html</loc>
+  <loc>https://afrahtafreeh.site/index.html</loc>
+  <lastmod>2024-09-15T05:01:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://afrahtafreeh.site/indexb.html</loc>
   <lastmod>2024-09-15T05:01:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
@@ -64,6 +69,17 @@
 </url>
 <url>
   <loc>https://afrahtafreeh.site/platform/dams1.html</loc>
+  <lastmod>2024-09-15T05:01:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+<url>
+  <loc>https://afrahtafreeh.site/platform/damsultimate.html</loc>
+  <lastmod>2024-09-15T05:01:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://afrahtafreeh.site/platform/dams.html</loc>
   <lastmod>2024-09-15T05:01:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>

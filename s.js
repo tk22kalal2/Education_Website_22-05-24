@@ -13,7 +13,10 @@ function showSuggestions() {
         teachers.forEach(teacher => {
             if (teacher.name.toLowerCase().includes(input)) {
                 const listItem = document.createElement('li');
-                listItem.innerHTML = `<strong>${teacher.name}</strong><br><span>${teacher.subject}</span>`;
+                listItem.innerHTML = `
+                    <strong>${teacher.name}</strong><br>
+                    <span>${teacher.subject}</span>
+                `;
                 listItem.onclick = () => {
                     window.location.href = teacher.page;
                 };

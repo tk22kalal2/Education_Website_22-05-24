@@ -33,7 +33,7 @@
 }
 
 .suggestion-list li {
-    padding: 8px; /* Reduced padding */
+    padding: 2px; /* Reduced padding */
     cursor: pointer;
     line-height: 1.2; /* Reduced line height to minimize gap */
     border-bottom: 1px solid #ddd;

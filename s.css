@@ -1,0 +1,35 @@
+.custom-form {
+    max-width: 600px;
+    margin: auto;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+#teacherSearchInput {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#teacherSuggestionList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+#teacherSuggestionList li {
+    padding: 8px;
+    cursor: pointer;
+}
+
+#teacherSuggestionList li:hover {
+    background-color: #f0f0f0;
+}

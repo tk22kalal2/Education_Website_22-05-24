@@ -1,7 +1,7 @@
 // Teacher data for search suggestions
 const teachers = [
-    { name: 'Dr. Govind Rai Garg', page: 'Plugins/pharmacologycb.html' },
-    { name: 'Dr. Deepak Mehrah', page: 'Plugins/medicinep6.html' }
+    { name: 'Dr. Govind Rai Garg', subject: 'PHARMACOLOGY', page: 'Plugins/pharmacologycb.html' },
+    { name: 'Dr. Deepak Mehrah', subject: 'MEDICINE', page: 'Plugins/medicinep6.html' }
 ];
 
 function showSuggestions() {
@@ -13,7 +13,7 @@ function showSuggestions() {
         teachers.forEach(teacher => {
             if (teacher.name.toLowerCase().includes(input)) {
                 const listItem = document.createElement('li');
-                listItem.textContent = teacher.name;
+                listItem.innerHTML = `<strong>${teacher.name}</strong><br><span>${teacher.subject}</span>`;
                 listItem.onclick = () => {
                     window.location.href = teacher.page;
                 };

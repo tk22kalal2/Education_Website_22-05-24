@@ -33,9 +33,9 @@
 }
 
 .suggestion-list li {
-    padding: 10px;
+    padding: 8px; /* Reduced padding */
     cursor: pointer;
-    line-height: 1.4;
+    line-height: 1.2; /* Reduced line height to minimize gap */
     border-bottom: 1px solid #ddd;
 }
 
@@ -53,6 +53,8 @@
 }
 
 .suggestion-list li span {
-    color: #555; /* Subtle color for the subject */
     display: block;
+    color: #555; /* Subtle color for the subject */
+    font-size: 14px; /* Decreased font size */
+    margin-top: 2px; /* Reduced margin to minimize space */
 }

@@ -35,8 +35,18 @@
 .suggestion-list li {
     padding: 10px;
     cursor: pointer;
+    line-height: 1.4;
 }
 
 .suggestion-list li:hover {
     background-color: #f0f0f0;
+}
+
+.suggestion-list li strong {
+    display: block;
+    font-weight: bold;
+}
+
+.suggestion-list li span {
+    color: #555; /* Subtle color for the subject */
 }

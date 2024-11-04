@@ -1,35 +1,39 @@
-.custom-form {
-    max-width: 600px;
-    margin: auto;
+.search-container {
+    position: relative;
+    max-width: 400px;
+    margin: 20px auto;
 }
 
-.input-group {
-    display: flex;
-    flex-direction: column;
-}
-
-#teacherSearchInput {
-    padding: 10px;
+.search-box {
+    width: 100%;
+    padding: 12px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 8px;
     font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    outline: none;
 }
 
-#teacherSuggestionList {
+.suggestion-list {
+    position: absolute;
+    width: 100%;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     list-style-type: none;
     padding: 0;
-    margin: 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
     max-height: 150px;
     overflow-y: auto;
+    z-index: 100;
 }
 
-#teacherSuggestionList li {
-    padding: 8px;
+.suggestion-list li {
+    padding: 10px;
     cursor: pointer;
 }
 
-#teacherSuggestionList li:hover {
+.suggestion-list li:hover {
     background-color: #f0f0f0;
 }

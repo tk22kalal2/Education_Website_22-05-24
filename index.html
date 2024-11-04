@@ -130,17 +130,15 @@
 
                             <form method="get" class="custom-form mt-4 pt-2 mb-lg-0 mb-5" role="search">
                                 <div class="input-group input-group-lg">
-                                    <span class="input-group-text bi-search" id="basic-addon1"></span>
-                                    
+                                    <span class="input-group-text bi-search" id="search-addon"></span>
                                     <input 
                                         type="text" 
-                                        id="searchInput" 
-                                        placeholder="Enter your search term..." 
-                                        oninput="getSuggestions()" 
+                                        id="teacherSearchInput" 
+                                        placeholder="Search for a teacher..." 
+                                        oninput="showSuggestions()" 
                                         autocomplete="off" 
                                     />
-                            
-                                    <ul id="suggestionList" class="list-group mt-1"></ul> <!-- Suggestion List -->
+                                    <ul id="teacherSuggestionList" class="list-group mt-1"></ul>
                                 </div>
                             </form>
 

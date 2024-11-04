@@ -36,6 +36,11 @@
     padding: 10px;
     cursor: pointer;
     line-height: 1.4;
+    border-bottom: 1px solid #ddd;
+}
+
+.suggestion-list li:last-child {
+    border-bottom: none;
 }
 
 .suggestion-list li:hover {
@@ -49,4 +54,5 @@
 
 .suggestion-list li span {
     color: #555; /* Subtle color for the subject */
+    display: block;
 }

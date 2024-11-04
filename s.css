@@ -55,6 +55,6 @@
 .suggestion-list li span {
     display: block;
     color: #555; /* Subtle color for the subject */
-    font-size: 14px; /* Decreased font size */
-    margin-top: 2px; /* Reduced margin to minimize space */
+    font-size: 16px; /* Decreased font size */
+    margin-top: 0; /* Reduced margin to minimize space */
 }

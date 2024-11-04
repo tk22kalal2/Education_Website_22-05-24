@@ -50,6 +50,7 @@
 .suggestion-list li strong {
     display: block;
     font-weight: bold;
+    margin-bottom: 0;
 }
 
 .suggestion-list li span {

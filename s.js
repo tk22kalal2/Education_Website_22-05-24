@@ -14,7 +14,7 @@ function showSuggestions() {
             if (teacher.name.toLowerCase().includes(input)) {
                 const listItem = document.createElement('li');
                 listItem.innerHTML = `
-                    <strong>${teacher.name}</strong><br>
+                    <strong>${teacher.name}</strong>
                     <span>${teacher.subject}</span>
                 `;
                 listItem.onclick = () => {

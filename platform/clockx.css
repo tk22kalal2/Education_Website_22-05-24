@@ -63,6 +63,7 @@ body {
 
 /* Clock and Timer Section */
 .container {
+    align-items: center;
     text-align: center;
     max-width: 320px;
     width: 100%;

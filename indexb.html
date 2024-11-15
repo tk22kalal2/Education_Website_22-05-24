@@ -76,7 +76,7 @@
         <h2>POMODORO</h2>
         <small>NEXTPULSE</small>
         <p>If you are not able to concentrate more accuratly to your studies or you have less efficiency to your studies than pomodoro is best way to increase your efficency towords study. Try it today....</p>
-        <button type="button"><a href="platform/pomodoro.html">CLICK HERE</a></button>
+        <button type="button" class="redirect-button"> <a href="platform/pomodoro.html">CLICK HERE</a></button>
         <span class="left-container-arrow"></span>
       </div>
     </div>
@@ -218,5 +218,34 @@
     
   <script src="search.js"></script>
   <script src="shareme.js"></script>
+  <script>
+  // Select all buttons with the class 'redirect-button'
+  document.querySelectorAll('.redirect-button').forEach(button => {
+    button.addEventListener('click', function(event) {
+      event.preventDefault();  // Prevent default link behavior
+      
+      let countdown = 5;
+      const originalText = this.innerHTML;
+      const link = this.querySelector('a');  // Find the <a> element inside the button
+      const targetUrl = link.getAttribute('href');  // Get the href attribute of the <a>
+      
+      // Disable button to prevent multiple clicks and show countdown
+      this.disabled = true;
+      this.innerHTML = `Redirecting in ${countdown}...`;
+      
+      const countdownInterval = setInterval(() => {
+        countdown--;
+        this.innerHTML = `Redirecting in ${countdown}...`;
+        
+        // Once countdown reaches 0, stop the interval and redirect
+        if (countdown <= 0) {
+          clearInterval(countdownInterval);
+          window.location.href = targetUrl;
+        }
+      }, 1000);
+    });
+  });
+</script>
+
 </body>
 </html>

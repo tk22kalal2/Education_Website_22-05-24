@@ -4,7 +4,7 @@
     button.addEventListener('click', function(event) {
       event.preventDefault();  // Prevent default link behavior
       
-      let countdown = 5;
+      let countdown = 15;
       const originalText = this.innerHTML;
       const link = this.querySelector('a');  // Find the <a> element inside the button
       const targetUrl = link.getAttribute('href');  // Get the href attribute of the <a>

@@ -3,7 +3,7 @@ document.querySelectorAll('.custom-button').forEach(button => {
   button.addEventListener('click', function(event) {
     event.preventDefault(); // Prevent default link behavior
     
-    let countdown = 5;
+    let countdown = 15;
     const originalContent = this.innerHTML; // Store original content of the button
     const targetUrl = this.getAttribute('href'); // Get the href attribute of the <a>
     

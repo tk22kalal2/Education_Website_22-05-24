@@ -142,11 +142,7 @@
 
 /* General styles for images */
 /* General styles for images */
-.blog-image {
-  height: 100%; /* Set the image height to fill the square box */
-  object-fit: cover; /* Ensure the image covers the available space */
-  border-radius: 8px; /* Optional: To make the image corners rounded */
-}
+
 
 /* Flexbox for images in a row with border */
 .image-row {

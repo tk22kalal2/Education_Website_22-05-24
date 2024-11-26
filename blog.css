@@ -61,6 +61,17 @@
   margin-bottom: 20px; /* Spacing below */
 }
 
+/* Ensures the image fits the blog container's width */
+.blog-container img {
+  max-width: 100%; /* Image will scale down to fit the container width */
+  height: auto; /* Maintain the aspect ratio */
+  display: block; /* Removes any extra space below the image */
+  margin: 0 auto; /* Center the image within the container */
+  border-radius: 8px; /* Optional: Rounded corners for a clean look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow for better appearance */
+}
+
+
 .blog-title {
   font-size: 28px;
   color: #333;

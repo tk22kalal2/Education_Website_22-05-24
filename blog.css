@@ -105,32 +105,21 @@
   margin-bottom: 0;
 }
 /* Styling for Read More and Blog Content */
+.read-more-btn {
+  display: none;
+}
+
+/* Remove the max-height and overflow restrictions on blog-content-wrapper */
 .blog-content-wrapper {
-  max-height: 200px;
-  overflow: hidden;
-  transition: max-height 0.3s ease-in-out;
+  max-height: none; /* Fully expanded by default */
+  overflow: visible; /* Ensure all content is visible */
+  transition: none; /* Remove animation effects */
 }
 
 .blog-content-wrapper.expanded {
   max-height: none; /* Remove the height limit when expanded */
 }
 
-.read-more-btn {
-  display: block;
-  margin-left: auto;
-  margin-top: 20px;
-  background-color: #0077cc;
-  color: #fff;
-  padding: 8px 16px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.read-more-btn:hover {
-  background-color: #005fa3;
-}
 /* Styling for Read More and Blog Content */
 .website-button-wrapper {
   text-align: center; /* Corrected 'centre' to 'center' */
